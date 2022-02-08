@@ -9,3 +9,13 @@
         dd{margin-right: 20px;color: #666;margin-bottom: 0;}
     }
 }
+
+.fake-table{
+    display: flex;flex-wrap: wrap;padding: 1px 0 0 0;
+    li{flex: 0 0 16.66666%;width: 16.66666%;text-align: center;}
+    li > div{
+        border: 1px solid #d5d8db;margin: -1px;
+        > p{padding: 5px;background: #f2f2f2;font-weight: 500;border-bottom: 1px solid #d5d8db;}
+        > span{display: block;padding: 5px .75rem;background: #fff;}
+    }
+}
