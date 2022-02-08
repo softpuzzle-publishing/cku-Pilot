@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <%- include('../layout/_head.ejs')%>
+</head>
+
+<body>
+
+    <div id="wrap">
+
+        <%- include('../layout/_header.ejs')%>
+
+        <div id="container-block">
+            <div id="content">
+
+                <div class="visual flight-4">
+                    <!-- <div class="container">
+                        <h1 class="title">나의 비행정보</h1>
+                    </div> -->
+                </div>
+
+                <div class="contents">
+                    <div class="list-title-wrap">
+                        <div>
+                            <i class="icon-list-title"></i>
+                            <p class="title">나의 훈련 일정</p>
+                        </div>
+                    </div>
+
+                    <div class="main_search_result_list">
+                        <!-- softpuzzle에서 쓰는 datatable 고정 클래스명 -->
+                        <table class="table table-bordered table-fixed" id="datatable1">
+                            <colgroup>
+                                <col style="width:60px">
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col style="width:380px">
+                                <col style="width:80px">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>번호</th>
+                                    <th>교육날짜</th>
+                                    <th>교육시간</th>
+                                    <th>담당교관</th>
+                                    <th>구분</th>
+                                    <th>교육구분</th>
+                                    <th>교육내용</th>
+                                    <th>출결</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% for(var i = 5; i > 0 ; i--){ %>
+                                <tr>
+                                    <td class="text-center"><%= i%></td>
+                                    <td class="text-center">2021-10-07</td>
+                                    <td class="text-center">18:00∼19:30</td>
+                                    <td class="text-center">김교관</td>
+                                    <td class="text-center">시뮬레이터교육</td>
+                                    <td class="text-center">시뮬레이터1</td>
+                                    <td class="text-center">
+                                        <p>Checklist,4Basic,PPL Maneuver</p><p>Checklist,4Basic,PPL Maneuver</p><p>Checklist,4Basic,PPL Maneuver</p>
+                                    </td>
+                                    <td class="text-center">출석</td>
+                                </tr>
+                                <% } %>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="list-title-wrap">
+                        <div>
+                            <i class="icon-list-title"></i>
+                            <p class="title">나의 신체검사일</p>
+                        </div>
+                    </div>
+
+                    <div class="main_search_result_list">
+                        <!-- softpuzzle에서 쓰는 datatable 고정 클래스명 -->
+                        <table class="table table-bordered table-fixed" id="datatable1">
+                            <thead>
+                                <tr>
+                                    <th>신체검사 최종 검사일</th>
+                                    <th>신체검사 다음 검사일</th>
+                                    <th>남은 검사일</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-center">2021. 03. 26</td>
+                                    <td class="text-center">2022. 03. 25</td>
+                                    <td class="text-center">250일 <strong class="text-danger">-13일</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p class="m-t-10">※ 신체검사일이 지난 경우 비행기를 탑승하실 수 없습니다.</p>
+                    </div>
+
+                    <div class="list-title-wrap">
+                        <div>
+                            <i class="icon-list-title"></i>
+                            <p class="title">공지사항</p>
+                        </div>
+                        <div>
+                            <a href="../board/notice_list.html" class="font-14px">+ 더보기</a>
+                        </div>
+                    </div>
+
+                    <div class="main_search_result_list">
+                        <!-- softpuzzle에서 쓰는 datatable 고정 클래스명 -->
+                        <table class="table table-bordered-style2" id="datatable1">
+                            <colgroup>
+                                <col style="width:110px;">
+                                <col>
+                                <col style="width:200px;">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>NO</th>
+                                    <th>제 목</th>
+                                    <th>등록일</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- 공지 -->
+                                <tr>
+                                    <td>
+                                        <div class="notice-badge">공지</div>
+                                    </td>
+                                    <td class="text-left">
+                                        <div class="d-flex  max-width-700px">
+                                            <a href="../board/notice_detail.html" class="subject text-truncate font-weight-bold">2021년 상반기 현장실습 안내입니다.2021년 상반기 현장실습 안내입니다2021년 상반기 현장실습 안내입니다.2021년 상반기 현장실습 안내입니다2021년 상반기 현장실습 안내입니다.2021년 상반기 현장실습 안내입니다2021년 상반기 현장실습 안내입니다.2021년 상반기 현장실습 안내입니다</a>
+                                        </div>
+                                    </td>
+                                    <td class="text-gray4">2021-09-01</td>
+                                </tr>
+                                <!-- 공지 끝 -->
+                                <tr>
+                                    <td>19</td>
+                                    <td class="text-left">
+                                        <div class="d-flex  max-width-700px">
+                                            <a href="../board/notice_detail.html" class="subject text-truncate">2021년 상반기 현장실습 안내입니다.2021년 상반기 현장실습 안내입니다>2021년 상반기 현장실습 안내입니다.2021년 상반기 현장실습 안내입니다>2021년 상반기 현장실습 안내입니다.2021년 상반기 현장실습 안내입니다>2021년 상반기 현장실습 안내입니다.2021년 상반기 현장실습 안내입니다</a>
+                                            <div class="new"></div>
+                                        </div>
+                                    </td>
+                                    <td class="text-gray4">2021-09-01</td>
+                                </tr>
+                                <tr>
+                                    <td>18</td>
+                                    <td class="text-left">
+                                        <div class="d-flex  max-width-700px">
+                                            <a href="../board/notice_detail.html" class="subject text-truncate">2021년 상반기 현장실습 안내입니다.2021년 상반기 현장실습 안내입니다</a>
+                                            <div class="new"></div>
+                                        </div>
+                                    </td>
+                                    <td class="text-gray4">2021-09-01</td>
+                                </tr>
+                                <tr>
+                                    <td>18</td>
+                                    <td class="text-left">
+                                        <div class="d-flex  max-width-700px">
+                                            <a href="../board/notice_detail.html" class="subject text-truncate">2021년 상반기 현장실습 안내입니다.2021년 상반기 현장실습 안내입니다</a>
+                                            <div class="attachments">
+                                                <span>첨부파일</span>
+                                                <i class="icon-attachments"></i>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="text-gray4">2021-09-01</td>
+                                </tr>
+                                <tr>
+                                    <td>18</td>
+                                    <td class="text-left">
+                                        <div class="d-flex  max-width-700px">
+                                            <a href="../board/notice_detail.html" class="subject text-truncate">2021년 상반기 현장실습 안내입니다.2021년 상반기 현장실습 안내입니다021년 상반기 현장실습 안내입니다.2021년 상반기 현장실습 안내입니다021년 상반기 현장실습 안내입니다.2021년 상반기 현장실습 안내입니다021년 상반기 현장실습 안내입니다.2021년 상반기 현장실습 안내입니다</a>
+                                            <div class="attachments">
+                                                <span>첨부파일</span>
+                                                <i class="icon-attachments"></i>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="text-gray4">2021-09-01</td>
+                                </tr>
+                                <tr>
+                                    <td>18</td>
+                                    <td class="text-left">
+                                        <a href="../board/notice_detail.html" class="d-flex  max-width-700px">
+                                            <div class="subject text-truncate">2021년 상반기 현장실습 안내입니다.2021년 상반기 현장실습 안내입니다
+                                        </a>
+                                    </td>
+                                    <td class="text-gray4">2021-09-01</td>
+                                </tr>
+    
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+        <!-- 모달-->
+        <%- include('../modal/modal.ejs')%>
+        <!-- 공통모달(로그인/ 삭제 관련) -->
+        <%- include('../modal/common.ejs')%>
+
+        <%- include('../layout/_footer.ejs')%>
+
+    </div>
+
+
+    <script>
+    </script>
+
+</body>
+
+</html>

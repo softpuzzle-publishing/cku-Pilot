@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <%- include('../layout/_head.ejs')%>
+</head>
+
+<body>
+
+    <div id="wrap">
+
+        <%- include('../layout/_header.ejs')%>
+
+        <div id="container-block">
+            <div id="content">
+
+                <div class="visual board">
+                    <div class="container">
+                        <h1 class="title">지원센터</h1>
+                    </div>
+                </div>
+
+                <div class="contents">
+                    <div class="sub-nav">
+                        <div class="subject">
+                            <nav class="tab-visual">
+                                <ul>
+                                    <li><a href="notice_list.html">공지사항</a></li>
+                                    <li><a href="resource_list.html">자료실</a></li>
+                                    <li class="active"><a href="qna_list.html">1:1문의</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="breadcrumb">
+                            <ol>
+                                <li><i class="icon-breadcrumb-home"></i></li>
+                                <li>지원센터</li>
+                                <li>1:1문의</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <table class="table table-bordered" id="datatable1">
+                        <colgroup>
+                            <col style="width:230px;">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>분류</th>
+                                <td>
+                                    <select name="" id="" class="form-control width-240px">
+                                        <option value="">구분</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>제목</th>
+                                <td>
+                                    <input type="text" class="form-control" placeholder="제목을 입력해 주세요">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>내용</th>
+                                <td>
+                                    <textarea name="" id="" cols="30" rows="10" class="form-control"></textarea>
+                                    <div class="m-t-10 d-flex align-items-center">
+                                        <i class="icon-info-red"></i>
+                                        <span class="text-gray5 m-l-5">답변처리기간 : (공휴일제외)1~7일 소요</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>첨부파일</th>
+                                <td>
+                                    <div class="custom-file">
+                                        <input type="file" class="form-control min-width-500px custom-file-input" id="customFile" placeholder="파일을 업로드 해 주세요.">
+                                        <label class="custom-file-label" for="customFile" lang="ko">파일을 업로드 해 주세요.</label>
+                                    </div>
+                                    <div class="p-3 bg-light m-t-10">
+                                        <div>
+                                            <div class="d-inline-flex align-items-center">
+                                                <a href="javascript:void(0);" class="d-block">xxxxxxxxxxx.pdf</a>
+                                                <button type="button" class="btn text-underline text-gray4 p-0 m-l-10">삭제</button>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="d-inline-flex align-items-center">
+                                                <a href="javascript:void(0);" class="d-block">xxxddgdgdgdgdxx.pdf</a>
+                                                <button type="button" class="btn text-underline text-gray4 p-0 m-l-10">삭제</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="m-t-10 d-flex align-items-center">
+                                        <i class="icon-info-red"></i>
+                                        <span class="text-gray5 m-l-5">업로드 가능한 파일용량은 20MB입니다.</span>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="d-flex justify-content-end m-t-30">
+                        <button type="button" class="btn btn-secondary min-width-120px">목록보기</button>
+                        <button type="button" class="btn btn-primary min-width-120px m-l-10">저장</button>
+                    </div>
+
+                </div>
+                <!-- contents  -->
+
+            </div>
+            <!-- content  -->
+        </div>
+        <!-- 모달-->
+        <%- include('../modal/modal.ejs')%>
+        <!-- 공통모달(로그인/ 삭제 관련) -->
+        <%- include('../modal/common.ejs')%>
+
+        <%- include('../layout/_footer.ejs')%>
+
+    </div>
+
+
+    <script>
+    </script>
+
+</body>
+
+</html>

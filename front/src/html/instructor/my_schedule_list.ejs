@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <%- include('../layout/_head.ejs')%>
+</head>
+
+<body>
+
+    <div id="wrap">
+
+        <%- include('../layout/_header.ejs')%>
+
+        <div id="container-block">
+            <div id="content">
+
+                <div class="visual flight-4">
+                    <div class="container">
+                        <h1 class="title">비행스케줄</h1>
+                    </div>
+                </div>
+
+                <div class="contents">
+                    <div class="sub-nav">
+                        <div class="subject">
+                            <nav class="tab-visual">
+                                <ul>
+                                    <li class="active"><a href="my_schedule_list.html">나의 스케줄</a></li>
+                                    <li><a href="total_schedule_list.html">전체 스케줄</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="breadcrumb">
+                            <ol>
+                                <li><i class="icon-breadcrumb-home"></i></li>
+                                <li>비행스케줄</li>
+                                <li>나의 스케줄</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="list-title-wrap border-bottom p-b-40">
+                        <div>
+                            <i class="icon-list-title"></i>
+                            <p class="title">비행 스케줄 현황</p>
+                        </div>
+                        <div>
+                            <button  type="button" class="btn btn-outline-light width-140px">
+                                엑셀다운로드
+                                <i class="icon-excel m-l-10"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-t-50">
+                        <!-- 캘린더 영역 { -->
+                        <div id='calendar'></div>
+                        <!-- }-->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- 모달-->
+        <%- include('../modal/modal.ejs')%>
+        <!-- 공통모달(로그인/ 삭제 관련) -->
+        <%- include('../modal/common.ejs')%>
+
+        <%- include('../layout/_footer.ejs')%>
+
+    </div>
+
+
+    <script>
+        $(document).ready(function () {
+            $(function () {
+                // calendar element 취득
+                var calendarEl = $('#calendar')[0];
+                // full-calendar 생성하기
+                var calendar = new FullCalendar.Calendar(calendarEl, {
+                    // height: '00px', // calendar 높이 설정
+                    expandRows: true, // 화면에 맞게 높이 재설정
+                    slotMinTime: '06:00', // Day 캘린더에서 시작 시간
+                    slotMaxTime: '24:00', // Day 캘린더에서 종료 시간
+                    // 해더에 표시할 툴바
+                    headerToolbar: {
+                        left: '',
+                        center: 'title',
+                        right: 'prev,next today'
+                    },
+                    initialView: 'timeGridWeek', // 초기 로드 될때 보이는 캘린더 화면(기본 설정: 달)
+                    //initialDate: '', // 초기 날짜 설정 (설정하지 않으면 오늘 날짜가 보인다.)
+                    navLinks: true, // 날짜를 선택하면 Day 캘린더나 Week 캘린더로 링크
+                    editable: true, // 수정 가능?
+                    selectable: true, // 달력 일자 드래그 설정가능
+                    nowIndicator: true, // 현재 시간 마크
+                    dayMaxEvents: true, // 이벤트가 오버되면 높이 제한 (+ 몇 개식으로 표현)
+                    locale: 'ko', // 한국어 설정
+                    eventAdd: function (obj) { // 이벤트가 추가되면 발생하는 이벤트
+                        console.log(obj);
+                    },
+                    eventChange: function (obj) { // 이벤트가 수정되면 발생하는 이벤트
+                        console.log(obj);
+                    },
+                    eventRemove: function (obj) { // 이벤트가 삭제되면 발생하는 이벤트
+                        console.log(obj);
+                    },
+                    select: function (arg) { // 캘린더에서 드래그로 이벤트를 생성할 수 있다.
+                        var title = prompt('Event Title:');
+                        if (title) {
+                            calendar.addEvent({
+                                title: title,
+                                start: arg.start,
+                                end: arg.end,
+                                allDay: arg.allDay
+                            })
+                        }
+                        calendar.unselect()
+                    },
+                    // 이벤트
+                    events: [{
+                        title: 'All Day Event',
+                        start: '2021-12-01',
+                    }]
+                });
+                // 캘린더 랜더링
+                calendar.render();
+                myDatepicker();
+
+                // 월만 선택할수있는 데이트 피커
+                function myDatepicker() {
+                    $(".fc-toolbar-chunk:first-child").prepend('<div class="datepicker-area scheduler-date" id="month-datepicker-area"></div>');
+                    $.datepicker.monthpicker = {
+                        closeText: '닫기',
+                        nextText: '다음 달',
+                        prevText: '이전 달',
+                        currentText: "오늘",
+                        changeMonth: true,
+                        changeYear: true,
+                        monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+                        monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+                        dayNames: ["일요일", "월요일", "화요일", "수요일", "목요일", "금요일", "토요일"],
+                        dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+                        dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+                        weekHeader: "주",
+                        firstDay: 0,
+                        isRTL: false,
+                        showMonthAfterYear: true,
+                        yearSuffix: "년",
+                        showOn: 'both',
+                        // buttonText: "달력",
+                        showButtonPanel: true,
+                        dateFormat: 'yy-mm',
+                        yearRange: "-10:+0",
+                    };
+
+                    $.datepicker.setDefaults($.datepicker.monthpicker);
+
+                    var datepicker_default = {
+                        showOn: 'both',
+                        buttonText: "달력",
+                        currentText: "이번달",
+                        changeMonth: true,
+                        changeYear: true,
+                        showButtonPanel: true,
+                        yearRange: 'c-5:c+5',//년도 범위 선택
+                        showOtherMonths: true,
+                        selectOtherMonths: true
+                    }
+                    datepicker_default.closeText = "선택";
+                    datepicker_default.dateFormat = "yy-mm";
+                    datepicker_default.onClose = function (dateText, inst) {
+                        var month = $("#ui-datepicker-div .ui-datepicker-month :selected").val();
+                        var year = $("#ui-datepicker-div .ui-datepicker-year :selected").val();
+                        $(this).datepicker("option", "defaultDate", new Date(year, month, 1));
+                        $(this).datepicker('setDate', new Date(year, month, 1));
+                    }
+                    datepicker_default.beforeShow = function () {
+                        var selectDate = $("#sdate").val().split("-");
+                        var year = Number(selectDate[0]);
+                        var month = Number(selectDate[1]) - 1;
+                        $(this).datepicker("option", "defaultDate", new Date(year, month, 1));
+                    }
+                    $("#month-datepicker-area").datepicker(datepicker_default);
+
+                    ///
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

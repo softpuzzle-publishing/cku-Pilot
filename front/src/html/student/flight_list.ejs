@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <%- include('../layout/_head.ejs')%>
+</head>
+
+<body>
+
+    <div id="wrap">
+
+        <%- include('../layout/_header.ejs')%>
+
+        <div id="container-block">
+            <div id="content">
+
+                <div class="visual flight-2">
+                    <div class="container">
+                        <h1 class="title">나의 비행정보</h1>
+                    </div>
+                </div>
+
+                <div class="contents">
+                    <div class="sub-nav">
+                        <div class="subject">
+                            <nav class="tab-visual">
+                                <ul>
+                                    <li class="active"><a href="flight_list.html">비행정보</a></li>
+                                    <li><a href="safety_list.html">안전보고</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="breadcrumb">
+                            <ol>
+                                <li><i class="icon-breadcrumb-home"></i></li>
+                                <li>나의 비행정보</li>
+                                <li>비행정보</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="inquery-area">
+                        <table class="table table-bordered">
+                            <colgroup>
+                                <col style="width: 170px">
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>기간</th>
+                                    <td colspan="3">
+                                        <div class="row row-10  align-items-center">
+                                            <div class="col-auto">
+                                                <input type="text" readonly="" class="form-control form-datepicker" placeholder="0000-00-00">
+                                            </div>
+                                            <div class="col-auto">~</div>
+                                            <div class="col-auto">
+                                                <input type="text" readonly="" class="form-control form-datepicker" placeholder="0000-00-00">
+                                            </div>
+                                            <div class="col">
+                                                <div class="btn-group" role="group">
+                                                    <button type="button" class="btn btn-outline-secondary">오늘</button>
+                                                    <button type="button" class="btn btn-outline-secondary">어제</button>
+                                                    <button type="button" class="btn btn-outline-secondary">3일</button>
+                                                    <button type="button" class="btn btn-outline-secondary">7일</button>
+                                                    <button type="button" class="btn btn-outline-secondary">15일</button>
+                                                    <button type="button" class="btn btn-outline-secondary">1개월</button>
+                                                    <button type="button" class="btn btn-outline-secondary">3개월</button>
+                                                    <button type="button" class="btn btn-outline-secondary active">6개월</button>
+                                                    <button type="button" class="btn btn-outline-secondary">전체</button>
+                                                </div>
+                                                <script>
+                                                    $('.btn-group .btn').on('click', function(e) {
+                                                        $(this).siblings().removeClass('active');
+                                                        $(this).addClass('active');
+                                                    });
+                                                </script>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>상태</th>
+                                    <td colspan="3">
+                                        <select name="" id="" class="form-control width-240px">
+                                            <option value="">전체</option>
+                                            <option value=""></option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="btns">
+                            <button class="btn btn-primary">검색</button>
+                        </div>
+                    </div>
+
+                    <div class="list-title-wrap">
+                        <div>
+                            <i class="icon-list-title"></i>
+                            <p class="title">비행 목록</p>
+                            <p class="total">Total : 000 </p>
+                            <p class="page">Page 1/3 </p>
+                        </div>
+                        <div>
+                            <button  type="button" class="btn btn-outline-light width-140px">
+                                엑셀다운로드
+                                <i class="icon-excel m-l-10"></i>
+                            </button>
+                            <select name="" id="" class="form-control width-90px">
+                                <option value="">50</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="main_search_result_list">
+                        <!-- softpuzzle에서 쓰는 datatable 고정 클래스명 -->
+                        <table class="table table-bordered" id="datatable1">
+                            <colgroup>
+                                <col style="width:60px">
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col style="width:80px">
+                                <col style="width:80px">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>번호</th>
+                                    <th>비행일</th>
+                                    <th>담당교관</th>
+                                    <th>(운항번호) 항공기</th>
+                                    <th>Hobbs(before)</th>
+                                    <th>Hobbs(after)</th>
+                                    <th>L/D Cyle</th>
+                                    <th>비행시간</th>
+                                    <th>상태</th>
+                                    <th>탑승</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% for(var i = 10; i > 0 ; i--){ %>
+                                <tr>
+                                    <td class="text-center"><%= i%></td>
+                                    <td class="text-center">2021-10-07</td>
+                                    <td class="text-center">김교관</td>
+                                    <td class="text-center">HL1156</td>
+                                    <td class="text-center">10:00</td>
+                                    <td class="text-center">12:00</td>
+                                    <td class="text-center">02:00</td>
+                                    <td class="text-center">6403.3</td>
+                                    <td class="text-center">예정</td>
+                                    <td class="text-center">400h</td>
+                                </tr>
+                                <% } %>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <%- include('../layout/_pagination.ejs')%>
+
+                </div>
+
+
+            </div>
+        </div>
+        <!-- 모달-->
+        <%- include('../modal/modal.ejs')%>
+        <!-- 공통모달(로그인/ 삭제 관련) -->
+        <%- include('../modal/common.ejs')%>
+
+        <%- include('../layout/_footer.ejs')%>
+
+    </div>
+
+
+    <script>
+    </script>
+
+</body>
+
+</html>

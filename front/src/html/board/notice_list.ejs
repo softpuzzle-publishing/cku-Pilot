@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <%- include('../layout/_head.ejs')%>
+</head>
+
+<body>
+
+    <div id="wrap">
+
+        <%- include('../layout/_header.ejs')%>
+
+        <div id="container-block">
+            <div id="content">
+
+                <div class="visual board">
+                    <div class="container">
+                        <h1 class="title">지원센터</h1>
+                    </div>
+                </div>
+
+                <div class="contents">
+                    <div class="sub-nav">
+                        <div class="subject">
+                            <nav class="tab-visual">
+                                <ul>
+                                    <li class="active"><a href="notice_list.html">공지사항</a></li>
+                                    <li><a href="resource_list.html">자료실</a></li>
+                                    <li><a href="qna_list.html">1:1문의</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="breadcrumb">
+                            <ol>
+                                <li><i class="icon-breadcrumb-home"></i></li>
+                                <li>지원센터</li>
+                                <li>공지사항</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="row row-0 justify-content-between table-top-info">
+                        <div class="col-auto">
+                            <select name="" id="" class="custom-select width-140px form-control-lg">
+                                <option value="">전체</option>
+                                <option value="">전체</option>
+                            </select>
+                        </div>
+                        <div class="col-auto">
+                            <div class="row row-10">
+                                <div class="col-auto">
+                                    <div class="m-r-20">
+                                        <select name="" id="" class="custom-select width-140px form-control-lg">
+                                            <option value="">전체</option>
+                                            <option value="">전체</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col"><input type="text" class="form-control min-width-300px form-control-lg" placeholder="검색어를 입력해 주세요."></div>
+                                <div class="col-auto"><button class="btn btn-primary min-width-120px btn-lg">검색</button></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <table class="table table-bordered-style2 m-t-60" id="datatable1">
+                        <colgroup>
+                            <col style="width:110px;">
+                            <col>
+                            <col style="width:200px;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>NO</th>
+                                <th>제 목</th>
+                                <th>등록일</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- 공지 -->
+                            <tr>
+                                <td>
+                                    <div class="notice-badge">공지</div>
+                                </td>
+                                <td class="text-left">
+                                    <div class="d-flex  max-width-700px">
+                                        <a href="notice_detail.html" class="subject text-truncate font-weight-bold">2021년 상반기 현장실습 안내입니다.2021년 상반기 현장실습 안내입니다2021년 상반기 현장실습 안내입니다.2021년 상반기 현장실습 안내입니다2021년 상반기 현장실습 안내입니다.2021년 상반기 현장실습 안내입니다2021년 상반기 현장실습 안내입니다.2021년 상반기 현장실습 안내입니다</a>
+                                    </div>
+                                </td>
+                                <td class="text-gray4">2021-09-01</td>
+                            </tr>
+                            <!-- 공지 끝 -->
+                            <tr>
+                                <td>19</td>
+                                <td class="text-left">
+                                    <div class="d-flex  max-width-700px">
+                                        <a href="notice_detail.html" class="subject text-truncate">2021년 상반기 현장실습 안내입니다.2021년 상반기 현장실습 안내입니다>2021년 상반기 현장실습 안내입니다.2021년 상반기 현장실습 안내입니다>2021년 상반기 현장실습 안내입니다.2021년 상반기 현장실습 안내입니다>2021년 상반기 현장실습 안내입니다.2021년 상반기 현장실습 안내입니다</a>
+                                        <div class="new"></div>
+                                    </div>
+                                </td>
+                                <td class="text-gray4">2021-09-01</td>
+                            </tr>
+                            <tr>
+                                <td>18</td>
+                                <td class="text-left">
+                                    <div class="d-flex  max-width-700px">
+                                        <a href="notice_detail.html" class="subject text-truncate">2021년 상반기 현장실습 안내입니다.2021년 상반기 현장실습 안내입니다</a>
+                                        <div class="new"></div>
+                                    </div>
+                                </td>
+                                <td class="text-gray4">2021-09-01</td>
+                            </tr>
+                            <tr>
+                                <td>18</td>
+                                <td class="text-left">
+                                    <div class="d-flex  max-width-700px">
+                                        <a href="notice_detail.html" class="subject text-truncate">2021년 상반기 현장실습 안내입니다.2021년 상반기 현장실습 안내입니다</a>
+                                        <div class="attachments">
+                                            <span>첨부파일</span>
+                                            <i class="icon-attachments"></i>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-gray4">2021-09-01</td>
+                            </tr>
+                            <tr>
+                                <td>18</td>
+                                <td class="text-left">
+                                    <div class="d-flex  max-width-700px">
+                                        <a href="notice_detail.html" class="subject text-truncate">2021년 상반기 현장실습 안내입니다.2021년 상반기 현장실습 안내입니다021년 상반기 현장실습 안내입니다.2021년 상반기 현장실습 안내입니다021년 상반기 현장실습 안내입니다.2021년 상반기 현장실습 안내입니다021년 상반기 현장실습 안내입니다.2021년 상반기 현장실습 안내입니다</a>
+                                        <div class="attachments">
+                                            <span>첨부파일</span>
+                                            <i class="icon-attachments"></i>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-gray4">2021-09-01</td>
+                            </tr>
+                            <tr>
+                                <td>18</td>
+                                <td class="text-left">
+                                    <a href="notice_detail.html" class="d-flex  max-width-700px">
+                                        <div class="subject text-truncate">2021년 상반기 현장실습 안내입니다.2021년 상반기 현장실습 안내입니다
+                                    </a>
+                                </td>
+                                <td class="text-gray4">2021-09-01</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <%- include('../layout/_pagination.ejs')%>
+
+                </div>
+                <!-- contents  -->
+
+            </div>
+            <!-- content  -->
+        </div>
+        <!-- 모달-->
+        <%- include('../modal/modal.ejs')%>
+        <!-- 공통모달(로그인/ 삭제 관련) -->
+        <%- include('../modal/common.ejs')%>
+
+        <%- include('../layout/_footer.ejs')%>
+
+    </div>
+
+
+    <script>
+    </script>
+
+</body>
+
+</html>

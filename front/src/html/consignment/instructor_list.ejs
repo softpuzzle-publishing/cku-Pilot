@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <%- include('../layout/_head.ejs')%>
+</head>
+
+<body>
+
+    <div id="wrap">
+
+        <%- include('../layout/_header.ejs')%>
+
+        <div id="container-block">
+            <div id="content">
+
+                <div class="visual flight-3">
+                    <div class="container">
+                        <h1 class="title">학생/교관 관리</h1>
+                    </div>
+                </div>
+
+                <div class="contents">
+                    <div class="sub-nav">
+                        <div class="subject">
+                            <nav class="tab-visual">
+                                <ul>
+                                    <li><a href="student_edu_list.html">학생교육 정보</a></li>
+                                    <li class="active"><a href="instructor_list.html">교관 관리</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="breadcrumb">
+                            <ol>
+                                <li><i class="icon-breadcrumb-home"></i></li>
+                                <li>학생/교관 관리</li>
+                                <li>교관 관리</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="inquery-area">
+                        <div class="box p-3 mb-3">
+                            <strong class="font-18px">주의사항</strong>
+                            <p>※ 등록된 교관만 교관 페이지에 접근 할 수 있습니다. </p>
+                        </div>
+                        <div class="btns">
+                            <a href="instructor_form.html" class="btn btn-primary">등록</a>
+                        </div>
+                    </div>
+
+                    <div class="list-title-wrap">
+                        <div>
+                            <i class="icon-list-title"></i>
+                            <p class="title">교관목록</p>
+                        </div>
+                    </div>
+
+                    <div class="main_search_result_list">
+                        <!-- softpuzzle에서 쓰는 datatable 고정 클래스명 -->
+                        <table class="table table-bordered" id="datatable1">
+                            <colgroup>
+                                <col style="width:60px">
+                                <col style="width:80px">
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col style="width:80px">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <label class="checkbox-inline without-label">
+                                            <input type="checkbox" name="" value="">
+                                        </label>
+                                    </th>
+                                    <th>번호</th>
+                                    <th>훈련기관</th>
+                                    <th>아이디</th>
+                                    <th>교관명</th>
+                                    <th>부서전화번호</th>
+                                    <th>휴대폰전화</th>
+                                    <th>이메일</th>
+                                    <th>경력</th>
+                                    <th>관리</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% for(var i = 10; i > 0 ; i--){ %>
+                                <tr>
+                                    <td class="text-center">
+                                        <label class="checkbox-inline without-label">
+                                            <input type="checkbox" name="" value="">
+                                        </label>
+                                    </td>
+                                    <td class="text-center"><%= i%></td>
+                                    <td class="text-center">가디언즈 항공</td>
+                                    <td class="text-center">dalskdfjdk</td>
+                                    <td class="text-center">김교관</td>
+                                    <td class="text-center">033-1234-9989</td>
+                                    <td class="text-center">010-2311-9899</td>
+                                    <td class="text-center">adf@naver.com</td>
+                                    <td class="text-center">20년 2개월</td>
+                                    <td class="text-center">
+                                        <a href="instructor_form.html" class="btn btn-sm btn-dark">관리</a>
+                                    </td>
+                                </tr>
+                                <% } %>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <%- include('../layout/_pagination.ejs')%>
+                </div>
+
+            </div>
+        </div>
+        <!-- 모달-->
+        <%- include('../modal/modal.ejs')%>
+        <!-- 공통모달(로그인/ 삭제 관련) -->
+        <%- include('../modal/common.ejs')%>
+
+        <%- include('../layout/_footer.ejs')%>
+
+    </div>
+
+
+    <script>
+    </script>
+
+</body>
+
+</html>

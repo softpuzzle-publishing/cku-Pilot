@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <%- include('../layout/_head.ejs')%>
+</head>
+
+<body>
+
+    <div id="wrap">
+
+        <%- include('../layout/_header.ejs')%>
+
+        <div id="container-block">
+            <div id="content">
+
+                <div class="visual flight-3">
+                    <div class="container">
+                        <h1 class="title">학생/교관 관리</h1>
+                    </div>
+                </div>
+
+                <div class="contents">
+                    <div class="sub-nav">
+                        <div class="subject">
+                            <nav class="tab-visual">
+                                <ul>
+                                    <li><a href="student_edu_list.html">학생교육 정보</a></li>
+                                    <li class="active"><a href="instructor_list.html">교관 관리</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="breadcrumb">
+                            <ol>
+                                <li><i class="icon-breadcrumb-home"></i></li>
+                                <li>학생/교관 관리</li>
+                                <li>교관 관리</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="table-title table-top-info">상태 정보</div>
+
+                    <table class="table table-bordered table-fixed" id="datatable1">
+                        <colgroup>
+                            <col style="width:240px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>
+                                    사용자 상태<strong class="text-danger">*</strong>
+                                </th>
+                                <td>
+                                    <div class="row row-10 align-items-center">
+                                        <div class="col-auto">
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input class="custom-control-input" type="radio" id="normal" name="userStatus" checked="">
+                                                <label for="normal" class="custom-control-label">정상</label>
+                                            </div>
+                                            <div class="custom-control custom-radio custom-control-inline mr-0">
+                                                <input class="custom-control-input" type="radio" id="stop" name="userStatus" data-pair="#stop-reason">
+                                                <label for="stop" class="custom-control-label">정지</label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="input-next-radio show" id="stop-reason">
+                                                <label for="reason">- 정지사유</label>
+                                                <input type="text" class="form-control" id="reason">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="table-title table-top-info">부서정보</div>
+
+                    <table class="table table-bordered table-fixed" id="datatable2">
+                        <colgroup>
+                            <col style="width:240px">
+                            <col>
+                            <col style="width:240px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>
+                                    훈련기관<strong class="text-danger">*</strong>
+                                </th>
+                                <td colspan="3">
+                                    <select name="" id="" class="form-control width-200px" required>
+                                        <option value="">가디언즈항공</option>
+                                        <option value=""></option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    부서전화번호<strong class="text-danger">*</strong>
+                                </th>
+                                <td>
+                                    <input type="text" class="form-control" value=""  required>
+                                </td>
+                                <th>팩스번호</th>
+                                <td>
+                                    <input type="text" class="form-control" value="" placeholder="대시(-)없이 번호만 입력해 주세요!
+                                    ">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="table-title table-top-info">교관 정보</div>
+
+                    <table class="table table-bordered table-fixed" id="datatable3">
+                        <colgroup>
+                            <col style="width:240px">
+                            <col>
+                            <col style="width:240px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>
+                                    교관명<strong class="text-danger">*</strong>
+                                </th>
+                                <td>김교관</td>
+                                <th>
+                                    직위<strong class="text-danger">*</strong>
+                                </th>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    연락처<strong class="text-danger">*</strong>
+                                </th>
+                                <td>
+                                    <input type="text" class="form-control" value=""  required>
+                                </td>
+                                <th>이메일</th>
+                                <td>
+                                    <input type="text" class="form-control" value="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    해당분야 시작일<strong class="text-danger">*</strong>
+                                </th>
+                                <td>
+                                    <div class="row row-10 align-items-center">
+                                        <div class="col-auto">
+                                            <input type="text" class="form-control width-60px" value=""  required>
+                                        </div>
+                                        <div class="col-auto">
+                                            년
+                                        </div>
+                                        <div class="col-auto">
+                                            <input type="text" class="form-control width-60px" value=""  required>
+                                        </div>
+                                        <div class="col-auto">
+                                            월
+                                        </div>
+                                        <div class="col-auto">
+                                            (경력  10년  5개월)
+                                        </div>
+                                    </div>
+                                </td>
+                                <th>
+                                    최종학력<strong class="text-danger">*</strong>
+                                </th>
+                                <td>
+                                    <input type="text" class="form-control" value="" required>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    항공관련면허<strong class="text-danger">*</strong>
+                                </th>
+                                <td colspan="3">
+                                    <input type="text" class="form-control" value="" required>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="table-title table-top-info">비밀번호 변경</div>
+
+                    <table class="table table-bordered table-fixed" id="datatable4">
+                        <colgroup>
+                            <col style="width:240px">
+                            <col>
+                            <col style="width:240px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>등록아이디</th>
+                                <td colspan="3">
+                                    <div class="row row-10 align-items-center">
+                                        <div class="col-auto">
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="col-auto">
+                                            <button type="button" class="btn btn-dark">확인</button>
+                                        </div>
+                                        <div class="col-auto">
+                                            <p class="text-danger">등록된 아이디가 아닙니다</p>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>비밀번호</th>
+                                <td>
+                                    <input type="password" class="form-control">
+                                    <p class="text-danger">변경할 비밀번호를 입력해주세요.</p>
+                                </td>
+                                <th>비밀번호 확인</th>
+                                <td>
+                                    <input type="password" class="form-control">
+                                    <p class="text-danger">비밀번호가 일치하지 않습니다.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="d-flex justify-content-center m-t-40">
+                        <button type="button" class="btn btn-primary min-width-120px">저장</button>
+                        <button type="button" class="btn btn-secondary min-width-120px m-l-10">취소</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- 모달-->
+        <%- include('../modal/modal.ejs')%>
+        <!-- 공통모달(로그인/ 삭제 관련) -->
+        <%- include('../modal/common.ejs')%>
+
+        <%- include('../layout/_footer.ejs')%>
+
+    </div>
+
+
+    <script>
+    </script>
+
+</body>
+
+</html>

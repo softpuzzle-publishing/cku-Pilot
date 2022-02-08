@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1440">
+    <title>항공정비학과 | 가톨릭관동대학교</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../assets/images/favicon.ico">
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png" sizes="192x192">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://shop.montbell.co.kr/thema/default/assets/bs3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/lib/swiper/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../assets/lib/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../assets/lib/mCustomScrollbar/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="../assets/lib/select2/select2.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-ui-timepicker-addon/1.6.3/jquery-ui-timepicker-addon.min.css">
+    
+    <link rel="stylesheet" href="../assets/css/bootstrap.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <script src="../assets/lib/jquery/jquery.min.js"></script>
+    <script src="../assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/lib/swiper/js/swiper-bundle.min.js"></script>
+    <script src="../assets/lib/jquery-ui/jquery-ui.min.js"></script>
+    <script src="../assets/lib/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ui-timepicker-addon/1.6.3/jquery-ui-timepicker-addon.min.js"></script>
+    <script src="../assets/lib/select2/select2.min.js"></script>
+
+    <style>
+        #wrap {
+            padding: 0;
+            margin: 30px;
+        }
+
+        #content {
+            background: #fff;
+        }
+
+        #content .container {
+            min-height: 60vh;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            margin: 0 auto !important;
+        }
+
+        #content section>h1 {
+            font-size: 24px;
+            margin-bottom: 1rem;
+            color: #8c0cf5;
+            letter-spacing: -.5px;
+        }
+
+        #content section>h1::before {
+            content: '♣️ ';
+        }
+
+        #content section {
+            padding: 1rem;
+        }
+
+        #content section>div+div {
+            margin-top: .5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="container-block">
+            <div id="content">
+
+                <div class="container">
+                    <div class="row row-20">
+                        <section class="col-6">
+                            <h1>text</h1>
+                            <div>
+                                <span class="font-weight-medium">font-weigh medium(500)</span>
+                                <span class="font-weight-bold">font-weigh bold(700)</span>
+                            </div>
+                            <div>
+                                <span class="text-primary">color pimary</span>
+                                <span class="text-dark">color dark</span>
+                                <span class="text-secondary">color secondary</span>
+                                <span class="text-danger">color danger</span>
+                                <span class="bg-dark"><span class="text-white">color white</span></span>
+                                <br>
+                                텍스트 컬러 디자인 밝은 순 >> 어두운 순(클래스 추가)
+                                <br>
+                                <span class="text-gray1 bg-dark">color text-gray1 #f7f8f8</span><br>
+                                <span class="text-gray2 bg-dark">color text-gray2 #efefef</span><br>
+                                <span class="text-gray3 bg-dark">color text-gray3 #d7d9db</span><br>
+                                <span class="text-gray4">color text-gray4 #909295</span><br>
+                                <span class="text-gray5">color text-gray5 #545658</span><br>
+                            </div>
+                        </section>
+                        <section class="col-6">
+                            <h1>form</h1>
+                            <div>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" name="mb_mailling" value="1" id="reg_mb_mailling" checked="">
+                                    정보 메일을 받겠습니다.
+                                </label>
+                                <label class="checkbox-inline without-label">
+                                    <input type="checkbox" name="mb_mailling" value="1" id="reg_mb_mailling" checked="">
+                                    <span class="sr-only">레이블 없을때</span>
+                                </label>
+                            </div>
+                            <div>
+                                <label class="checkbox-inline radio mr-3">
+                                    <input type="checkbox" name="activityLevel"> 상
+                                </label>
+                                <label class="checkbox-inline radio">
+                                    <input type="checkbox" name="activityLevel"> 중
+                                </label>
+                            </div>
+
+                            <div class="custom-control custom-checkbox without-label">
+                                <input type="checkbox" class="custom-control-input" id="checkbox1">
+                                <label class="custom-control-label" for="checkbox1"><span class="sr-only">레이블 없을때</span></label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="checkbox2">
+                                <label class="custom-control-label" for="checkbox2">레이블 있을때</label>
+                            </div>
+
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                <label class="custom-control-label" for="radio1">레이블</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="radio2" name="radio">
+                                <label class="custom-control-label" for="radio2">레이블</label>
+                            </div>
+
+                            <div>
+                                <div class="row row-10  align-items-center">
+                                    <div class="custom-file">
+                                        <input type="file" class="form-control min-width-500px custom-file-input" id="customFile" placeholder="파일을 업로드 해 주세요.">
+                                        <label class="custom-file-label" for="customFile" lang="ko">찾아보기</label>
+                                    </div>
+                                    <div class="col-auto">
+                                        <button type="button" class="btn btn-outline-dark">파일삭제</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <input type="text"class="form-control form-datepicker" placeholder="0000-00-00">
+                                <input type="text"class="form-control form-datepicker" placeholder="0000-00-00">
+                                <input type="text"class="form-control form-datepicker" placeholder="0000-00-00">
+                            </div>
+                            <div>
+                                <input type="text" readonly="" class="form-control form-datetimepicker" placeholder="0000-00-00 00:00">
+                            </div>
+                        </section>
+
+                        <section class="col-6">
+                            <h1>모달 스타일</h1>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#modal-cancel">modal-style-1</button>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#modal-password-guide">modal-style-2</button>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#modal-password">modal-style-3</button>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#modal-practice-history">modal-style-4</button>
+                            <!-- 모달 : 삭제 확인 여부 -->
+                            <div class="modal fade" id="modal-cancel" tabindex="-1" aria-hidden="true" data-overlap="true">
+                                <div class="modal-dialog modal-dialog-centered modal-sm">
+                                    <div class="modal-content">
+                                        <div class="modal-header border-0">
+                                            <!-- <h2 class="modal-title">알림</h2> -->
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <i class="icon-close"></i>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body text-center">
+                                            <div class="p-2">
+                                                삭제하시겠습니까?
+                                            </div>
+                                            <input type="text"class="form-control form-datepicker" placeholder="0000-00-00">
+                                        </div>
+                                        <div class="modal-footer border-0">
+                                            <div class="row row-10 w-100">
+                                                <div class="col">
+                                                    <button type="button" class="btn btn-lg btn-primary btn-block">확인</button>
+                                                </div>
+                                                <div class="col">
+                                                    <button type="button" class="btn btn-lg btn-secondary btn-block" data-dismiss="modal">취소</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="modal fade" id="modal-password-guide" tabindex="-1" aria-hidden="true" data-overlap="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h2 class="modal-title">알림</h2>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <i class="icon-close"></i>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body text-center">
+                                            <div class="p-2">
+                                                비밀번호는 다음과 같습니다
+                                                <p class="password m-t-30 w-100 font-weight-bold font-18px">
+                                                    abcde***
+                                                </p>
+                                            </div>
+
+                                        </div>
+                                        <div class="modal-footer border-0 p-b-40">
+                                            <div class="d-flex justify-content-center w-100">
+                                                <button type="button" class="btn btn-lg btn-primary width-120px">확인</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 모달 : 비밀번호 찾기 -->
+                            <div class="modal fade user-modal" id="modal-password" tabindex="-1" aria-modal="true" data-overlap="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h2 class="modal-title"></h2>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <i class="icon-close"></i>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="icon-wrap"><i class="icon-password"></i></div>
+                                            <p class="title">비밀번호 찾기</p>
+                                            <p class="desc">가톨릭관동대학교 항공정비관리시스템입니다.</p>
+                                            <form action="">
+                                                <fieldset>
+                                                    <legend>LOGIN</legend>
+                                                    <input type="text" class="form-control form-control-lg" placeholder="학번(아이디)를 입력해 주세요.">
+                                                    <input type="password" class="form-control form-control-lg mt-2" placeholder="휴대폰 번호를 입력해 주세요.">
+                                                    <button type="button" class="btn btn-primary btn-block btn-lg mt-3">비밀번호 찾기</button>
+                                                </fieldset>
+                                                <a href="#modal-login" data-toggle="modal" class="m-t-20 text-right d-block font-14px text-gray5 font-weight-medium" data-dismiss="modal">로그인</a>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 모달 : 비행실습이력 -->
+                            <div class="modal" tabindex="-1" role="dialog" id="modal-practice-history">
+                                <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+                                    <div class="modal-content border-0">
+                                        <div class="modal-header bg-primary">
+                                            <h1 class="modal-title text-white">비행실습이력</h1>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <i class="icon-close-white"></i>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="box p-3">
+                                                <div class="student-courses-profile">
+                                                    <dl>
+                                                        <dt>학생</dt>
+                                                        <dd>김학생 (20190102)</dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>생년월일</dt>
+                                                        <dd>1999.02.02</dd>
+                                                        <dt>성별</dt>
+                                                        <dd>여</dd>
+                                                    </dl>
+                                                    <dl>
+
+
+                                                        <dt>휴대폰번호</dt>
+                                                        <dd>010-0000-0000</dd>
+                                                        <dt>이메일</dt>
+                                                        <dd>aaabbbccc22@gmail.com</dd>
+                                                    </dl>
+                                                </div>
+                                            </div>
+                                            <div class="list-title-wrap">
+                                                <div>
+                                                    <i class="icon-list-title"></i>
+                                                    <p class="title">비행 목록</p>
+                                                    <p class="total">Total : 000 </p>
+                                                    <p class="page">Page 1/3 </p>
+                                                </div>
+                                            </div>
+                                            <table class="table table-bordered mb-0">
+                                                <colgroup>
+                                                    <col style="width:60px;">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th>번호</th>
+                                                        <th>구분</th>
+                                                        <th>비행일</th>
+                                                        <th>담당교관</th>
+                                                        <th>(운항번호)항공기</th>
+                                                        <th>Hobbs(before)</th>
+                                                        <th>Hobbs(after)</th>
+                                                        <th>비행시간</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <% for(var i = 10; i > 0 ; i--){ %>
+                                                    <tr>
+                                                        <td class="text-center"><%= i %></td>
+                                                        <td class="text-center">항공실습</td>
+                                                        <td class="text-center">2021-10-08</td>
+                                                        <td class="text-center">김교관</td>
+                                                        <td class="text-center">HL1156</td>
+                                                        <td class="text-center">10:00</td>
+                                                        <td class="text-center">12:00</td>
+                                                        <td class="text-center">02:00</td>
+                                                    </tr>
+                                                    <% } %>
+                                                </tbody>
+                                            </table>
+                                            <%- include('../layout/_pagination.ejs')%>
+                                        </div>
+                                        <div class="modal-footer justify-content-center">
+                                            <button type="button" class="btn btn-secondary width-120px" data-dismiss="modal" aria-label="Close">닫기</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="col-6">
+                            <h1>selectbox</h1>
+                            <div>
+                                <select name="" id="" class="custom-select w-auto min-width-200">
+                                    <option value="">인기도순</option>
+                                    <option value="">최신순</option>
+                                </select>
+                            </div>
+                            <div class="m-t-20">
+                                <select name="" id="" class="form-control">
+                                    <option value="">인기도순</option>
+                                    <option value="">최신순</option>
+                                </select>
+                            </div>
+                            <div class="m-t-20">
+                                <select name="" id="" class="form-control select-dark">
+                                    <option value="">인기도순</option>
+                                    <option value="">최신순</option>
+                                </select>
+                            </div>
+                        </section>
+                    </div>
+
+                    <section class="col-6">
+                        <h1>button</h1>
+                        <p>기존 클래스 동일하게 사용가능하도록 테마컬러를 추가했습니다. <b>primary = color, dark = black</b></p>
+                        <div>
+                            <a href="#none" class="btn btn-black btn-sm">버튼 sm</a>
+                            <a href="#none" class="btn btn-primary">버튼 기본</a>
+                            <a href="#none" class="btn btn-color">버튼 기본</a>
+                            <a href="#none" class="btn btn-secondary">버튼 기본</a>
+                            <a href="#none" class="btn btn-dark">버튼 기본</a>
+                            <a href="#none" class="btn btn-success">버튼 기본</a>
+                            <a href="#none" class="btn btn-warning">버튼 기본</a>
+                            <a href="#none" class="btn btn-danger">버튼 기본</a>
+                            <a href="#none" class="btn btn-outline-dark btn-block">버튼 block</a>
+                            <a href="#none" class="btn btn-lg btn-outline-dark">버튼 lg</a>
+                            <a href="#none" class="btn btn-xl btn-outline-dark">버튼 xl</a>
+                            <a href="#none" class="btn btn-primary btn-round">버튼 round</a>
+                            <a href="#none" class="btn btn-primary btn-sm-round">버튼 sm-round</a>
+                        </div>
+                        <div>
+                            <div class="btn-group" role="group">
+                                <button type="button" class="btn btn-outline-secondary">오늘</button>
+                                <button type="button" class="btn btn-outline-secondary">어제</button>
+                                <button type="button" class="btn btn-outline-secondary">3일</button>
+                                <button type="button" class="btn btn-outline-secondary">7일</button>
+                                <button type="button" class="btn btn-outline-secondary">15일</button>
+                                <button type="button" class="btn btn-outline-secondary">1개월</button>
+                                <button type="button" class="btn btn-outline-secondary">3개월</button>
+                                <button type="button" class="btn btn-outline-secondary active">6개월</button>
+                                <button type="button" class="btn btn-outline-secondary">전체</button>
+                            </div>
+                            <script>
+                                $('.btn-group .btn').on('click', function(e) {
+                                    $(this).siblings().removeClass('active');
+                                    $(this).addClass('active');
+                                });
+                            </script>
+                        </div>
+                    </section>
+                    <section class="col-12">
+                        <h1>table</h1>
+                        <div>
+                            <table class="table table-bordered">
+                                <colgroup>
+                                    <col width="40%">
+                                    <col width="30%">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th style="border-top:0px;">목적</th>
+                                        <th style="border-top:0px;">항목</th>
+                                        <th style="border-top:0px;">보유기간</th>
+                                    </tr>
+                                    <tr>
+                                        <td>이용자 식별 및 본인여부 확인</td>
+                                        <td>아이디, 이름, 비밀번호</td>
+                                        <td>회원 탈퇴 시까지</td>
+                                    </tr>
+                                    <tr>
+                                        <td>고객서비스 이용에 관한 통지, CS대응을 위한 이용자 식별</td>
+                                        <td>연락처 (이메일, 휴대전화번호)</td>
+                                        <td>회원 탈퇴 시까지</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div>
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">
+                                                <div class="custom-control custom-checkbox without-label">
+                                                    <input type="checkbox" class="custom-control-input" name="ct_all" value="1" id="ct_all" checked="checked">
+                                                    <label class="custom-control-label" for="ct_all"><span class="sr-only">Never</span></label>
+                                                </div>
+                                            </th>
+                                            <th scope="col"><span>이미지</span></th>
+                                            <th scope="col"><span>상품명</span></th>
+                                            <th scope="col"><span>총수량</span></th>
+                                            <th scope="col"><span>판매가</span></th>
+                                            <th scope="col"><span>소계</span></th>
+                                            <th scope="col"><span>포인트</span></th>
+                                            <th scope="col"><span>배송비</span></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-center">
+                                                <div class="custom-control custom-checkbox without-label">
+                                                    <input type="checkbox" class="custom-control-input" name="ct_chk[0]" value="1" id="ct_chk_0" checked="checked">
+                                                    <label class="custom-control-label" for="ct_chk_0"><span class="sr-only">상품</span></label>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">
+                                                <div class="item-img">
+                                                    <img src="https://shop.montbell.co.kr/data/item/1632479932/thumb-01_100x100.png" width="100" height="100" alt="">
+                                                    <div class="item-type">일반 </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <input type="hidden" name="it_id[0]" value="1632479932">
+                                                <input type="hidden" name="it_name[0]" value="캔버스 컨트리 다운 자켓">
+                                                <a href="./item.php?it_id=1632479932">
+                                                    <b>캔버스 컨트리 다운 자켓</b>
+                                                </a>
+                                                <div class="well well-sm">
+                                                    <ul style="line-height:20px;">
+                                                        <li>사이즈:105 1개 (+0원)</li>
+                                                    </ul>
+                                                </div>
+                                                <button type="button" class="btn btn-primary btn-sm btn-block mod_options">선택사항수정</button>
+                                            </td>
+                                            <td class="text-center">1</td>
+                                            <td class="text-right">329,000</td>
+                                            <td class="text-right"><span id="sell_price_0">329,000</span></td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-center">선불</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div>
+                            <table class="table table-bordered-style2 m-t-60" id="datatable1">
+                                <colgroup>
+                                    <col style="width:110px;">
+                                    <col>
+                                    <col style="width:200px;">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>NO</th>
+                                        <th>제 목</th>
+                                        <th>등록일</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- 공지 -->
+                                    <tr>
+                                        <td>
+                                            <div class="notice-badge">공지</div>
+                                        </td>
+                                        <td class="text-left">
+                                            <div class="d-flex  max-width-700px">
+                                                <a href="notice_detail.html" class="subject text-truncate font-weight-bold">2021년 상반기 현장실습 안내입니다.2021년 상반기 현장실습 안내입니다2021년 상반기 현장실습 안내입니다.2021년 상반기 현장실습 안내입니다2021년 상반기 현장실습 안내입니다.2021년 상반기 현장실습 안내입니다2021년 상반기 현장실습 안내입니다.2021년 상반기 현장실습 안내입니다</a>
+                                            </div>
+                                        </td>
+                                        <td class="text-gray4">2021-09-01</td>
+                                    </tr>
+                                    <!-- 공지 끝 -->
+                                    <tr>
+                                        <td>19</td>
+                                        <td class="text-left">
+                                            <div class="d-flex  max-width-700px">
+                                                <a href="notice_detail.html" class="subject text-truncate">2021년 상반기 현장실습 안내입니다.2021년 상반기 현장실습 안내입니다>2021년 상반기 현장실습 안내입니다.2021년 상반기 현장실습 안내입니다>2021년 상반기 현장실습 안내입니다.2021년 상반기 현장실습 안내입니다>2021년 상반기 현장실습 안내입니다.2021년 상반기 현장실습 안내입니다</a>
+                                                <div class="new"></div>
+                                            </div>
+                                        </td>
+                                        <td class="text-gray4">2021-09-01</td>
+                                    </tr>
+                                    <tr>
+                                        <td>18</td>
+                                        <td class="text-left">
+                                            <div class="d-flex  max-width-700px">
+                                                <a href="notice_detail.html" class="subject text-truncate">2021년 상반기 현장실습 안내입니다.2021년 상반기 현장실습 안내입니다</a>
+                                                <div class="new"></div>
+                                            </div>
+                                        </td>
+                                        <td class="text-gray4">2021-09-01</td>
+                                    </tr>
+                                    <tr>
+                                        <td>18</td>
+                                        <td class="text-left">
+                                            <div class="d-flex  max-width-700px">
+                                                <a href="notice_detail.html" class="subject text-truncate">2021년 상반기 현장실습 안내입니다.2021년 상반기 현장실습 안내입니다</a>
+                                                <div class="attachments">
+                                                    <span>첨부파일</span>
+                                                    <i class="icon-attachments"></i>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="text-gray4">2021-09-01</td>
+                                    </tr>
+                                    <tr>
+                                        <td>18</td>
+                                        <td class="text-left">
+                                            <div class="d-flex  max-width-700px">
+                                                <a href="notice_detail.html" class="subject text-truncate">2021년 상반기 현장실습 안내입니다.2021년 상반기 현장실습 안내입니다021년 상반기 현장실습 안내입니다.2021년 상반기 현장실습 안내입니다021년 상반기 현장실습 안내입니다.2021년 상반기 현장실습 안내입니다021년 상반기 현장실습 안내입니다.2021년 상반기 현장실습 안내입니다</a>
+                                                <div class="attachments">
+                                                    <span>첨부파일</span>
+                                                    <i class="icon-attachments"></i>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="text-gray4">2021-09-01</td>
+                                    </tr>
+                                    <tr>
+                                        <td>18</td>
+                                        <td class="text-left">
+                                            <a href="notice_detail.html" class="d-flex  max-width-700px">
+                                                <div class="subject text-truncate">2021년 상반기 현장실습 안내입니다.2021년 상반기 현장실습 안내입니다
+                                            </a>
+                                        </td>
+                                        <td class="text-gray4">2021-09-01</td>
+                                    </tr>
+        
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                    <section class="col-6">
+
+                        <h1>pagination</h1>
+                        <div>
+                            <div class="pagination pagination-sm">
+                                <a href="" class="first" aria-hidden="true">
+                                    <i class="fas fa-angle-double-left"></i>
+                                </a>
+                                <a href="" class="prev mr-3" aria-hidden="true">
+                                    <i class="fas fa-angle-left"></i>
+                                </a>
+                                <a href="" class="active">1</a>
+                                <a href="">2</a>
+                                <a href="">3</a>
+                                <a href="">4</a>
+                                <a href="">5</a>
+                                <a href="" class="next ml-3" aria-hidden="true">
+                                    <i class="fas fa-angle-right"></i>
+                                </a>
+                                <a href="" class="end" aria-hidden="true">
+                                    <i class="fas fa-angle-double-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div>
+                            <nav aria-label="Page navigation">
+                                <ul class="pagination justify-content-center">
+                                    <li class="page-item disabled">
+                                        <a class="page-link" href="#">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="13.5" height="12.5">
+                                                <path stroke="#000" fill="none" d="M10.858 11.498 5.499 5.997l5.359-5.5" />
+                                                <path stroke="#000" fill="none" d="M5.858 11.498.499 5.997l5.359-5.5" />
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="page-item disabled">
+                                        <a class="page-link" href="#">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="8.5" height="12.5">
+                                                <path stroke="#000" fill="none" d="M5.858 11.498.499 5.997l5.359-5.5" />
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="page-item active" aria-current="page"><a class="page-link" href="#">1</a></li>
+                                    <% for(var i = 2; i < 10; i++){ %>
+                                    <li class="page-item"><a class="page-link" href="#"><%= i %></a></li>
+                                    <% } %>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="8.5" height="12.5">
+                                                <path stroke="#000" fill="none" d="m2.141.497 5.359 5.5-5.359 5.501" />
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="13.5" height="12.5">
+                                                <path stroke="#000" fill="none" d="m2.141.497 5.358 5.5-5.358 5.501" />
+                                                <path stroke="#000" fill="none" d="m7.141.497 5.358 5.5-5.358 5.501" />
+                                            </svg>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </section>
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+    <script src="../assets/js/ui.js"></script>
+    <script>
+    </script>
+</body>
+
+</html>

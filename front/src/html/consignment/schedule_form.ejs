@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <%- include('../layout/_head.ejs')%>
+</head>
+
+<body>
+
+    <div id="wrap">
+
+        <%- include('../layout/_header.ejs')%>
+
+        <div id="container-block">
+            <div id="content">
+
+                <div class="visual flight-4">
+                    <div class="container">
+                        <h1 class="title">비행스케줄 등록/수정</h1>
+                    </div>
+                </div>
+
+                <div class="contents">
+                    <div class="sub-nav">
+                        <div class="subject">
+                            <nav class="tab-visual">
+                                <ul>
+                                    <li class="active"><a href="schedule_list.html">비행스케줄 등록/수정</a></li>
+                                    <li><a href="flight_instructor_list.html">교관별 비행 스케줄</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="breadcrumb">
+                            <ol>
+                                <li><i class="icon-breadcrumb-home"></i></li>
+                                <li>비행스케줄 관리</li>
+                                <li>비행스케줄 등록/수정</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <table class="table table-bordered table-fixed" id="datatable1">
+                        <colgroup>
+                            <col style="width:240px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>항공기명</th>
+                                <td>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">HL1162</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">HL1156</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">HL1163</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">대기(HL1185)</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">HL1197</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">대기(HL1219)</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">HL1257</label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>학생</th>
+                                <td>
+                                    <div class="row row-10">
+                                        <div class="col-auto">
+                                            <input type="text" class="form-control width-240px">
+                                        </div>
+                                        <div class="col-auto">
+                                            <button type="button" class="btn btn-primary" data-target="#modal-traning-target" data-toggle="modal">학생 선택</button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>교관</th>
+                                <td>
+                                    <select name="" id="" class="form-control width-240px">
+                                        <option value="">김교관</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>비행구분</th>
+                                <td>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">시계LCL</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">계기LCL</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">크로스 컨트리</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">솔로비행</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">평가비행</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">체크라이드</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">Ferry</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">Repair</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">체험비행</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">기타</label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>교관</th>
+                                <td>
+                                    <div class="row row-10 align-items-center">
+                                        <div class="col-auto">
+                                            <input type="text" class="form-control form-datepicker width-200px">
+                                        </div>
+                                        <div class="col-auto">
+                                            <select name="" id="" class="form-control width-120px">
+                                                <option value="">06시</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-auto">
+                                            <select name="" id="" class="form-control width-120px">
+                                                <option value="">30분</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-auto">
+                                            ~
+                                        </div>
+                                        <div class="col-auto">
+                                            <select name="" id="" class="form-control width-120px">
+                                                <option value="">24시</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-auto">
+                                            <select name="" id="" class="form-control width-120px">
+                                                <option value="">00분</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>출발공항</th>
+                                <td>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">X-C</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">X-C</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">RKSS</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">X-C</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">RKNY</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">RKJK</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">RKPU</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">RKSG</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">RKTU</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">RKSO</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">RKJB</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">RKJY</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">RKNW</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">RKPS</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">RKTL</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">RKTN</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">RKTH</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">RKPK</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">RKPC</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">캔슬/기상</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">캔슬/정비</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">캔슬/노탐</label>
+                                    </div>
+                                    <div class="row row-0 align-items-center">
+                                        <div class="col-auto">
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                                <label class="custom-control-label" for="radio1">기타</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <div class="input-next-radio show" id="stop-reason">
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>도착공항</th>
+                                <td>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">X-C</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">X-C</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">RKSS</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">X-C</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">RKNY</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">RKJK</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">RKPU</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">RKSG</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">RKTU</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">RKSO</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">RKJB</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">RKJY</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">RKNW</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">RKPS</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">RKTL</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">RKTN</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">RKTH</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">RKPK</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">RKPC</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">캔슬/기상</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">캔슬/정비</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                        <label class="custom-control-label" for="radio1">캔슬/노탐</label>
+                                    </div>
+                                    <div class="row row-0 align-items-center">
+                                        <div class="col-auto">
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input type="radio" class="custom-control-input" id="radio1" name="radio">
+                                                <label class="custom-control-label" for="radio1">기타</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <div class="input-next-radio show" id="stop-reason">
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="d-flex justify-content-center m-t-40">
+                        <button type="button" class="btn btn-primary min-width-120px">저장</button>
+                        <button type="button" class="btn btn-secondary min-width-120px m-l-10">취소</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- 모달-->
+        <%- include('../modal/modal.ejs')%>
+        <!-- 공통모달(로그인/ 삭제 관련) -->
+        <%- include('../modal/common.ejs')%>
+
+        <%- include('../layout/_footer.ejs')%>
+
+    </div>
+
+
+    <script>
+        $(document).ready(function () {
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+<svg id="icon_excel" xmlns="http://www.w3.org/2000/svg" width="17.172" height="19.871" viewBox="0 0 17.172 19.871">
+    <defs>
+        <style>
+            .cls-1{fill:#111}
+        </style>
+    </defs>
+    <path id="사각형_1863" data-name="사각형 1863" class="cls-1" transform="translate(3.826 9.119)" d="M0 0h9.52v1.07H0z"/>
+    <path id="사각형_1864" data-name="사각형 1864" class="cls-1" transform="translate(3.826 11.728)" d="M0 0h9.52v1.07H0z"/>
+    <path id="사각형_1865" data-name="사각형 1865" class="cls-1" transform="translate(3.826 6.509)" d="M0 0h5.556v1.07H0z"/>
+    <path id="사각형_1866" data-name="사각형 1866" class="cls-1" transform="translate(3.826 14.338)" d="M0 0h9.52v1.07H0z"/>
+    <g id="그룹_2793" data-name="그룹 2793">
+        <path id="패스_79" data-name="패스 79" class="cls-1" d="M1148.528 974.048h-14.163a1.506 1.506 0 0 1-1.5-1.5v-13.47a.744.744 0 0 1 .218-.526l4.157-4.157a.744.744 0 0 1 .526-.218h10.766a1.506 1.506 0 0 1 1.5 1.5v16.862a1.506 1.506 0 0 1-1.504 1.509zm-14.179-14.662v13.158a.019.019 0 0 0 .016.016h14.163a.02.02 0 0 0 .017-.016v-16.862a.019.019 0 0 0-.017-.017h-10.458z" transform="translate(-1132.861 -954.177)"/>
+        <path id="패스_80" data-name="패스 80" class="cls-1" d="M1137.218 959.821h-3.613a.744.744 0 0 1-.526-1.27l4.157-4.156a.744.744 0 0 1 1.27.526v3.613a1.29 1.29 0 0 1-1.288 1.287zm-1.817-1.488h1.617v-1.617z" transform="translate(-1132.861 -954.176)"/>
+    </g>
+</svg>

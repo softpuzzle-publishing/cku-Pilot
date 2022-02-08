@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <%- include('../layout/_head.ejs')%>
+</head>
+
+<body>
+
+    <div id="wrap">
+
+        <%- include('../layout/_header.ejs')%>
+
+        <div id="container-block">
+            <div id="content">
+
+                <div class="visual flight-2">
+                    <div class="container">
+                        <h1 class="title">나의 비행정보</h1>
+                    </div>
+                </div>
+
+                <div class="contents">
+                    <div class="sub-nav">
+                        <div class="subject">
+                            <nav class="tab-visual">
+                                <ul>
+                                    <li><a href="flight_list.html">비행정보</a></li>
+                                    <li class="active"><a href="safety_list.html">안전보고</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="breadcrumb">
+                            <ol>
+                                <li><i class="icon-breadcrumb-home"></i></li>
+                                <li>나의 비행정보</li>
+                                <li>안전보고</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <table class="table table-bordered" id="datatable1">
+                        <colgroup>
+                            <col style="width:230px;">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>분류</th>
+                                <td>급기동</td>
+                            </tr>
+                            <tr>
+                                <th>제목</th>
+                                <td>기체 결함으로 인해 출발하지 못했습니다.</td>
+                            </tr>
+                            <tr>
+                                <th>내용</th>
+                                <td>
+                                    <div class="min-height-200px">기체 결함으로 인해 출발하지 못했습니다. 기체 결함으로 인해 출발하지 못했습니다. 기체 결함으로 인해 출발하지 못했습니다. 기체 결함으로 인해 출발하지 못했습니다. 기체 결함으로 인해 출발하지 못했습니다. 기체 결함으로 인해 출발하지 못했습니다. 기체 결함으로 인해 출발하지 못했습니다. 기체 결함으로 인해 출발하지 못했습니다. 기체 결함으로 인해 출발하지 못했습니다. 기체 결함으로 인해 출발하지 못했습니다. 기체 결함으로 인해 출발하지 못했습니다. 기체 결함으로 인해 출발하지 못했습니다. 기체 결함으로 인해 출발하지 못했습니다.</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>첨부파일</th>
+                                <td>
+                                    <div class="attachments w-100">
+                                        <i class="icon-attachments"></i>
+                                        <a href="javascript:;">비행충돌사진01.jpg</a>
+                                    </div>
+                                    <div class="attachments w-100">
+                                        <i class="icon-attachments"></i>
+                                        <a href="javascript:;">비행충돌사진01.jpg</a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="d-flex justify-content-end m-t-30">
+                        <button type="button" class="btn btn-primary min-width-120px">목록으로</button>
+                    </div>
+
+                </div>
+                <!-- contents  -->
+
+            </div>
+            <!-- content  -->
+        </div>
+        <!-- 모달-->
+        <%- include('../modal/modal.ejs')%>
+        <!-- 공통모달(로그인/ 삭제 관련) -->
+        <%- include('../modal/common.ejs')%>
+
+        <%- include('../layout/_footer.ejs')%>
+
+    </div>
+
+
+    <script>
+    </script>
+
+</body>
+
+</html>

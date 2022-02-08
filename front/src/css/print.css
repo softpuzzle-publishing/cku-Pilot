@@ -1,0 +1,94 @@
+@charset "UTF-8";
+@media print { *, *::before, *::after { text-shadow: none !important; box-shadow: none !important; }
+  a:not(.btn) { text-decoration: underline; }
+  abbr[title]::after { content: " (" attr(title) ")"; }
+  pre { white-space: pre-wrap !important; }
+  pre, blockquote { border: 1px solid #9ea2a2; page-break-inside: avoid; }
+  thead { display: table-header-group; }
+  tr, img { page-break-inside: avoid; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; }
+  @page { size: a3; }
+  body { min-width: 992px !important; }
+  .container { min-width: 992px !important; }
+  .navbar { display: none; }
+  .badge { border: 1px solid #000; }
+  .table { border-collapse: collapse !important; }
+  .table td, .table th { background-color: #fff !important; }
+  .table-bordered th, .table-bordered td { border: 1px solid #d7d9db !important; }
+  .table-dark { color: inherit; }
+  .table-dark th, .table-dark td, .table-dark thead th, .table-dark tbody + tbody { border-color: #d7d9db; }
+  .table .thead-dark th { color: inherit; border-color: #d7d9db; } }
+
+@page { /*A4*/
+  size: A4 portrait;
+  margin: 30mm auto; }
+
+@media print { html, body { margin: 0; padding: 0; page-break-after: avoid; page-break-before: avoid; /*해당 엘리먼트의 앞 페이지 넘김을 금지*/ font-family: 'Malgun Gothic', ' dotum', 'gulim', sans-serif; }
+  .page-divide { page-break-after: always; height: 0; margin: 0; border: 0; }
+  .no-print-page { display: none; }
+  .body, .page { margin-top: -1px; }
+  /*서브픽셀 해결1*/
+  .page:first-child { page-break-before: auto; page-break-inside: avoid; }
+  header, footer, aside, nav, form, iframe, .menu, .hero, .adslot { display: none; } }
+
+h1, h2, h3, h4, h5 { page-break-after: avoid; display: flex; justify-content: center; }
+
+figure, .sector, .table { margin-left: auto; margin-right: auto; width: 100%; }
+
+.table { border-collapse: collapse !important; font-size: 14px; }
+
+.table td, .table th { background-color: #fff !important; }
+
+.table td, .table th { padding: .75rem; vertical-align: middle; border-top: 1px solid #eceeef; }
+
+.table-bordered th, .table-bordered td { border: 1px solid #d7d9db; }
+
+.no-print-button { position: absolute; bottom: 0; left: 0; }
+
+body { font-family: 'Malgun Gothic', ' dotum', 'gulim', sans-serif; }
+
+.page { position: relative; width: 210mm; page-break-before: always; margin: auto; }
+
+.water-mark { opacity: 0.08; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 50%; }
+
+.logo-wide { width: 186px; height: 186px; }
+
+.invoice { display: flex; justify-content: space-between; }
+
+.invoice ul { margin-top: 20px; list-style: none; color: #707372; }
+
+.invoice ul li { margin-top: 10px; }
+
+.career-wrap { min-height: 70vh; }
+
+.career-wrap .career td:not(:nth-child(6)) { text-align: center; }
+
+.certificate-content { font-size: 18px; padding: 0 0.75rem; line-height: 2; }
+
+.sector-footer { page-break-inside: avoid; padding-top: 30px; position: relative; }
+
+.sector-footer h1 { font-size: 30px; position: relative; height: 50px; display: flex; align-items: center; justify-content: center; }
+
+.sector-footer .seal { width: 60px; height: 60px; position: absolute; right: 13%; z-index: -1; top: 50%; transform: translateY(-50%); }
+
+.sector-footer p { margin-top: 20px; color: #427079; text-align: center; }
+
+.sector-footer.certificate .seal { right: 13%; top: 60%; }
+
+.sector-footer.certificate h1 { margin-bottom: 0; }
+
+.sector-footer.certificate h3 { margin-top: 0; }
+
+.text-danger { color: red; }
+
+.list-style { padding-left: 20px; }
+
+.list-style li { list-style: circle; font-weight: bold; }
+
+.perforation { height: 150px; font-size: 12px; position: relative; display: flex; align-items: center; justify-content: center; }
+
+.perforation span { vertical-align: middle; border-bottom: 1px dashed #ddd; width: 45%; }
+
+.perforation .perforation-text { width: 10%; text-align: center; }
+/*# sourceMappingURL=print.css.map */

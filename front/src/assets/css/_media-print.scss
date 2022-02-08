@@ -1,0 +1,214 @@
+@page {
+    // size: 210mm 297mm;
+    /*A4*/
+    size: A4 portrait;
+    // margin: 0mm
+    margin: 30mm auto;
+}
+
+@media print {
+
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        page-break-after: avoid;
+        page-break-before: avoid;
+        /*해당 엘리먼트의 앞 페이지 넘김을 금지*/
+        font-family: 'Malgun Gothic', ' dotum', 'gulim', sans-serif;
+    }
+
+    // 인쇄페이지 영역 나누기
+    .page-divide {
+        page-break-after: always;
+        height: 0;
+        margin: 0;
+        border: 0;
+    }
+
+    //페이지 인쇄 안되는 영역
+    .no-print-page {
+        display: none;
+    }
+
+    .body,.page {
+        margin-top: -1px
+    }
+
+    /*서브픽셀 해결1*/
+
+    .page:first-child {
+        page-break-before: auto;
+        page-break-inside: avoid
+    }
+
+    header,footer,aside,nav,form,iframe,.menu,.hero,.adslot {
+        display: none;
+    }
+
+}
+
+// ----------------------------
+
+h1,h2,h3,h4,h5 {
+    page-break-after: avoid;
+    display: flex;
+    justify-content: center;
+}
+
+figure,.sector,.table {
+    // page-break-inside: avoid;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.table {
+    border-collapse: collapse !important;
+    font-size: 14px;
+    td,th {
+        background-color: $white !important;
+    }
+}
+
+.table td,
+.table th {
+    padding: .75rem;
+    vertical-align: middle;
+    border-top: 1px solid #eceeef;
+}
+.table-bordered {
+    th,td {
+        border: 1px solid $gray-300;
+    }
+}
+.no-print-button {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+
+
+
+body {
+    font-family: 'Malgun Gothic', ' dotum', 'gulim', sans-serif;
+}
+
+.page {
+    position: relative;
+    width: 210mm;
+    page-break-before: always;
+    margin: auto;
+}
+
+.water-mark{
+    opacity: 0.08;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width:50%;
+    
+}
+
+.logo-wide {
+    width: 186px;
+    height: 186px;
+}
+
+.invoice {
+    display: flex;
+    justify-content: space-between;
+    ul {
+        margin-top: 20px;
+        list-style: none;
+        color: $gray-600;
+
+        li {
+            margin-top: 10px;
+        }
+    }
+}
+
+.career-wrap {
+    min-height: 70vh;
+    .career {
+        td:not(:nth-child(6)) {
+            text-align: center;
+        }
+    }
+}
+
+.certificate-content{
+    // min-height:50vh;
+    font-size: 18px;
+    padding:0 0.75rem;
+    line-height: 2;
+}
+
+.sector-footer {
+    page-break-inside: avoid;
+    padding-top:30px;
+    position: relative;
+    h1 {
+        font-size: 30px;
+        position: relative;
+        height:50px;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .seal {
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        right: 13%;
+        z-index: -1;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    p {
+        margin-top: 20px;
+        color: #427079;
+        text-align: center;
+    }
+    &.certificate{
+        .seal{
+            right:13%;
+            top:60%;
+        }
+        h1{margin-bottom:0;}
+        h3{margin-top:0;}
+    }
+}
+
+.text-danger{color:red;}
+
+.list-style{
+    padding-left: 20px;
+    li{
+        list-style: circle;
+        font-weight: bold;
+    }
+}
+.perforation{
+    height:150px;
+    font-size:12px;
+    position:relative;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    span{
+        vertical-align: middle;
+        border-bottom:1px dashed #ddd;
+        width:45%;
+    }
+    .perforation-text{
+        width:10%;
+        text-align: center;
+    }
+}
+

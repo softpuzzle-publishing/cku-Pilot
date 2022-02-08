@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <%- include('../layout/_head.ejs')%>
+</head>
+
+<body class="body-main">
+
+    <div id="wrap">
+
+        <%- include('../layout/_header.ejs')%>
+
+        <div id="container-block">
+            <div id="content">
+
+                <div class="main">
+                    <div class="main-visual">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <% for(var i = 1; i < 4; i++){ %>
+                                <div class="swiper-slide" style="background-image: url('../assets/images/main_visual_<%= i %>.png');">
+                                    <div class="item">
+                                        <strong>항공운항관리시스템</strong>
+                                        <p>
+                                            새로운 항공 시대를 이끌어 나갈 차세대 인력양성! <br>
+                                            호연지기(浩然之氣)와 실무능력을 겸비한 <br>
+                                            민·군 조종사 양성하는 비행교육원입니다.
+                                        </p>
+                                        <a href="" class="btn btn-outline-white width-140px">1:1 inquiry</a>
+                                    </div>
+                                </div>
+                                <% } %>
+                            </div>
+                            <div class="main-visual-container">
+                                <div class="swiper-pagination"></div>
+                            </div>
+                            <span class="main-sub-text">Air flight management system</span>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="main-login">
+                            <!-- 로그인 전 { -->
+                            <div class="box" style="display:none;">
+                                <form action="">
+                                    <fieldset>
+                                        <legend>LOGIN</legend>
+                                        <h2>LOGIN IN</h2>
+                                        <input type="text" class="form-control form-control-lg" placeholder="ID">
+                                        <input type="password" class="form-control form-control-lg mt-2" placeholder="PASSWORD">
+                                        <button type="submit" class="btn btn-primary btn-block btn-lg mt-3">로그인</button>
+                                    </fieldset>
+                                </form>
+                            </div>
+                            <!-- } -->
+
+                            <!-- 로그인 후 { -->
+                            <div class="box dark" style="">
+                                <div class="top">
+                                    <div class="row row-25">
+                                        <div class="col-auto">
+                                            <div class="profile" style="background-image: url('../../assets/images/@portrait.jpg');"></div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="d-flex flex-column">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <a href="../personal/personal_list.html" class="d-inline-flex text-white font-14px">나의정보 수정
+                                                        <i class="icon-lock-gray m-l-10"></i>
+                                                    </a>
+                                                    <button class="btn btn-sm logout-btn btn-round">로그아웃</button>
+                                                </div>
+                                                <strong class="m-t-30">아랍에미리트 항공 <span>위탁기간</span></strong>
+                                                <!-- 학번/ 위탁기간은 없음 / 교관번호 {-->
+                                                <p class="m-t-10">202121548</p>
+                                                <!-- } -->
+                                                <p class="m-t-5">ghdrlfehd@naver.com</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 학생 {-->
+                                <div class="bottom" style="display:none;">
+                                    <a href="../student/traning_list.html">
+                                        <div class="d-flex align-items-center justify-content-center">훈련일정</div>
+                                    </a>
+                                    <a href="../student/flight_list.html">
+                                        <div class="d-flex align-items-center justify-content-center">비행정보</div>
+                                    </a>
+                                    <a href="../student/safety_list.html">
+                                        <div class="d-flex align-items-center justify-content-center">안전보고</div>
+                                    </a>
+                                    <a href="../student/faculty_list.html">
+                                        <div class="d-flex align-items-center justify-content-center">전문 교육 학과 시간</div>
+                                    </a>
+                                    <a href="../board/qna_list.html">
+                                        <div class="d-flex align-items-center justify-content-center">1:1 문의</div>
+                                    </a>
+                                </div>
+                                <!-- } -->
+
+                                <!-- 위탁기간 { -->
+                                <div class="bottom" style="display:none;">
+                                    <a href="../consignment/daily_list.html">
+                                        <div class="d-flex align-items-center justify-content-center">일자별 운항계획</div>
+                                    </a>
+                                    <a href="../consignment/flight_info_list.html">
+                                        <div class="d-flex align-items-center justify-content-center">비행 종합정보</div>
+                                    </a>
+                                    <a href="./consignment/student_edu_list.html">
+                                        <div class="d-flex align-items-center justify-content-center">학생교육 정보</div>
+                                    </a>
+                                    <a href="../consignment/schedule_list.html">
+                                        <div class="d-flex align-items-center justify-content-center">비행스케줄 등록/수정</div>
+                                    </a>
+                                </div>
+                                <!-- } -->
+
+                                <!-- 교관  {-->
+                                <div class="bottom">
+                                    <a href="../instructor/student_list.html">
+                                        <div class="d-flex align-items-center justify-content-center">교육대상</div>
+                                    </a>
+                                    <a href="../instructor/flight_list.html">
+                                        <div class="d-flex align-items-center justify-content-center">비행정보</div>
+                                    </a>
+                                    <a href="../instructor/instructor_working.html">
+                                        <div class="d-flex align-items-center justify-content-center">근무현황</div>
+                                    </a>
+                                    <a href="../instructor/my_schedule_list.html">
+                                        <div class="d-flex align-items-center justify-content-center">비행스케줄</div>
+                                    </a>
+                                </div>
+                                <!-- } -->
+                            </div>
+                            <!-- } -->
+                        </div>
+                    </div>
+                    <div class="main-notice">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-auto">
+                                    <div class="left">
+                                        <h2>Notice</h2>
+                                        <a href="javascript:;" class="pager-prev"><img src="../assets/images/icon-arrow-main-left.svg" alt="이전"></a>
+                                        <a href="javascript:;" class="pager-next"><img src="../assets/images/icon-arrow-main-right.svg" alt="다음"></a>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="row align-items-center justify-content-between mb-5">
+                                        <div class="col">
+                                            <ul class="tab">
+                                                <li class="active"><a href="#none">공지사항</a></li>
+                                                <li><a href="#none">자료실</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-auto">
+                                            <a href="" class="more" aria-label="더보기"><i class="icon-plus-white"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="notice-swiper">
+                                        <div class="swiper-container">
+                                            <div class="swiper-wrapper">
+                                                <% for(var i = 0; i < 5; i++){ %>
+                                                <div class="swiper-slide">
+                                                    <div class="item">
+                                                        <div class="tit">2021년 10월 실습교육 일정 안내입니다.</div>
+                                                        <div class="desc">경진대회 접수기간을 5월24일(월) 17시까지 연장합니다. 많은 참여부탁드립니다.</div>
+                                                        <div class="date">2021. 10. 11</div>
+                                                    </div>
+                                                </div>
+                                                <% } %>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-sites">
+                        <div class="container">
+                            <div class="sites-swiper">
+                                <div class="swiper-container">
+                                    <div class="swiper-wrapper">
+                                        <% for(var i = 1; i < 9; i++){ %>
+                                        <div class="swiper-slide">
+                                            <div class="item">
+                                                <a href="#none"><img src="../assets/images/main-site-<%= i %>.png" alt=""></a>
+                                            </div>
+                                        </div>
+                                        <% } %>
+                                    </div>
+                                </div>
+                                <div class="swiper-button-prev swiper-button-prev-sites"></div>
+                                <div class="swiper-button-next swiper-button-next-sites"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- 모달 : 시스템 모달  -->
+        <div class="system-popup">
+            <div class="popup-body bg-primary text-center text-white" style="width:500px; height:500px;">
+                <!-- 아래}} 이미지로 쓰실거면 디자인 요청해주세요 -->
+                <!-- <img src="../../assets/images/@landscape.jpg" alt="팝업배너"> -->
+
+                <!-- 아래}} 이미지 안쓸경우  -->
+                <div class="h-100">
+                    
+                    <div class="popup-header border-bottom py-3" style="width:100%; height: 57px;">
+                        <!-- 타이틀 영역     -->
+                        <img src="../assets/images/logo-white.svg" alt="관동대학교 로고" width="120" class="" style="opacity: 0.5;">
+                    </div>
+
+                    <div class="scroll-y-dark">
+                        <div class="popup-content p-3">
+                            <p class="h5">현재 베타 서비스 테스트 중입니다.</p>
+                            <p class="font-14px font-weight-semibold m-t-20">- 12월 중 오픈 예정 -</p>
+                            <p class="h5">현재 베타 서비스 테스트 중입니다.</p>
+                            <p class="font-14px font-weight-semibold m-t-20">- 12월 중 오픈 예정 -</p>
+                            <p class="h5">현재 베타 서비스 테스트 중입니다.</p>
+                            <p class="font-14px font-weight-semibold m-t-20">- 12월 중 오픈 예정 -</p>
+                            <p class="h5">현재 베타 서비스 테스트 중입니다.</p>
+                            <p class="font-14px font-weight-semibold m-t-20">- 12월 중 오픈 예정 -</p>
+                            <p class="h5">현재 베타 서비스 테스트 중입니다.</p>
+                            <p class="font-14px font-weight-semibold m-t-20">- 12월 중 오픈 예정 -</p>
+                            <p class="h5">현재 베타 서비스 테스트 중입니다.</p>
+                            <p class="font-14px font-weight-semibold m-t-20">- 12월 중 오픈 예정 -</p>
+                            <p class="h5">현재 베타 서비스 테스트 중입니다.</p>
+                            <p class="font-14px font-weight-semibold m-t-20">- 12월 중 오픈 예정 -</p>
+                            <p class="h5">현재 베타 서비스 테스트 중입니다.</p>
+                            <p class="font-14px font-weight-semibold m-t-20">- 12월 중 오픈 예정 -</p>
+                            <img src="../../assets/images/@portrait.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="popup-footer">
+                <div class="form-check pl-0">
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="checkbox2">
+                        <label class="custom-control-label" for="checkbox2">오늘 하루 그만 보기</label>
+                    </div>
+                </div>
+
+                <a href="javascript:void(0)" class="btn btn-sm btn-gray5 width-60px">닫기</a>
+            </div>
+        </div>
+        <div class="modal fade main-modal" role="dialog" tabindex="-1" aria-modal="true" style=" top: 100px; left: 50px;">
+            <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+                <div class="modal-content" style="width: 500px; height: 500px;">
+                    <div class="modal-header">
+                        <div class="modal-title">왜지</div>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <i class="icon-close"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <div class="popup-modal">
+                            <div class="popup">
+                                <div class="popup" style="border: 1px solid rgb(221, 221, 221); padding: 30px;">
+                                    <p>&nbsp;</p>
+
+                                    <p>감자</p>
+
+                                    <p>&nbsp;</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade main-modal" role="dialog" tabindex="-1" aria-modal="true" style=" top: 100px; left: 700px;">
+            <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+                <div class="modal-content" style="width: 300px; height: 300px;">
+                    <div class="modal-header">
+                        <div class="modal-title">test</div>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <i class="icon-close"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <div class="popup-modal">
+                            <div class="popup">
+                                <div class="popup" style="border: 1px solid rgb(221, 221, 221); padding: 30px;">
+                                    <p>&nbsp;</p>
+
+                                    <p>test</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <!-- 모달-->
+        <%- include('../modal/modal.ejs')%>
+        <!-- 공통모달(로그인/ 삭제 관련) -->
+        <%- include('../modal/common.ejs')%>
+
+        <%- include('../layout/_footer.ejs')%>
+
+    </div>
+
+
+    <script>
+        $(document).ready(function () {
+            // $('.main-modal').modal('show');
+        });
+        var visualSwiper = new Swiper('.main-visual .swiper-container', {
+            loop: true,
+            speed: 900,
+            observer: true,
+            observeParents: true,
+            observeSlideChildren: true,
+            autoplay: {
+                delay: 5000,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            on: {
+                slideChangeTransitionEnd: function () {
+                    $('.main-visual .swiper-slide').removeClass('active');
+                    $('.main-visual .swiper-slide-active').addClass('active');
+                }
+            }
+        });
+
+        var noticeSwiper = new Swiper('.main-notice .swiper-container', {
+            slidesPerView: 4,
+            spaceBetween: 60,
+            observer: true,
+            observeParents: true,
+            observeSlideChildren: true,
+            navigation: {
+                nextEl: '.pager-prev',
+                prevEl: '.pager-next',
+            },
+        });
+
+        var sitesSwiper = new Swiper('.main-sites .swiper-container', {
+            slidesPerView: 5,
+            spaceBetween: 15,
+            observer: true,
+            observeParents: true,
+            observeSlideChildren: true,
+            navigation: {
+                nextEl: '.swiper-button-next-sites',
+                prevEl: '.swiper-button-prev-sites',
+            },
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <%- include('../layout/_head.ejs')%>
+</head>
+
+<body>
+
+    <div id="wrap">
+
+        <%- include('../layout/_header.ejs')%>
+
+        <div id="container-block">
+            <div id="content">
+
+                <div class="visual board">
+                    <div class="container">
+                        <h1 class="title">사이트맵</h1>
+                    </div>
+                </div>
+
+                <div class="contents">
+                    <div class="sub-nav">
+                        <div class="subject">
+                            사이트맵
+                        </div>
+                        <div class="breadcrumb">
+                            <ol>
+                                <li><i class="icon-breadcrumb-home"></i></li>
+                                <li>사이트맵</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="list-title-wrap sitemap-wrap">
+                        <div>
+                            <i class="icon-list-title"></i>
+                            <p class="title">항공운항학과 소개</p>
+                        </div>
+                        <!-- 학생일 경우 { -->
+                        <div class="sitemap">
+                            <ul>
+                                <li>나의 훈련
+                                    <ul>
+                                        <li>훈련일정</li>
+                                        <li>비행시간 설정</li>
+                                    </ul>
+                                </li>
+                                <li>나의 비행정보
+                                    <ul>
+                                        <li>비행정보</li>
+                                        <li>안전보고</li>
+                                    </ul>
+                                </li>
+                                <li>전문교육학과시간</li>
+                                <li>나의 정보</li>
+                                <li>지원센터
+                                    <ul>
+                                        <li>공지사항</li>
+                                        <li>자료실</li>
+                                        <li>1:1 문의</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- } -->
+
+                        <!-- 교관일 경우 { -->
+                        <div class="sitemap" style="display:none;">
+                            <ul>
+                                <li>교육정보
+                                    <ul>
+                                        <li>교육대상자</li>
+                                        <li>비행훈련일정</li>
+                                    </ul>
+                                </li>
+                                <li>비행관리
+                                    <ul>
+                                        <li>비행정보</li>
+                                        <li>비행스케줄</li>
+                                    </ul>
+                                </li>
+                                <li>업무관리
+                                    <ul>
+                                        <li>근무현황</li>
+                                        <li>안전보고</li>
+                                    </ul>
+                                </li>
+                                <li>비행스케줄
+                                    <ul>
+                                        <li>나의 스케줄</li>
+                                        <li>전체 스케줄</li>
+                                    </ul>
+                                </li>
+                                <li>나의 정보</li>
+                            </ul>
+                        </div>
+                        <!-- } -->
+
+                        <!-- 위탁기간일 경우 { -->
+                        <div class="sitemap" style="display:none;">
+                            <ul>
+                                <li>운항계획 및 실시사항
+                                    <ul>
+                                        <li>일자별 운항계획</li>
+                                        <li>교관 월별 기준</li>
+                                        <li>학생 월별 기준</li>
+                                    </ul>
+                                </li>
+                                <li>비행종합정보</li>
+                                <li>학생/교관 관리
+                                    <ul>
+                                        <li>학생교육 정보</li>
+                                        <li>교관 관리</li>
+                                    </ul>
+                                </li>
+                                <li>비행스케줄관리
+                                    <ul>
+                                        <li>비행스케줄 등록/수정</li>
+                                        <li>교관별 비행스케줄</li>
+                                    </ul>
+                                </li>
+                                <li>교육비관리
+                                    <ul>
+                                        <li>교육내역</li>
+                                        <li>정산내역
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- } -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 모달-->
+        <%- include('../modal/modal.ejs')%>
+        <!-- 공통모달(로그인/ 삭제 관련) -->
+        <%- include('../modal/common.ejs')%>
+
+        <%- include('../layout/_footer.ejs')%>
+
+    </div>
+
+
+    <script>
+    </script>
+
+</body>
+
+</html>

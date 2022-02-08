@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <%- include('../layout/_head.ejs')%>
+</head>
+
+<body>
+
+    <div id="wrap">
+
+        <%- include('../layout/_header.ejs')%>
+
+        <div id="container-block">
+            <div id="content">
+
+                <div class="visual flight-3">
+                    <div class="container">
+                        <h1 class="title">전문교육 학과시간</h1>
+                    </div>
+                </div>
+
+                <div class="contents">
+                    <div class="sub-nav">
+                        <div class="subject">전문교육 학과시간</div>
+                        <div class="breadcrumb">
+                            <ol>
+                                <li><i class="icon-breadcrumb-home"></i></li>
+                                <li>전문교육 학과시간</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="list-title-wrap">
+                        <div>
+                            <i class="icon-list-title"></i>
+                            <p class="title">가톨릭관동대학교 전문교육학과 시간 내역으로 전체 충족할 때 이수가 가능합니다.
+                            </p>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-primary btn-round min-width-140px">
+                                이수증 출력
+                                <i class="icon-print-white m-l-10"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="main_search_result_list mt-3">
+                        <!-- softpuzzle에서 쓰는 datatable 고정 클래스명 -->
+                        <table class="table table-bordered" id="datatable1">
+                            <colgroup>
+                                <col style="width:150px">
+                                <col style="width:25%">
+                                <col style="width:25%">
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th rowspan="3">과목명</th>
+                                    <th colspan="2">교과목명</th>
+                                    <th colspan="4">가톨릭관동대학교</th>
+                                </tr>
+                                <tr>
+                                    <th rowspan="2">학과 교과목</th>
+                                    <th rowspan="2">실기 교과목</th>
+                                    <th colspan="2">학과</th>
+                                    <th colspan="2">실기</th>
+                                </tr>
+                                <tr>
+                                    <th>학기</th>
+                                    <th>방학</th>
+                                    <th>학기</th>
+                                    <th>방학</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- 항공법규 -->
+                                <tr>
+                                    <td class="text-center font-weight-semibold" rowspan="4">항공법규</td>
+                                    <td class="text-center">국제•국내항공법
+                                    </td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-center">45/ <span class="text-danger">5</span></td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-center">-</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">항공정비관리</td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-center">45/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-center">-</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center" colspan="2">중간고사(2회이상)</td>
+                                    <td class="text-center">5/<span class="text-danger">5</span></td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-center">-</td>
+                                </tr>
+                                <tr class="bg-lightblue">
+                                    <td class="text-center font-weight-semibold" colspan="2">소계</td>
+                                    <td class="text-center font-weight-semibold">95/<span class="text-danger">10</span></td>
+                                    <td class="text-center font-weight-semibold">-</td>
+                                    <td class="text-center font-weight-semibold">-</td>
+                                    <td class="text-center font-weight-semibold">-</td>
+                                </tr>
+                                <!-- 정비일반 -->
+                                <tr>
+                                    <td class="text-center font-weight-semibold" rowspan="13">정비일반</td>
+                                    <td class="text-center">수학•물리</td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-center">30/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-center">-</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">항공역학</td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-center">45/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-center">-</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">항공기 도면</td>
+                                    <td class="text-center">항공기 도면 실습</td>
+                                    <td class="text-center">20/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-center">25/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">-</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">항공기 중량 및 평형관리</td>
+                                    <td class="text-center">항공기 중량 및 평형관리 실습</td>
+                                    <td class="text-center">10/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-center">20/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">-</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">항공기재료, 공정, 하드웨어</td>
+                                    <td class="text-center">항공기재료, 공정, 하드웨어 실습</td>
+                                    <td class="text-center">20/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-center">25/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">-</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">항공기 세척 및 부식방지</td>
+                                    <td class="text-center">항공기 세척 및 부식방지 실습</td>
+                                    <td class="text-center">15/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-center">15/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">-</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">유체 라인 및 피팅</td>
+                                    <td class="text-center">유체 라인 및 피팅 실습</td>
+                                    <td class="text-center">10/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-center">10/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">25/ <span class="text-danger">0</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">일반공구와 측정공구</td>
+                                    <td class="text-center">일반공구와 측정공구 실습</td>
+                                    <td class="text-center">10/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-center">20/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">-</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">안전 및 지상취급과 서비스 작업</td>
+                                    <td class="text-center">안전 및 지상취급과 서비스 작업 실습</td>
+                                    <td class="text-center">20/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-center">10/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">-</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">검사원리 및 기법</td>
+                                    <td class="text-center">검사원리 및 기법 실습</td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-center">30/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">15/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">-</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">인적성능 및 한계</td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-center">45/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-center">-</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center" colspan="2">중간고사(2회이상)</td>
+                                    <td class="text-center">10/<span class="text-danger">10</span></td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-center">-</td>
+                                </tr>
+                                <tr class="bg-lightblue">
+                                    <td class="text-center font-weight-semibold" colspan="2">소계</td>
+                                    <td class="text-center font-weight-semibold">235/<span class="text-danger">10</span></td>
+                                    <td class="text-center font-weight-semibold">30/<span class="text-danger">0</span></td>
+                                    <td class="text-center font-weight-semibold">140/<span class="text-danger">0</span></td>
+                                    <td class="text-center font-weight-semibold">25/<span class="text-danger">0</span></td>
+                                </tr>
+                                <!-- 항공기체-->
+                                <tr>
+                                    <td class="text-center font-weight-semibold" rowspan="14">항공기체</td>
+                                    <td class="text-center">항공기 구조</td>
+                                    <td class="text-center">항공기 구조 실습</td>
+                                    <td class="text-center">30/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-center">30/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">-</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">항공기천, 외피, 목재와 구조물수리</td>
+                                    <td class="text-center">항공기천, 외피, 목재와 구조물수리 실습</td>
+                                    <td class="text-center">20/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-center">10/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">-</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">항공기 금속구조 수리</td>
+                                    <td class="text-center">항공기 금속구조 수리 실습</td>
+                                    <td class="text-center">30/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-center">30/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">30/ <span class="text-danger">0</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">항공기 용접</td>
+                                    <td class="text-center">항공기 용접 실습</td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-center">20/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">10/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">30/ <span class="text-danger">0</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">첨단 복합 소재</td>
+                                    <td class="text-center">첨단 복합 소재 실습</td>
+                                    <td class="text-center">5/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">20/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">10/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">40/ <span class="text-danger">0</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">항공기 도색 및 마무리</td>
+                                    <td class="text-center">항공기 도색 및 마무리 실습</td>
+                                    <td class="text-center">10/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-center">20/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">-</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">항공기 유압계통</td>
+                                    <td class="text-center">항공기 유압계통 실습</td>
+                                    <td class="text-center">30/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-center">30/ <span class="text-danger">0</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">항공기 착륙장치 계통</td>
+                                    <td class="text-center">항공기 착륙장치 계통 실습</td>
+                                    <td class="text-center">30/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-center">30/ <span class="text-danger">0</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">항공기 연료계통</td>
+                                    <td class="text-center">항공기 연료계통 실습</td>
+                                    <td class="text-center">30/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-center">30/ <span class="text-danger">0</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">화재방지, 제•방빙 및 제우계통</td>
+                                    <td class="text-center">화재방지, 제•방빙 및 제우계통 실습</td>
+                                    <td class="text-center">15/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-center">15/ <span class="text-danger">0</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">객실공조 및 공기압력 제어계통</td>
+                                    <td class="text-center">객실공조 및 공기압력 제어계통 실습</td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-center">20/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-center">25/ <span class="text-danger">0</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">헬리콥터 구조 및 계통</td>
+                                    <td class="text-center">헬리콥터 구조 및 계통 실습</td>
+                                    <td class="text-center">20/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-center">25/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">-</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center" colspan="2">중간고사(2회이상)</td>
+                                    <td class="text-center">13/<span class="text-danger">13</span></td>
+                                    <td class="text-center">2/<span class="text-danger">2</span></td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-center">-</td>
+                                </tr>
+                                <tr class="bg-lightblue">
+                                    <td class="text-center font-weight-semibold" colspan="2">소계</td>
+                                    <td class="text-center font-weight-semibold">235/<span class="text-danger">13</span></td>
+                                    <td class="text-center font-weight-semibold">62/<span class="text-danger">2</span></td>
+                                    <td class="text-center font-weight-semibold">135/<span class="text-danger">0</span></td>
+                                    <td class="text-center font-weight-semibold">230/<span class="text-danger">0</span></td>
+                                </tr>
+                                <!-- 항공발동기-->
+                                <tr>
+                                    <td class="text-center font-weight-semibold" rowspan="17">항공발동기</td>
+                                    <td class="text-center">왕복엔진 일반 및 흡•배기계통</td>
+                                    <td class="text-center">왕복엔진 일반 및 흡•배기계통 실습</td>
+                                    <td class="text-center">20/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-center">25/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">-</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">왕복엔진 연료 및 연료조절계통</td>
+                                    <td class="text-center">왕복엔진 연료 및 연료조절계통 실습</td>
+                                    <td class="text-center">20/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-center">25/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">-</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">왕복엔진 점화 및 시동계통</td>
+                                    <td class="text-center">왕복엔진 점화 및 시동계통 실습</td>
+                                    <td class="text-center">20/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-center">10/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">15/ <span class="text-danger">0</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">왕복엔진 윤할 및 냉각계통</td>
+                                    <td class="text-center">왕복엔진 윤할 및 냉각계통 실습</td>
+                                    <td class="text-center">5/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">15/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">25/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">-</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">프로펠러</td>
+                                    <td class="text-center">프로펠러 실습</td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-center">20/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">25/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">-</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">헬리콥터 엔진</td>
+                                    <td class="text-center">헬리콥터 엔진 실습</td>
+                                    <td class="text-center">20/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-center">10/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">15/ <span class="text-danger">0</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">왕복엔진 장탈 및 교환</td>
+                                    <td class="text-center">왕복엔진 장탈 및 교환 실습</td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-center">20/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-center">25/ <span class="text-danger">0</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">왕복엔진 정비 및 작동</td>
+                                    <td class="text-center">왕복엔진 정비 및 작동 실습</td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-center">20/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-center">5/ <span class="text-danger">0</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">경량항공기 엔진</td>
+                                    <td class="text-center">경량항공기 엔진 실습</td>
+                                    <td class="text-center">10/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-center">25/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">-</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">가스터빈엔진 일반 및 구조</td>
+                                    <td class="text-center">가스터빈엔진 일반 및 구조 실습</td>
+                                    <td class="text-center">20/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-center">25/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">-</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">가스터빈엔진연료 및 연료조절 계통</td>
+                                    <td class="text-center">가스터빈엔진연료 및 연료조절 계통 실습</td>
+                                    <td class="text-center">20/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-center">25/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">-</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">가스터빈엔진 점화 및 시동계통</td>
+                                    <td class="text-center">가스터빈엔진 점화 및 시동계통 실습</td>
+                                    <td class="text-center">20/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-center">10/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">15/ <span class="text-danger">0</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">가스터빈엔진 윤활 및 냉각계통</td>
+                                    <td class="text-center">가스터빈엔진 윤활 및 냉각계통 실습</td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-center">20/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-center">25/ <span class="text-danger">0</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">가스터빈엔진 장탈 및 교환</td>
+                                    <td class="text-center">가스터빈엔진 장탈 및 교환 실습</td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-center">20/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-center">20/ <span class="text-danger">0</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">가스터빈엔진 장탈 및 작동</td>
+                                    <td class="text-center">가스터빈엔진 장탈 및 작동 실습</td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-center">10/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-center">25/ <span class="text-danger">0</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center" colspan="2">중간고사(2회이상)</td>
+                                    <td class="text-center">3/<span class="text-danger">3</span></td>
+                                    <td class="text-center">2/<span class="text-danger">2</span></td>
+                                    <td class="text-center">3/<span class="text-danger">3</span></td>
+                                    <td class="text-center">2/<span class="text-danger">2</span></td>
+                                </tr>
+                                <tr class="bg-lightblue">
+                                    <td class="text-center font-weight-semibold" colspan="2">소계</td>
+                                    <td class="text-center font-weight-semibold">158/<span class="text-danger">3</span></td>
+                                    <td class="text-center font-weight-semibold">127/<span class="text-danger">2</span></td>
+                                    <td class="text-center font-weight-semibold">208/<span class="text-danger">3</span></td>
+                                    <td class="text-center font-weight-semibold">147/<span class="text-danger">2</span></td>
+                                </tr>
+                                <!-- 전기/전자/계기-->
+                                <tr>
+                                    <td class="text-center font-weight-semibold" rowspan="6">전기<br>/<br>전자<br>/<br>계기</td>
+                                    <td class="text-center">기초전기 전자</td>
+                                    <td class="text-center">기초전기 전자 실습</td>
+                                    <td class="text-center">60/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">60/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">60/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">15/ <span class="text-danger">0</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">항공기 전기계통</td>
+                                    <td class="text-center">항공기 전기계통 실습</td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-center">60/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">30/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">-</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">항공기 계기계통</td>
+                                    <td class="text-center">항공기 계기계통 실습</td>
+                                    <td class="text-center">45/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">15/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">30/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">-</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">항공기통신및항법계통, 자동비행장치</td>
+                                    <td class="text-center">항공기통신및항법계통, 자동비행장치 실습</td>
+                                    <td class="text-center">45/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">75/ <span class="text-danger">0</span></td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-center">60/ <span class="text-danger">0</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center" colspan="2">중간고사(2회이상)</td>
+                                    <td class="text-center">2/<span class="text-danger">2</span></td>
+                                    <td class="text-center">3/<span class="text-danger">3</span></td>
+                                    <td class="text-center">6/<span class="text-danger">6</span></td>
+                                    <td class="text-center">4/<span class="text-danger">4</span></td>
+                                </tr>
+                                <tr class="bg-lightblue">
+                                    <td class="text-center font-weight-semibold" colspan="2">소계</td>
+                                    <td class="text-center font-weight-semibold">158/<span class="text-danger">2</span></td>
+                                    <td class="text-center font-weight-semibold">213/<span class="text-danger">3</span></td>
+                                    <td class="text-center font-weight-semibold">126/<span class="text-danger">6</span></td>
+                                    <td class="text-center font-weight-semibold">79/<span class="text-danger">4</span></td>
+                                </tr>
+                                <!-- 최종시험 -->
+                                <tr>
+                                    <td class="text-center font-weight-semibold">최종시험</td>
+                                    <td class="text-center font-weight-semibold" colspan="2">종합평가시험
+                                    </td>
+                                    <td class="text-center font-weight-semibold" colspan="2">5/<span class="text-danger">5</span></td>
+                                    <td class="text-center font-weight-semibold" colspan="2">10/<span class="text-danger">10</span></td>
+                                </tr>
+                                <!-- 과정편성 소계 -->
+                                <tr class="bg-lightblue">
+                                    <td class="text-center font-weight-semibold" colspan="3">과정편성 소계</td>
+                                    <td class="text-center font-weight-semibold" colspan="2">1,310/<span class="text-danger">41</span></td>
+                                    <td class="text-center font-weight-semibold" colspan="2">1,110/<span class="text-danger">25</span></td>
+                                </tr>
+                                <!-- 과정편성 총계 -->
+                                <tr class="bg-middleblue">
+                                    <td class="text-center font-weight-semibold" colspan="3">과정편성 총계</td>
+                                    <td class="text-center font-weight-semibold" colspan="4">2,410/<span class="text-danger">66</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <!-- 모달-->
+        <%- include('../modal/modal.ejs')%>
+        <!-- 공통모달(로그인/ 삭제 관련) -->
+        <%- include('../modal/common.ejs')%>
+
+        <%- include('../layout/_footer.ejs')%>
+
+    </div>
+
+
+    <script>
+    </script>
+
+</body>
+
+</html>
