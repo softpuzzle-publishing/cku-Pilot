@@ -1,0 +1,1626 @@
+<!-- 공통 모달  -->
+
+<!-- 모달 : 삭제 여부 확인 -->
+<div class="modal" tabindex="-1" role="dialog" id="modal-delete">
+    <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="d-flex align-items-center justify-content-center">
+                    <i class="fas fa-exclamation-circle mr-2"></i>
+                    <p>삭제 하시겠습니까?</p>
+                </div>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <button type="button" class="btn btn-primary">확인</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="Close">취소</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 모달 : 등록 완료 -->
+<div class="modal" tabindex="-1" role="dialog" id="modal-success">
+    <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="d-flex align-items-center justify-content-center">
+                    <p>정상적으로 등록 되었습니다</p>
+                </div>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close">확인</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 모달 : 필수항목 미입력 시 입력요청 -->
+<div class="modal" tabindex="-1" role="dialog" id="modal-req-insert">
+    <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="d-flex align-items-center justify-content-center">
+                    <i class="fas fa-exclamation-circle mr-2"></i>
+                    <p>{{항목명}}을 입력해주세요</p>
+                </div>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close">확인</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 모달 : 팝업 미리보기 -->
+<div class="modal" tabindex="-1" role="dialog" id="modal-preview">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title">팝업 미리보기</div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body text-center">
+                <div class="popup-preview">
+                    <div class="preview">
+                        <img src="https://images.unsplash.com/photo-1602497223003-531c7a191886?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1548&q=80" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 모달 : 비밀번호 변경 완료 -->
+<div class="modal" tabindex="-1" role="dialog" id="modal-password-changed">
+    <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="d-flex align-items-center justify-content-center">
+                    <p>비밀번호가 변경되었습니다. <br>재 로그인 해주시기 바랍니다.</p>
+                </div>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close">확인</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 모달 : 비밀번호 초기화 > 확인 여부-->
+<div class="modal" tabindex="-1" role="dialog" id="modal-reset-password">
+    <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="text-center">
+                    <i class="fas fa-exclamation-circle m-b-20"></i>
+                    <p>비밀번호가 초기화 됩니다.<br>초기화 하시겠습니까?</p>
+                </div>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <button type="button" class="btn btn-primary" data-target="#modal-reset-password-success" data-dismiss="modal">확인</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="Close">취소</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 모달 : 비밀번호 초기화 > 완료 -->
+<div class="modal" tabindex="-1" role="dialog" id="modal-reset-password-success" data-overlap="true">
+    <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="d-flex align-items-center justify-content-center">
+                    <p>비밀번호가 초기화 되었습니다.</p>
+                </div>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close">확인</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 모달 : 학생정보 수정 > 확인 여부-->
+<div class="modal" tabindex="-1" role="dialog" id="modal-reset-studentInfo">
+    <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="text-center">
+                    <i class="fas fa-exclamation-circle m-b-20"></i>
+                    <p>학생 정보는 변경되면 수정이 어렵습니다.<br>
+                        학생정보를 변경하시겠습니까?</p>
+                </div>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <button type="button" class="btn btn-primary">확인</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="Close">취소</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 모달 : 학생정보 수정  > 완료 -->
+<div class="modal" tabindex="-1" role="dialog" id="modal-reset-studentInfo-success">
+    <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <p>학생정보 변경이 완료 되었습니다.</p>
+            </div>
+        </div>
+        <div class="modal-footer justify-content-center">
+            <button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close">확인</button>
+        </div>
+    </div>
+</div>
+
+
+<!-- ---------- -->
+<!-- 모달 : 훈련과목 지정(체크한 목록으로 지정)-->
+<div class="modal" tabindex="-1" role="dialog" id="modal-training-designation-common">
+    <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 740px">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title">훈련과목 지정</h1>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <table class="table table-bordered mb-0 m-t-20">
+                    <colgroup>
+                        <col style="width: 25%">
+                        <col>
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th class="text-center">구분</th>
+                            <th class="text-center">내용</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-center">비행훈련</td>
+                            <td class="text-left">
+                                <div class="custom-control custom-checkbox my-2">
+                                    <input class="custom-control-input" type="checkbox" id="chkPractice1">
+                                    <label for="chkPractice1" class="custom-control-label">전문교육과정자가 (Checklist,4Basic,PPL Maneuver)</label>
+                                </div>
+                                <div class="custom-control custom-checkbox my-2">
+                                    <input class="custom-control-input" type="checkbox" id="chkPractice1">
+                                    <label for="chkPractice1" class="custom-control-label">전문교육과정자가 (Checklist,4Basic,PPL Maneuver)</label>
+                                </div>
+                                <div class="custom-control custom-checkbox my-2">
+                                    <input class="custom-control-input" type="checkbox" id="chkPractice1">
+                                    <label for="chkPractice1" class="custom-control-label">전문교육과정자가 (Checklist,4Basic,PPL Maneuver)</label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">시뮬레이터교육</td>
+                            <td class="text-left">
+                                <div class="custom-control custom-checkbox my-2">
+                                    <input class="custom-control-input" type="checkbox" id="chkPractice4">
+                                    <label for="chkPractice4" class="custom-control-label">시뮬레이터교육 (IR 4Basic, VOR Intercept)
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="Close">취소</button>
+                <button type="button" class="btn btn-primary">저장</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 모달 : 훈련과목 지정(학생 개별지정)-->
+<div class="modal" tabindex="-1" role="dialog" id="modal-training-designation">
+    <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 740px">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title">학생 훈련과목</h1>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="box p-3">
+                    <div class="student-courses-profile">
+                        <dl>
+                            <dt>학생</dt>
+                            <dd>김학생 (20190102)</dd>
+                        </dl>
+                        <dl>
+                            <dt>생년월일</dt>
+                            <dd>1999.02.02</dd>
+                            <dt>성별</dt>
+                            <dd>여</dd>
+                        </dl>
+                        <dl>
+                            <dt>휴대폰번호</dt>
+                            <dd>010-0000-0000</dd>
+                            <dt>이메일</dt>
+                            <dd>aaabbbccc22@gmail.com</dd>
+                        </dl>
+                    </div>
+                </div>
+                <table class="table table-bordered mb-0 m-t-20">
+                    <colgroup>
+                        <col style="width: 25%">
+                        <col>
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th class="text-center">구분</th>
+                            <th class="text-center">내용</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-center">비행훈련</td>
+                            <td class="text-left">
+                                <div class="custom-control custom-checkbox my-2">
+                                    <input class="custom-control-input" type="checkbox" id="chkPractice1">
+                                    <label for="chkPractice1" class="custom-control-label">전문교육과정자가 (Checklist,4Basic,PPL Maneuver)</label>
+                                </div>
+                                <div class="custom-control custom-checkbox my-2">
+                                    <input class="custom-control-input" type="checkbox" id="chkPractice1">
+                                    <label for="chkPractice1" class="custom-control-label">전문교육과정자가 (Checklist,4Basic,PPL Maneuver)</label>
+                                </div>
+                                <div class="custom-control custom-checkbox my-2">
+                                    <input class="custom-control-input" type="checkbox" id="chkPractice1">
+                                    <label for="chkPractice1" class="custom-control-label">전문교육과정자가 (Checklist,4Basic,PPL Maneuver)</label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">시뮬레이터교육</td>
+                            <td class="text-left">
+                                <div class="custom-control custom-checkbox my-2">
+                                    <input class="custom-control-input" type="checkbox" id="chkPractice4">
+                                    <label for="chkPractice4" class="custom-control-label">시뮬레이터교육 (IR 4Basic, VOR Intercept)
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="Close">취소</button>
+                <button type="button" class="btn btn-primary">저장</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 모달 : 훈련과목 지정 등록-->
+<div class="modal" tabindex="-1" role="dialog" id="modal-training-form">
+    <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 740px">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title">학생훈련과목 관리</h1>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+                <div class="form-group row row-30 align-items-center justify-content-center">
+                    <div class="col-auto">
+                        <strong>연도 선택</strong>
+                    </div>
+                    <div class="col-auto">
+                        <select name="" id="" class="custom-select width-200px">
+                            <option value="">2022년</option>
+                            <option value=""></option>
+                        </select>
+                    </div>
+                </div>
+
+                <table class="table table-bordered mb-0 ">
+                    <colgroup>
+                        <col style="width: 25%">
+                        <col>
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th class="text-center">구분</th>
+                            <th class="text-center">훈련과목</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- 비행훈련 -->
+                        <tr>
+                            <td class="text-center" rowspan="3">비행훈련</td>
+                            <td class="text-left">
+                                <div class="row">
+                                    <div class="col-auto">
+                                        <input type="text" class="form-control min-width-400px" value="(Checklist,4Basic,PPL Maneuver)
+                                        ">
+                                    </div>
+                                    <div class="col-auto">
+                                        <button class="btn increase-btn btn-outline-borderColor">+</button>
+                                        <!-- <button class="btn increase-btn btn-outline-borderColor">-</button> -->
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-left">
+                                <div class="row">
+                                    <div class="col-auto">
+                                        <input type="text" class="form-control min-width-400px" value="(Checklist,4Basic,PPL Maneuver)
+                                        ">
+                                    </div>
+                                    <div class="col-auto">
+                                        <button class="btn increase-btn btn-outline-borderColor">+</button>
+                                        <button class="btn increase-btn btn-outline-borderColor">-</button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-left">
+                                <div class="row">
+                                    <div class="col-auto">
+                                        <input type="text" class="form-control min-width-400px" value="(Checklist,4Basic,PPL Maneuver)
+                                        ">
+                                    </div>
+                                    <div class="col-auto">
+                                        <button class="btn increase-btn btn-outline-borderColor">+</button>
+                                        <button class="btn increase-btn btn-outline-borderColor">-</button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <!-- 시뮬레이터교육 -->
+                        <tr>
+                            <td class="text-center" rowspan="2">시뮬레이터교육</td>
+                            <td class="text-left">
+                                <div class="row">
+                                    <div class="col-auto">
+                                        <input type="text" class="form-control min-width-400px" value="전문교육과정자가  (Checklist,4Basic,PPL Maneuver)">
+                                    </div>
+                                    <div class="col-auto">
+                                        <button class="btn increase-btn btn-outline-borderColor">+</button>
+                                        <!-- <button class="btn increase-btn btn-outline-borderColor">-</button> -->
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-left">
+                                <div class="row">
+                                    <div class="col-auto">
+                                        <input type="text" class="form-control min-width-400px" value="시뮬레이터교육 (IR 4Basic, VOR Intercept)">
+                                    </div>
+                                    <div class="col-auto">
+                                        <button class="btn increase-btn btn-outline-borderColor">+</button>
+                                        <button class="btn increase-btn btn-outline-borderColor">-</button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="Close">취소</button>
+                <button type="button" class="btn btn-primary">저장</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 모달 : 훈련일정 -->
+<div class="modal" tabindex="-1" role="dialog" id="modal-flights-schedule">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title">훈련일정</h1>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="box p-3">
+                    <div class="student-courses-profile">
+                        <dl>
+                            <dt>학생</dt>
+                            <dd>김학생 (20190102)</dd>
+                        </dl>
+                        <dl>
+                            <dt>생년월일</dt>
+                            <dd>1999.02.02</dd>
+                            <dt>성별</dt>
+                            <dd>여</dd>
+                        </dl>
+                        <dl>
+                            <dt>휴대폰번호</dt>
+                            <dd>010-0000-0000</dd>
+                            <dt>이메일</dt>
+                            <dd>aaabbbccc22@gmail.com</dd>
+                        </dl>
+                    </div>
+                </div>
+                <table class="table table-bordered mb-0 mt-4">
+                    <colgroup>
+                        <col style="width: 60px">
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th class="text-center">번호</th>
+                            <th class="text-center">교육날짜</th>
+                            <th class="text-center">교육시간</th>
+                            <th class="text-center">담당</th>
+                            <th class="text-center">구분</th>
+                            <th class="text-center">교육구분</th>
+                            <th class="text-center">교육내용</th>
+                            <th class="text-center">출결</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% for(var i = 10; i > 0 ; i--){ %>
+                        <tr>
+                            <td class="text-center"><%= i %></td>
+                            <td class="text-center">2021-10-26</td>
+                            <td class="text-center">13:00 ∼ 18:00</td>
+                            <td class="text-center">이교관</td>
+                            <td class="text-center">시뮬레이터교육</td>
+                            <td class="text-center">시뮬레이터교육</td>
+                            <td class="text-center ">
+                                <p>IR 4Basic, VOR InterceptIR 4Basic</p>
+                                <p>IR 4Basic, VOR InterceptIR 4Basic</p>
+                                <p>IR 4Basic, VOR InterceptIR 4Basic</p>
+                            </td>
+                            <td class="text-center">출결</td>
+                        </tr>
+                        <% } %>
+                    </tbody>
+                </table>
+                <%- include('../layout/_pagination.ejs')%>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close">확인</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 모달 : 비행정보 -->
+<div class="modal" tabindex="-1" role="dialog" id="modal-flights-info">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title">비행정보</h1>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <table class="table table-bordered table-fixed">
+                    <colgroup>
+                        <col style="width:170px">
+                        <col>
+                        <col style="width:170px">
+                        <col>
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th class="text-center">학번(아이디)<strong class="text-danger">*</strong></th>
+                            <td>201901000</td>
+
+                            <th class="text-center" rowspan="3">사진</th>
+                            <td rowspan="3">
+                                <div class="row row-10 align-items-end">
+                                    <div class="col-auto">
+                                        <div class="profile-thumb">
+                                            <img src="../../assets/images/@portrait.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="text-center">이름<strong class="text-danger">*</strong></th>
+                            <td>홍길동</td>
+                        </tr>
+                        <tr>
+                            <th class="text-center">생년월일<strong class="text-danger">*</strong></th>
+                            <td>19940707</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table class="table table-bordered mb-0 mt-4">
+                    <colgroup>
+                        <col style="width: 60px">
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th class="text-center">번호</th>
+                            <th class="text-center">비행일</th>
+                            <th class="text-center">담당교관</th>
+                            <th class="text-center">기번(운항번호)</th>
+                            <th class="text-center">Hobbs(before)</th>
+                            <th class="text-center">Hobbs(after)</th>
+                            <th class="text-center">비행시간</th>
+                            <th class="text-center">L/D Cyle</th>
+                            <th class="text-center">상태</th>
+                            <th class="text-center">탑승</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% for(var i = 10; i > 0 ; i--){ %>
+                        <tr>
+                            <td class="text-center"><%= i %></td>
+                            <td class="text-center">2021-10-26</td>
+                            <td class="text-center">이교관</td>
+                            <td class="text-center">HL1156
+                            </td>
+                            <td class="text-center">10:00
+                            </td>
+                            <td class="text-center">12:00</td>
+                            <td class="text-center">02:00
+                            </td>
+                            <td class="text-center">6403.3</td>
+                            <td class="text-center">예정</td>
+                            <td class="text-center">2h</td>
+                        </tr>
+                        <% } %>
+                    </tbody>
+                </table>
+                <%- include('../layout/_pagination.ejs')%>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close">확인</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 모달 : 학생정보 -->
+<div class="modal" tabindex="-1" role="dialog" id="modal-student">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title">학생정보</h1>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <table class="table table-bordered table-fixed">
+                    <colgroup>
+                        <col style="width:170px">
+                        <col>
+                        <col style="width:170px">
+                        <col>
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th class="text-center">학번(아이디)<strong class="text-danger">*</strong></th>
+                            <td>201901000</td>
+
+                            <th class="text-center" rowspan="3">사진</th>
+                            <td rowspan="3">
+                                <div class="row row-10 align-items-end">
+                                    <div class="col-auto">
+                                        <div class="profile-thumb">
+                                            <img src="../../assets/images/@portrait.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="text-center">이름<strong class="text-danger">*</strong></th>
+                            <td>홍길동</td>
+                        </tr>
+                        <tr>
+                            <th class="text-center">생년월일<strong class="text-danger">*</strong></th>
+                            <td>19940707</td>
+                        </tr>
+                        <tr>
+                            <th class="text-center">이메일<strong class="text-danger">*</strong></th>
+                            <td>gildong2@naver.com</td>
+                            <th class="text-center">자택 연락처</th>
+                            <td>033-9081-1111</td>
+                        </tr>
+                        <tr>
+                            <th class="text-center">휴대전화 번호<strong class="text-danger">*</strong></th>
+                            <td>010-2121-2121</td>
+                            <th class="text-center">보호자 휴대전화<strong class="text-danger">*</strong></th>
+                            <td>010-2121-2121</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close">목록</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 모달 : 참석자 -->
+<div class="modal" tabindex="-1" role="dialog" id="modal-participants">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title">참석자</h1>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <table class="table table-bordered table-fixed">
+                    <thead>
+                        <tr>
+                            <th class="text-center">학번</th>
+                            <th class="text-center">이름</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-center">
+                                <a href="../student/student_detail.html" class="text-underline">981016</a>
+                            </td>
+                            <td class="text-center">김학생</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">
+                                <a href="../student/student_detail.html" class="text-underline">981016</a>
+                            </td>
+                            <td class="text-center">김학생</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">
+                                <a href="../student/student_detail.html" class="text-underline">981016</a>
+                            </td>
+                            <td class="text-center">김학생</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="Close">닫기</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 모달 : 자가용 조종사 과정 성적 등록-->
+<div class="modal" tabindex="-1" role="dialog" id="modal-ppl-grade">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title">자가용 조종사 과정 성적 등록</h1>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <table class="table table-fixed table-bordered">
+                    <colgroup>
+                        <col style="width:25%">
+                        <col style="width:25%">
+                        <col style="width:25%">
+                        <col style="width:25%">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th class="text-center">항공법</th>
+                            <th class="text-center">공중항법</th>
+                            <th class="text-center">항공기상Ⅰ</th>
+                            <th class="text-center">비행이론</th>
+                        </tr>
+                        <tr>
+                            <td class="text-center">
+                                <input type="text" class="form-control">
+                            </td>
+                            <td class="text-center">
+                                <input type="text" class="form-control">
+                            </td>
+                            <td class="text-center">
+                                <input type="text" class="form-control">
+                            </td>
+                            <td class="text-center">
+                                <input type="text" class="form-control">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="text-center">모의비행Ⅰ</th>
+                            <th class="text-center">항공교통업무</th>
+                            <th class="text-center">항공무선통신</th>
+                            <td rowspan="2"></td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">
+                                <input type="text" class="form-control">
+                            </td>
+                            <td class="text-center">
+                                <input type="text" class="form-control">
+                            </td>
+                            <td class="text-center">
+                                <input type="text" class="form-control">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="d-flex justify-content-center p-b-20 border-bottom">
+                    <button type="button" class="btn btn-primary width-90px">점수 적용</button>
+                    <button type="button" class="btn btn-secondary m-l-10 width-90px">초기화</button>
+                </div>
+
+                <table class="table table-bordered table-fixed m-t-30">
+                    <colgroup>
+                        <col>
+                        <col>
+                        <col style="width:80px">
+                        <col style="width:80px">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th class="text-center">항공 과목</th>
+                            <th class="text-center">학과 교과목</th>
+                            <th class="text-center">교육 시간</th>
+                            <th class="text-center">평가 점수</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-center">항공법규</td>
+                            <td class="text-center">항공법</td>
+                            <td class="text-center">45</td>
+                            <td class="text-center text-danger font-weight-bold">100</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">공중항법</td>
+                            <td class="text-center">공중항법</td>
+                            <td class="text-center">45</td>
+                            <td class="text-center text-danger font-weight-bold">100</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">항공기상</td>
+                            <td class="text-center">항공기상Ⅰ</td>
+                            <td class="text-center">45</td>
+                            <td class="text-center text-danger font-weight-bold">100</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">비행이론</td>
+                            <td class="text-center">
+                                <p>비행이론(30시간)</p>
+                                <p>모의비행Ⅰ(60시간)</p>
+                            </td>
+                            <td class="text-center">90</td>
+                            <td class="text-center text-danger font-weight-bold">95</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">항공교통·통신·정보업무
+                            </td>
+                            <td class="text-center">
+                                <p>항공교통업무(45시간)</p>
+                                <p>항공무선통신(30시간)</p>
+                            </td>
+                            <td class="text-center">45</td>
+                            <td class="text-center text-danger font-weight-bold">100</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <button type="button" class="btn btn-primary width-90px">저장</button>
+                <button type="button" class="btn btn-secondary width-90px" data-dismiss="modal" aria-label="Close">취소</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 모달 : 자가용 조종사 과정 점수 보기-->
+<div class="modal" tabindex="-1" role="dialog" id="modal-ppl-score">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title">자가용 조종사 과정 성적</h1>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <table class="table table-bordered table-fixed">
+                    <colgroup>
+                        <col>
+                        <col>
+                        <col style="width:80px">
+                        <col style="width:80px">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th class="text-center">항공 과목</th>
+                            <th class="text-center">학과 교과목</th>
+                            <th class="text-center">교육 시간</th>
+                            <th class="text-center">평가 점수</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-center">항공법규</td>
+                            <td class="text-center">항공법</td>
+                            <td class="text-center">45</td>
+                            <td class="text-center text-danger font-weight-bold">100</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">공중항법</td>
+                            <td class="text-center">공중항법</td>
+                            <td class="text-center">45</td>
+                            <td class="text-center text-danger font-weight-bold">100</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">항공기상</td>
+                            <td class="text-center">항공기상Ⅰ</td>
+                            <td class="text-center">45</td>
+                            <td class="text-center text-danger font-weight-bold">100</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">비행이론</td>
+                            <td class="text-center">
+                                <p>비행이론(30시간)</p>
+                                <p>모의비행Ⅰ(60시간)</p>
+                            </td>
+                            <td class="text-center">90</td>
+                            <td class="text-center text-danger font-weight-bold">95</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">항공교통·통신·정보업무
+                            </td>
+                            <td class="text-center">
+                                <p>항공교통업무(45시간)</p>
+                                <p>항공무선통신(30시간)</p>
+                            </td>
+                            <td class="text-center">45</td>
+                            <td class="text-center text-danger font-weight-bold">100</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <button type="button" class="btn btn-secondary width-90px" data-dismiss="modal" aria-label="Close">닫기</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 모달 : 계기비행증명 과정 성적 등록-->
+<div class="modal" tabindex="-1" role="dialog" id="modal-ir-grade">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title">계기비행증명 과정 성적 등록</h1>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="box p-3 text-center m-b-20">
+                    점수를 입력하고 점수적용하면 평가점수가 자동으로 계산됩니다.
+                </div>
+                <table class="table table-fixed table-bordered">
+                    <colgroup>
+                        <col>
+                        <col>
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th class="text-center">계기비행</th>
+                            <td class="text-center">
+                                <input type="text" class="form-control">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="d-flex justify-content-center p-b-20 border-bottom">
+                    <button type="button" class="btn btn-primary width-90px">점수 적용</button>
+                    <button type="button" class="btn btn-secondary m-l-10 width-90px">초기화</button>
+                </div>
+
+                <table class="table table-bordered table-fixed m-t-30">
+                    <colgroup>
+                        <col>
+                        <col>
+                        <col style="width:80px">
+                        <col style="width:80px">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th class="text-center">항공 과목</th>
+                            <th class="text-center">학과 교과목</th>
+                            <th class="text-center">교육 시간</th>
+                            <th class="text-center">평가 점수</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-center">계기비행</td>
+                            <td class="text-center">
+                                <p>계기비행이론(45시간)</p>
+                                <p>모의비행Ⅱ(60시간)</p>
+                                <p>항공기시스템Ⅰ(45시간)</p>
+                                <p>항공기시스템Ⅱ(45시간)</p>
+                                <p>항공기엔진Ⅰ(45시간)</p>
+                                <p>항공기엔진Ⅱ(45시간)</p>
+                            </td>
+                            <td class="text-center">285</td>
+                            <td class="text-center text-danger font-weight-bold">100</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <button type="button" class="btn btn-primary width-90px">저장</button>
+                <button type="button" class="btn btn-secondary width-90px" data-dismiss="modal" aria-label="Close">취소</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 모달 : 계기비행증명 과정 점수 보기-->
+<div class="modal" tabindex="-1" role="dialog" id="modal-ir-score">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title">계기비행증명 과정 성적</h1>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <table class="table table-bordered table-fixed m-t-30">
+                    <colgroup>
+                        <col>
+                        <col>
+                        <col style="width:80px">
+                        <col style="width:80px">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th class="text-center">항공 과목</th>
+                            <th class="text-center">학과 교과목</th>
+                            <th class="text-center">교육 시간</th>
+                            <th class="text-center">평가 점수</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-center">계기비행</td>
+                            <td class="text-center">
+                                <p>계기비행이론(45시간)</p>
+                                <p>모의비행Ⅱ(60시간)</p>
+                                <p>항공기시스템Ⅰ(45시간)</p>
+                                <p>항공기시스템Ⅱ(45시간)</p>
+                                <p>항공기엔진Ⅰ(45시간)</p>
+                                <p>항공기엔진Ⅱ(45시간)</p>
+                            </td>
+                            <td class="text-center">285</td>
+                            <td class="text-center text-danger font-weight-bold">100</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <button type="button" class="btn btn-secondary width-90px" data-dismiss="modal" aria-label="Close">닫기</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 모달 : 사업용 조종사 과정 성적 등록-->
+<div class="modal" tabindex="-1" role="dialog" id="modal-cpl-grade">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title">사업용 조종사 과정 성적 등록</h1>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <table class="table table-fixed table-bordered">
+                    <colgroup>
+                        <col style="width:16.66%">
+                        <col style="width:16.66%">
+                        <col style="width:16.66%">
+                        <col style="width:16.66%">
+                        <col style="width:16.66%">
+                        <col style="width:16.66%">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th class="text-center">항공법</th>
+                            <th class="text-center">항공학</th>
+                            <th class="text-center">공중항법</th>
+                            <th class="text-center">인적요소분석론</th>
+                            <th class="text-center">최신항법시스템</th>
+                            <th class="text-center">항공생리학</th>
+                        </tr>
+                        <tr>
+                            <td class="text-center">
+                                <input type="text" class="form-control">
+                            </td>
+                            <td class="text-center">
+                                <input type="text" class="form-control">
+                            </td>
+                            <td class="text-center">
+                                <input type="text" class="form-control">
+                            </td>
+                            <td class="text-center">
+                                <input type="text" class="form-control">
+                            </td>
+                            <td class="text-center">
+                                <input type="text" class="form-control">
+                            </td>
+                            <td class="text-center">
+                                <input type="text" class="form-control">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="text-center">항공의학</th>
+                            <th class="text-center">CRM</th>
+                            <th class="text-center">모의비행Ⅱ</th>
+                            <th class="text-center">항공기상Ⅰ</th>
+                            <th class="text-center">항공기상Ⅱ</th>
+                            <th class="text-center">비행이론</th>
+                        </tr>
+                        <tr>
+                            <td class="text-center">
+                                <input type="text" class="form-control">
+                            </td>
+                            <td class="text-center">
+                                <input type="text" class="form-control">
+                            </td>
+                            <td class="text-center">
+                                <input type="text" class="form-control">
+                            </td>
+                            <td class="text-center">
+                                <input type="text" class="form-control">
+                            </td>
+                            <td class="text-center">
+                                <input type="text" class="form-control">
+                            </td>
+                            <td class="text-center">
+                                <input type="text" class="form-control">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="text-center">항공역학</th>
+                            <th class="text-center">항공기시스템Ⅰ</th>
+                            <th class="text-center">항공기시스템Ⅱ</th>
+                            <th class="text-center">항공기엔진Ⅰ</th>
+                            <th class="text-center">항공기엔진Ⅱ</th>
+                            <th class="text-center">고성능항공기</th>
+                        </tr>
+                        <tr>
+                            <td class="text-center">
+                                <input type="text" class="form-control">
+                            </td>
+                            <td class="text-center">
+                                <input type="text" class="form-control">
+                            </td>
+                            <td class="text-center">
+                                <input type="text" class="form-control">
+                            </td>
+                            <td class="text-center">
+                                <input type="text" class="form-control">
+                            </td>
+                            <td class="text-center">
+                                <input type="text" class="form-control">
+                            </td>
+                            <td class="text-center">
+                                <input type="text" class="form-control">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="text-center">항공교통업무</th>
+                            <th class="text-center">항공무선통신</th>
+                            <th class="text-center">EPTA</th>
+                            <th class="text-center">항공영어</th>
+                            <th class="text-center">비행안전론</th>
+                            <th class="text-center">항공사고조사론</th>
+                        </tr>
+                        <tr>
+                            <td class="text-center">
+                                <input type="text" class="form-control">
+                            </td>
+                            <td class="text-center">
+                                <input type="text" class="form-control">
+                            </td>
+                            <td class="text-center">
+                                <input type="text" class="form-control">
+                            </td>
+                            <td class="text-center">
+                                <input type="text" class="form-control">
+                            </td>
+                            <td class="text-center">
+                                <input type="text" class="form-control">
+                            </td>
+                            <td class="text-center">
+                                <input type="text" class="form-control">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="d-flex justify-content-center p-b-20 border-bottom">
+                    <button type="button" class="btn btn-primary width-90px">점수 적용</button>
+                    <button type="button" class="btn btn-secondary m-l-10 width-90px">초기화</button>
+                </div>
+
+                <table class="table table-bordered table-fixed m-t-30">
+                    <colgroup>
+                        <col>
+                        <col>
+                        <col style="width:120px">
+                        <col style="width:120px">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th class="text-center">항공 과목</th>
+                            <th class="text-center">학과 교과목</th>
+                            <th class="text-center">교육 시간</th>
+                            <th class="text-center">평가 점수</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-center">항공법규</td>
+                            <td class="text-center">
+                                <p>항공법(45시간)</p>
+                                <p>항공학(45시간)</p>
+                            </td>
+                            <td class="text-center">45</td>
+                            <td class="text-center text-danger font-weight-bold">100</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">공중항법</td>
+                            <td class="text-center">
+                                <p>공중항법(45시간)</p>
+                                <p>인적요소분석론(45시간)</p>
+                                <p>최신항법시스템(30시간)</p>
+                                <p>항공생리학(45시간)</p>
+                                <p>항공의학(45시간)</p>
+                                <p>CRM(45시간)</p>
+                                <p>모의비행Ⅱ(60시간)</p>
+                            </td>
+                            <td class="text-center">45</td>
+                            <td class="text-center text-danger font-weight-bold">100</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">항공기상</td>
+                            <td class="text-center">
+                                <p>항공기상Ⅰ(45시간)</p>
+                                <p>항공기상Ⅱ(45시간)</p>
+                            </td>
+                            <td class="text-center">45</td>
+                            <td class="text-center text-danger font-weight-bold">100</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">비행이론</td>
+                            <td class="text-center">
+                                <p>비행이론(30시간)</p>
+                                <p>항공역학(30시간)</p>
+                                <p>항공기시스템Ⅰ(45시간)</p>
+                                <p>항공기시스템Ⅱ(45시간)</p>
+                                <p>항공기엔진Ⅰ(45시간)</p>
+                                <p>항공기엔진Ⅱ(45시간)</p>
+                                <p>고성능항공기(45시간)</p>
+                            </td>
+                            <td class="text-center">90</td>
+                            <td class="text-center text-danger font-weight-bold">95</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">항공교통·통신·정보업무
+                            </td>
+                            <td class="text-center">
+                                <p>항공교통업무(45시간)</p>
+                                <p>항공무선통신(30시간)</p>
+                                <p>EPTA(45시간)</p>
+                                <p>항공영어(45시간)</p>
+                                <p>비행안전론(45시간)</p>
+                                <p>항공사고조사론(45시간)</p>
+                            </td>
+                            <td class="text-center">45</td>
+                            <td class="text-center text-danger font-weight-bold">100</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <button type="button" class="btn btn-primary width-90px">저장</button>
+                <button type="button" class="btn btn-secondary width-90px" data-dismiss="modal" aria-label="Close">취소</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 모달 : 사업용 조종사 과정 점수 보기-->
+<div class="modal" tabindex="-1" role="dialog" id="modal-cpl-score">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title">사업용 조종사 과정 성적</h1>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <table class="table table-bordered table-fixed m-t-30">
+                    <colgroup>
+                        <col>
+                        <col>
+                        <col style="width:120px">
+                        <col style="width:120px">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th class="text-center">항공 과목</th>
+                            <th class="text-center">학과 교과목</th>
+                            <th class="text-center">교육 시간</th>
+                            <th class="text-center">평가 점수</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-center">항공법규</td>
+                            <td class="text-center">
+                                <p>항공법(45시간)</p>
+                                <p>항공학(45시간)</p>
+                            </td>
+                            <td class="text-center">45</td>
+                            <td class="text-center text-danger font-weight-bold">100</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">공중항법</td>
+                            <td class="text-center">
+                                <p>공중항법(45시간)</p>
+                                <p>인적요소분석론(45시간)</p>
+                                <p>최신항법시스템(30시간)</p>
+                                <p>항공생리학(45시간)</p>
+                                <p>항공의학(45시간)</p>
+                                <p>CRM(45시간)</p>
+                                <p>모의비행Ⅱ(60시간)</p>
+                            </td>
+                            <td class="text-center">45</td>
+                            <td class="text-center text-danger font-weight-bold">100</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">항공기상</td>
+                            <td class="text-center">
+                                <p>항공기상Ⅰ(45시간)</p>
+                                <p>항공기상Ⅱ(45시간)</p>
+                            </td>
+                            <td class="text-center">45</td>
+                            <td class="text-center text-danger font-weight-bold">100</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">비행이론</td>
+                            <td class="text-center">
+                                <p>비행이론(30시간)</p>
+                                <p>항공역학(30시간)</p>
+                                <p>항공기시스템Ⅰ(45시간)</p>
+                                <p>항공기시스템Ⅱ(45시간)</p>
+                                <p>항공기엔진Ⅰ(45시간)</p>
+                                <p>항공기엔진Ⅱ(45시간)</p>
+                                <p>고성능항공기(45시간)</p>
+                            </td>
+                            <td class="text-center">90</td>
+                            <td class="text-center text-danger font-weight-bold">95</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">항공교통·통신·정보업무
+                            </td>
+                            <td class="text-center">
+                                <p>항공교통업무(45시간)</p>
+                                <p>항공무선통신(30시간)</p>
+                                <p>EPTA(45시간)</p>
+                                <p>항공영어(45시간)</p>
+                                <p>비행안전론(45시간)</p>
+                                <p>항공사고조사론(45시간)</p>
+                            </td>
+                            <td class="text-center">45</td>
+                            <td class="text-center text-danger font-weight-bold">100</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <button type="button" class="btn btn-secondary width-90px" data-dismiss="modal" aria-label="Close">닫기</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 모달 : 과정단가 관리-->
+<div class="modal" tabindex="-1" role="dialog" id="modal-unit-price">
+    <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 740px">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title">과정단가 관리 </h1>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+                <div class="form-group row row-30 align-items-center justify-content-center">
+                    <div class="col-auto">
+                        <strong>연도 선택</strong>
+                    </div>
+                    <div class="col-auto">
+                        <select name="" id="" class="custom-select width-200px">
+                            <option value="">2022년</option>
+                            <option value=""></option>
+                        </select>
+                    </div>
+                </div>
+
+                <table class="table table-bordered mb-0 ">
+                    <colgroup>
+                        <col style="width:100px">
+                        <col>
+                        <col style="width:100px">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th class="text-center">구분</th>
+                            <th class="text-center">훈련과목</th>
+                            <th class="text-center">단가</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- 비행훈련 -->
+                        <tr>
+                            <td class="text-center" rowspan="3">비행훈련</td>
+                            <td class="text-center">
+                                (Checklist,4Basic,PPL Maneuver)
+                            </td>
+                            <td>
+                                <input type="text" class="form-control width-120px">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">
+                                (Checklist,4Basic,PPL Maneuver)
+                            </td>
+                            <td>
+                                <input type="text" class="form-control width-120px">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">
+                                (Checklist,4Basic,PPL Maneuver)
+                            </td>
+                            <td>
+                                <input type="text" class="form-control width-120px">
+                            </td>
+                        </tr>
+
+                        <!-- 시뮬레이터교육 -->
+                        <tr>
+                            <td class="text-center" rowspan="2">시뮬레이터교육</td>
+                            <td class="text-center">
+                                전문교육과정자가 (Checklist,4Basic,PPL Maneuver)
+                            </td>
+                            <td>
+                                <input type="text" class="form-control width-120px">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">
+                                시뮬레이터교육 (IR 4Basic, VOR Intercept)
+                            </td>
+                            <td>
+                                <input type="text" class="form-control width-120px">
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="Close">취소</button>
+                <button type="button" class="btn btn-primary">저장</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- 모달 : 납입관리-->
+<div class="modal" tabindex="-1" role="dialog" id="modal-payment-management">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title">납입관리</h1>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+                <div class="form-group row row-30 align-items-center justify-content-center">
+                    <div class="col-auto">
+                        <strong>연도 선택</strong>
+                    </div>
+                    <div class="col-auto">
+                        <select name="" id="" class="custom-select width-200px">
+                            <option value="">2022년</option>
+                            <option value=""></option>
+                        </select>
+                    </div>
+                </div>
+
+                <table class="table table-bordered mb-0 ">
+                    <colgroup>
+                        <col style="width:80px">
+                        <col>
+                        <col>
+                        <col>
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th class="text-center">구분</th>
+                            <th class="text-center">납입일</th>
+                            <th class="text-center">납입내용</th>
+                            <th class="text-center">납입금액(원)</th>
+                            <th class="text-center"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-center">1차</td>
+                            <td class="text-center">
+                                <input type="text" readonly="" class="form-control form-datepicker" placeholder="0000-00-00">
+                            </td>
+                            <td class="text-center">
+                                <input type="text" class="form-control">
+                            </td>
+                            <td class="text-center">
+                                <input type="text" class="form-control">
+                            </td>
+                            <td class="text-center">
+                                <div class="d-flex">
+                                    <button class="btn increase-btn btn-outline-borderColor">+</button>
+                                    <button class="btn increase-btn btn-outline-borderColor m-l-5">-</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">2차</td>
+                            <td class="text-center">
+                                <input type="text" readonly="" class="form-control form-datepicker" placeholder="0000-00-00">
+                            </td>
+                            <td class="text-center">
+                                <input type="text" class="form-control">
+                            </td>
+                            <td class="text-center">
+                                <input type="text" class="form-control">
+                            </td>
+                            <td class="text-center">
+                                <div class="d-flex">
+                                    <button class="btn increase-btn btn-outline-borderColor">+</button>
+                                    <button class="btn increase-btn btn-outline-borderColor m-l-5">-</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="Close">취소</button>
+                <button type="button" class="btn btn-primary">저장</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 모달 : 납입내역 -->
+<div class="modal" tabindex="-1" role="dialog" id="modal-payment-management-view">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title">납입내역</h1>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+                <div class="form-group row row-30 align-items-center justify-content-center">
+                    <div class="col-auto">
+                        <strong>연도 선택</strong>
+                    </div>
+                    <div class="col-auto">
+                        <select name="" id="" class="custom-select width-200px">
+                            <option value="">2022년</option>
+                            <option value=""></option>
+                        </select>
+                    </div>
+                </div>
+
+                <table class="table table-bordered mb-0 ">
+                    <colgroup>
+                        <col style="width:80px">
+                        <col>
+                        <col>
+                        <cl>
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th class="text-center">구분</th>
+                            <th class="text-center">납입일</th>
+                            <th class="text-center">납입내용</th>
+                            <th class="text-center">납입금액(원)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-center">1차</td>
+                            <td class="text-center">
+                                2021.10-21
+                            </td>
+                            <td class="text-center">
+                                항공실습비용
+                            </td>
+                            <td class="text-center">
+                                3,000,000
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">2차</td>
+                            <td class="text-center">
+                                2021.10-21
+                            </td>
+                            <td class="text-center">
+                                항공실습비용
+                            </td>
+                            <td class="text-center">
+                                3,000,000
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="Close">취소</button>
+                <button type="button" class="btn btn-primary">저장</button>
+            </div>
+        </div>
+    </div>
+</div>

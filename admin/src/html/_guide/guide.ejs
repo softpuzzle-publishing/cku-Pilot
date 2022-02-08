@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>(Guide)항공운항학과 관리자 시스템</title>
+    <%- include('../layout/_head.ejs')%>
+</head>
+
+<body>
+
+    <style>
+        body {margin: 20px;}
+
+        h1 {text-align: center;margin-bottom: 10px;}
+
+        #guide {overflow: hidden;}
+
+        section {float: left;padding: 15px 20px;width: 50%;}
+
+        section>div+div {margin-top: 5px;}
+
+        h2 {margin-bottom: 15px;font-size: 24px;font-weight: 700;color: #4887fd;}
+
+        h2::before {content: '#';}
+
+        @media (max-width: 991.98px) {
+            section {width: 100%;padding: 15px 0;}
+        }
+    </style>
+    <div id="guide">
+        <h1>항공운항학과 관리자 시스템 Guide</h1>
+        <section>
+            <h2>버튼</h2>
+            <div>
+                <button type="button" class="btn btn-primary btn-block">버튼(block)</button>
+            </div>
+            <div>
+                <button type="button" class="btn btn-primary none-round">버튼</button>
+                <button type="button" class="btn btn-secondary">버튼</button>
+                <button type="button" class="btn btn-success none-round">버튼</button>
+                <button type="button" class="btn btn-info">버튼</button>
+                <button type="button" class="btn btn-warning">버튼</button>
+                <button type="button" class="btn btn-danger">버튼</button>
+                <button type="button" class="btn btn-dark">버튼</button>
+                <button type="button" class="btn btn-light">버튼</button>
+            </div>
+            <div>
+                <button type="button" class="btn btn-primary min-width-90px">버튼</button>
+                <button type="button" class="btn btn-secondary min-width-90px">버튼</button>
+            </div>
+            <div>
+                <button type="button" class="btn btn-outline-primary">버튼</button>
+                <button type="button" class="btn btn-outline-secondary">버튼</button>
+                <button type="button" class="btn btn-outline-success">버튼</button>
+                <button type="button" class="btn btn-outline-info">버튼</button>
+                <button type="button" class="btn btn-outline-warning">버튼</button>
+                <button type="button" class="btn btn-outline-danger">버튼</button>
+                <button type="button" class="btn btn-outline-dark">버튼</button>
+            </div>
+            <div>
+                <button type="button" class="btn btn-sm btn-primary">버튼</button>
+                <button type="button" class="btn btn-sm btn-success">버튼</button>
+                <button type="button" class="btn btn-sm btn-info">버튼</button>
+                <button type="button" class="btn btn-sm btn-danger">버튼</button>
+            </div>
+            <div>
+                <button type="button" class="btn btn-lg btn-primary">버튼</button>
+                <button type="button" class="btn btn-lg btn-success">버튼</button>
+                <button type="button" class="btn btn-lg btn-info">버튼</button>
+                <button type="button" class="btn btn-lg btn-danger">버튼</button>
+            </div>
+            <div>
+                <button type="button" class="btn btn-dark"><i class="fas fa-angle-up"></i></button>
+                <button type="button" class="btn btn-dark"><i class="fas fa-angle-down"></i></button>
+                <button type="button" class="btn btn-primary btn-round">라운드</button>
+            </div>
+        </section>
+        <section>
+            <h2>버튼 그룹</h2>
+            <div>
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-outline-secondary">오늘</button>
+                    <button type="button" class="btn btn-outline-secondary">어제</button>
+                    <button type="button" class="btn btn-outline-secondary">3일</button>
+                    <button type="button" class="btn btn-outline-secondary">7일</button>
+                    <button type="button" class="btn btn-outline-secondary">15일</button>
+                    <button type="button" class="btn btn-outline-secondary">1개월</button>
+                    <button type="button" class="btn btn-outline-secondary">3개월</button>
+                    <button type="button" class="btn btn-outline-secondary">6개월</button>
+                    <button type="button" class="btn btn-outline-secondary">전체</button>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2>버튼 정렬</h2>
+            <div class="d-flex align-items-center justify-content-center">
+                <button type="button" class="btn btn-dark min-w-100px">조회</button>
+            </div>
+            <div class="d-flex align-items-center justify-content-end">
+                <a href="#none" class="btn btn-primary min-w-100px">등록</a>
+                <a href="#none" class="btn btn-secondary min-w-100px ml-2">취소</a>
+            </div>
+            <div class="d-flex align-items-center justify-content-between">
+                <a href="#none" class="btn btn-primary">삭제</a>
+                <a href="#none" class="btn btn-primary ml-2"><i class="fas fa-file-excel mr-1"></i> 엑셀 다운로드</a>
+            </div>
+        </section>
+        <section>
+            <h2>Tooltip</h2>
+            <div>
+                <a href="javascript:;" role="button" class="font-size-16px text-secondary" data-toggle="tooltip" data-placement="right" data-html="true" title="팝업창을 노출 기간을 설정합니다. <br>설정한 기간이라도, 진행여부 설정값이 대기 또는 종료일 경우에는 노출되지 않습니다."><i class="fas fa-info-circle"></i></a>
+            </div>
+        </section>
+        <section>
+            <h2>Form</h2>
+            <div>
+                <div class="row row-40">
+                    <div class="col-12 col-md">
+                        <div class="form-group">
+                            <label for="form1">이메일</label>
+                            <input type="text" id="form1" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="form1">제목</label>
+                    <div class="row row-10 align-items-end">
+                        <div class="col"><input type="text" class="form-control" id="form1" maxlength="15" data-byte-target="#byte-check-title"></div>
+                        <div class="col-auto">(<span id="byte-check-title">0</span>/15)</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="customFile">첨부파일</label>
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="customFile">
+                        <label class="custom-file-label" for="customFile" lang="ko">Choose file</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="form3">내용</label>
+                    <textarea name="" id="form3" cols="" rows="2" class="form-control" maxlength="500" data-byte-target="#byte-check-cont"></textarea>
+                    <div class="text-right mt-2">(<span id="byte-check-cont">0</span>/500)</div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2>Form 요소</h2>
+            <div>
+                <input type="text" class="form-control" value="input medium">
+                <input type="text" class="form-control form-control-sm" value="input small">
+                <select name="" id="" class="custom-select width-200px">
+                    <option value="">select 200px</option>
+                    <option value="">20</option>
+                </select>
+                <select name="" id="" class="custom-select width-150px">
+                    <option value="">select 150px</option>
+                    <option value="">20</option>
+                </select>
+            </div>
+            <div>
+                <input type="text" readonly="" class="form-control form-datepicker" placeholder="0000-00-00">
+                <input type="text" readonly="" class="form-control form-datetimepicker" placeholder="0000-00-00 00:00">
+                <div>
+                    <div class="datepicker-area scheduler-date" id="month-datepicker-area"></div>
+                </div>
+            </div>
+            <div>
+                <div class="form-group">
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                        <label class="custom-control-label" for="customSwitch1">Toggle this custom switch element</label>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <!-- checkbox -->
+                        <div class="custom-control custom-checkbox">
+                            <input class="custom-control-input" type="checkbox" id="customCheckbox1" value="option1">
+                            <label for="customCheckbox1" class="custom-control-label">Custom Checkbox</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input class="custom-control-input" type="checkbox" id="customCheckbox3" disabled="">
+                            <label for="customCheckbox3" class="custom-control-label">Custom Checkbox disabled</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <!-- radio -->
+                        <div class="custom-control custom-radio">
+                            <input class="custom-control-input" type="radio" id="customRadio1" name="customRadio">
+                            <label for="customRadio1" class="custom-control-label">Custom Radio</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input class="custom-control-input" type="radio" id="customRadio3" disabled="">
+                            <label for="customRadio3" class="custom-control-label">Custom Radio disabled</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="custom-control custom-checkbox without-label">
+                    <input type="checkbox" class="custom-control-input" id="checkbox1">
+                    <label class="custom-control-label" for="checkbox1"><label>
+                </div>
+                <div class="custom-control custom-radio without-label">
+                    <input class="custom-control-input" type="radio" id="customRadio1" name="customRadio">
+                    <label for="customRadio1" class="custom-control-label"></label>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2>Text</h2>
+            <div>
+                <span class="text-primary">텍스트 컬러</span>
+                <span class="text-secondary">텍스트 컬러</span>
+                <span class="text-info">텍스트 컬러</span>
+                <span class="text-success">텍스트 컬러</span>
+                <span class="text-danger">텍스트 컬러</span>
+                <a href="#none" class="text-underline">텍스트 underline</a>
+            </div>
+            <div>
+                <div class="box p-2">
+                    박스
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2>Align</h2>
+            <div>
+                <div class="text-left">텍스트 정렬</div>
+                <div class="text-center">텍스트 정렬</div>
+                <div class="text-right">텍스트 정렬</div>
+            </div>
+        </section>
+        <section>
+            <h2>Tab</h2>
+            <div>
+                <nav class="my-tab">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="pill" href="#t1" role="tab">Sales</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="pill" href="#t2" role="tab">Service</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+        <section>
+            <h2>Card</h2>
+            <div>
+                <div class="card card-primary card-outline">
+                    <div class="card-body">
+                        카드 내용
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2>Table</h2>
+            <div>
+                <table class="table table-bordered table-mobile-normal">
+                    <caption>Driver Evaluation Table</caption>
+                    <thead>
+                        <tr>
+                            <th class="text-center"></th>
+                            <th class="text-center">Performance (Act/Pos)</th>
+                            <th class="text-center">Driver Evaluation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-center mobile-subject">First point of contact</td>
+                            <td class="text-center" data-label="Performance (Act/Pos)">2/3</td>
+                            <td class="text-center" data-label="Driver Evaluation">5</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center mobile-subject">First point of contact</td>
+                            <td class="text-center" data-label="Performance (Act/Pos)">2/3</td>
+                            <td class="text-center" data-label="Driver Evaluation">5</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section>
+            <h2>pagination</h2>
+            <div class="row align-items-center justify-content-center m-t-60">
+                <div class="col-auto">
+                    <div class="pagination">
+                        <a href="" class="first" aria-hidden="true">
+                            <i class="fas fa-angle-double-left"></i>
+                        </a>
+                        <a href="" class="prev mr-3" aria-hidden="true">
+                            <i class="fas fa-angle-left"></i>
+                        </a>
+                        <a href="" class="active">1</a>
+                        <a href="">2</a>
+                        <a href="">3</a>
+                        <a href="">4</a>
+                        <a href="">5</a>
+                        <a href="" class="next ml-3" aria-hidden="true">
+                            <i class="fas fa-angle-right"></i>
+                        </a>
+                        <a href="" class="end" aria-hidden="true">
+                            <i class="fas fa-angle-double-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section style="width: 100%;">
+            <div>
+                <div class="inquery-area">
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <th>등록일</th>
+                                <td colspan="3">
+                                    <div class="row">
+                                        <div class="col-auto">
+                                            <input type="text" readonly="" class="form-control form-datepicker" placeholder="0000-00-00">
+                                            <input type="text" readonly="" class="form-control form-datetimepicker" placeholder="0000-00-00 00:00">
+                                        </div>
+                                        <div class="col">
+                                            <div class="btn-group" role="group">
+                                                <button type="button" class="btn btn-outline-secondary active">오늘</button>
+                                                <button type="button" class="btn btn-outline-secondary">어제</button>
+                                                <button type="button" class="btn btn-outline-secondary">3일</button>
+                                                <button type="button" class="btn btn-outline-secondary">7일</button>
+                                                <button type="button" class="btn btn-outline-secondary">15일</button>
+                                                <button type="button" class="btn btn-outline-secondary">1개월</button>
+                                                <button type="button" class="btn btn-outline-secondary">3개월</button>
+                                                <button type="button" class="btn btn-outline-secondary">6개월</button>
+                                                <button type="button" class="btn btn-outline-secondary">전체</button>
+                                            </div>
+                                            <script>
+                                                $('.btn-group .btn').on('click',function(e){
+                                                    $(this).siblings().removeClass('active');
+                                                    $(this).addClass('active');
+                                                });
+                                            </script>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>노출여부</th>
+                                <td>
+                                    <div class="custom-control custom-checkbox custom-control-inline">
+                                        <input class="custom-control-input" type="checkbox" id="chk1-1">
+                                        <label for="chk1-1" class="custom-control-label">전체</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox custom-control-inline">
+                                        <input class="custom-control-input" type="checkbox" id="chk1-2">
+                                        <label for="chk1-2" class="custom-control-label">노출</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox custom-control-inline">
+                                        <input class="custom-control-input" type="checkbox" id="chk1-3">
+                                        <label for="chk1-3" class="custom-control-label">비노출</label>
+                                    </div>
+                                </td>
+                                <th>학년</th>
+                                <td>
+                                    <div class="custom-control custom-checkbox custom-control-inline">
+                                        <input class="custom-control-input" type="checkbox" id="chk2-0>">
+                                        <label for="chk2-0" class="custom-control-label">전체</label>
+                                    </div>
+                                    <% for(var i = 1; i < 5; i++){ %>
+                                    <div class="custom-control custom-checkbox custom-control-inline">
+                                        <input class="custom-control-input" type="checkbox" id="chk2-<%= i %>">
+                                        <label for="chk2-1" class="custom-control-label"><%= i %>학년</label>
+                                    </div>
+                                    <% } %>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>검색</th>
+                                <td colspan="3">
+                                    <input type="text" class="form-control" placeholder="제목">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="btns">
+                        <button type="button" class="btn btn-dark">검색</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+</body>
+
+</html>

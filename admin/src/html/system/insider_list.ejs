@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <%- include('../layout/_head.ejs')%>
+</head>
+
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+
+        <%- include('../layout/_header.ejs')%>
+
+        <%- include('../layout/_sidebar.ejs')%>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col">
+                            <h1 class="title">내부사용자관리</h1>
+                        </div>
+                        <div class="col">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item"><a href="#">시스템관리</a></li>
+                                <li class="breadcrumb-item">내부사용자관리</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.content-header -->
+
+            <!-- Main content -->
+            <div class="content" data-menu="insider">
+                <div class="container-fluid">
+                    <div class="inquery-area">
+                        <table class="table table-bordered">
+                            <tbody>
+                                <colgroup>
+                                    <col style="width: 150px">
+                                    <col>
+                                </colgroup>
+                                <tr>
+                                    <th>상태</th>
+                                    <td>
+                                        <div class="custom-control custom-checkbox custom-control-inline">
+                                            <input class="custom-control-input" type="checkbox" id="chk1-1">
+                                            <label for="chk1-1" class="custom-control-label">전체</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox custom-control-inline">
+                                            <input class="custom-control-input" type="checkbox" id="chk1-2">
+                                            <label for="chk1-2" class="custom-control-label">정상</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox custom-control-inline">
+                                            <input class="custom-control-input" type="checkbox" id="chk1-3">
+                                            <label for="chk1-3" class="custom-control-label">정지</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>검색</th>
+                                    <td>
+                                        <input type="text" class="form-control" placeholder="이메일, 이름, 학번">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="btns">
+                            <button type="button" class="btn btn-dark min-width-90px">검색</button>
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-between align-items-end mb-3">
+                        <div class="col-auto">
+                            <b>Total : 000</b>,
+                            Page 1/3
+                        </div>
+                        <div class="col-auto">
+                            <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#modal-delete">선택삭제</button>
+                            <a href="insider_form.html" class="btn btn-primary mr-1">사용자등록</a>
+                            <select class="custom-select w-auto">
+                                <option>10</option>
+                                <option>30</option>
+                                <option>50</option>
+                                <option>100</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="main_search_result_list"> <!-- softpuzzle에서 쓰는 datatable 고정 클래스명 -->
+                        <table class="table table-bordered" id="datatable1">
+                            <colgroup>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th class="text-center" style="width: 50px">
+                                        <div class="custom-control custom-checkbox without-label">
+                                            <input type="checkbox" class="custom-control-input" id="checkAll">
+                                            <label class="custom-control-label" for="checkAll"><label>
+                                        </div>
+                                    </th>
+                                    <th class="text-center">번호</th>
+                                    <th class="text-center">이메일(ID)</th>
+                                    <th class="text-center">이름</th>
+                                    <th class="text-center">직급</th>
+                                    <th class="text-center">등록일</th>
+                                    <th class="text-center">최종 로그인</th>
+                                    <th class="text-center">상태</th>
+                                    <th class="text-center">권한</th>
+                                    <th class="text-center">관리</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-center">
+                                        <div class="custom-control custom-checkbox without-label">
+                                            <input type="checkbox" class="custom-control-input" id="check<%= i %>">
+                                            <label class="custom-control-label" for="check<%= i %>"><label>
+                                        </div>
+                                    </td>
+                                    <td class="text-center">10</td>
+                                    <td class="text-center"><a href="insider_form.html">aaabbbccc@gmail.com</a></td>
+                                    <td class="text-center">김교수</td>
+                                    <td class="text-center">교수</td>
+                                    <td class="text-center"><div class="text-nowrap">0000.00.00 00:00</div></td>
+                                    <td class="text-center"><div class="text-nowrap">0000.00.00 00:00</div></td>
+                                    <td class="text-center">정상</td>
+                                    <td class="text-center">마스터(전체)</td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-sm btn-secondary">수정</button>
+                                    </td>
+                                </tr>
+                                <% for(var i = 9; i > 0 ; i--){ %>
+                                <tr>
+                                    <td class="text-center">
+                                        <div class="custom-control custom-checkbox without-label">
+                                            <input type="checkbox" class="custom-control-input" id="check<%= i %>">
+                                            <label class="custom-control-label" for="check<%= i %>"><label>
+                                        </div>
+                                    </td>
+                                    <td class="text-center"><%= i %></td>
+                                    <td class="text-center"><a href="insider_form.html">aaabbbccc@gmail.com</a></td>
+                                    <td class="text-center">박조교</td>
+                                    <td class="text-center">조교</td>
+                                    <td class="text-center"><div class="text-nowrap">0000.00.00 00:00</div></td>
+                                    <td class="text-center"><div class="text-nowrap">0000.00.00 00:00</div></td>
+                                    <td class="text-center">정상</td>
+                                    <td class="text-center">3가지 메뉴</td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-sm btn-secondary">수정</button>
+                                    </td>
+                                </tr>
+                                <% } %>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <%- include('../layout/_pagination.ejs')%>
+                </div>
+            </div>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+
+    </div>
+    <!-- ./wrapper -->
+
+    <%- include('../layout/_footer.ejs')%>
+
+    <%- include('../layout/_modal.ejs')%>
+
+    <script>
+        $(document).ready(function () {
+        });
+    </script>
+</body>
+
+</html>

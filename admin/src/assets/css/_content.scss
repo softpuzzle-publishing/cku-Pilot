@@ -1,0 +1,11 @@
+.student-courses-profile{
+    dl{
+        display: flex;flex-wrap: wrap;
+        & + dl{margin-top: .5rem;}
+        dt{
+            font-weight: 500;
+            &::after{content: ' : ';margin-right: 5px;}
+        }
+        dd{margin-right: 20px;color: #666;margin-bottom: 0;}
+    }
+}

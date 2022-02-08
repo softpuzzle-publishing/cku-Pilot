@@ -1,0 +1,135 @@
+<!-- 모달 : 로그인 -->
+<div class="modal fade user-modal" id="modal-login" tabindex="-1" aria-modal="true" data-overlap="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title"></h2>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <i class="icon-close"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="icon-wrap"><i class="icon-login"></i></div>
+                <p class="title">로그인</p>
+                <p class="desc">가톨릭관동대학교 비행교육원 항공관리시스템입니다.</p>
+                <form action="">
+                    <fieldset>
+                        <legend>LOGIN</legend>
+                        <input type="text" class="form-control form-control-lg" placeholder="학번(아이디)를 입력해 주세요.">
+                        <input type="password" class="form-control form-control-lg mt-2" placeholder="비밀번호를 입력해 주세요.">
+                        <button type="submit" class="btn btn-primary btn-block btn-lg mt-3">로그인</button>
+                    </fieldset>
+                    <a href="#modal-password" data-toggle="modal" class="m-t-20 text-right d-block font-14px text-gray5 font-weight-medium" data-dismiss="modal">비밀번호찾기</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 모달 : 비밀번호 찾기 -->
+<div class="modal fade user-modal" id="modal-password" tabindex="-1" aria-modal="true" data-overlap="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title"></h2>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <i class="icon-close"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="icon-wrap"><i class="icon-password"></i></div>
+                <p class="title">비밀번호 찾기</p>
+                <p class="desc">가톨릭관동대학교 비행교육원 항공관리시스템입니다.</p>
+                <form action="">
+                    <fieldset>
+                        <legend>LOGIN</legend>
+                        <input type="text" class="form-control form-control-lg" placeholder="학번(아이디)를 입력해 주세요.">
+                        <input type="password" class="form-control form-control-lg mt-2" placeholder="휴대폰 번호를 입력해 주세요.">
+                        <button type="button" class="btn btn-primary btn-block btn-lg mt-3">비밀번호 찾기</button>
+                    </fieldset>
+                    <a href="#modal-login" data-toggle="modal" class="m-t-20 text-right d-block font-14px text-gray5 font-weight-medium" data-dismiss="modal">로그인</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 모달 : 비밀번호 찾기 > 비밀번호 안내 -->
+<div class="modal fade" id="modal-password-guide" tabindex="-1" aria-hidden="true" data-overlap="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">알림</h2>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <i class="icon-close"></i>
+                </button>
+            </div>
+            <div class="modal-body text-center">
+                <div class="p-2">
+                    비밀번호는 다음과 같습니다
+                    <p class="password m-t-30 w-100 font-weight-bold font-18px">
+                        abcde***
+                    </p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="d-flex justify-content-center w-100">
+                    <button type="button" class="btn btn-lg btn-primary width-120px">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 모달 : 삭제 확인 여부 -->
+<div class="modal fade" id="modal-cancel" tabindex="-1" aria-hidden="true" data-overlap="true">
+    <div class="modal-dialog modal-dialog-centered modal-sm">
+        <div class="modal-content">
+            <div class="modal-header border-0">
+                <!-- <h2 class="modal-title">알림</h2> -->
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <i class="icon-close"></i>
+                </button>
+            </div>
+            <div class="modal-body text-center">
+                <div class="p-2">
+                    삭제하시겠습니까?
+                </div>
+
+            </div>
+            <div class="modal-footer border-0">
+                <div class="row row-10 w-100">
+                    <div class="col">
+                        <button type="button" class="btn btn-lg btn-primary btn-block">확인</button>
+                    </div>
+                    <div class="col">
+                        <button type="button" class="btn btn-lg btn-secondary btn-block" data-dismiss="modal">취소</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 모달 : 삭제 완료 알림 -->
+<div class="modal fade" id="modal-cancel-complete" tabindex="-1" aria-hidden="true" data-overlap="true">
+    <div class="modal-dialog modal-dialog-centered modal-sm">
+        <div class="modal-content">
+            <div class="modal-header border-0">
+                <!-- <h2 class="modal-title">알림</h2> -->
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <i class="icon-close"></i>
+                </button>
+            </div>
+            <div class="modal-body text-center">
+                <div class="p-2">
+                    삭제되었습니다.
+                </div>
+
+            </div>
+            <div class="modal-footer border-0 justify-content-center">
+                <button type="button" class="btn btn-lg btn-primary btn-block width-120px">확인</button>
+            </div>
+        </div>
+    </div>
+</div>

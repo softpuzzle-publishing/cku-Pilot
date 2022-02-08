@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <%- include('../layout/_head.ejs')%>
+</head>
+
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+
+        <%- include('../layout/_header.ejs')%>
+
+        <%- include('../layout/_sidebar.ejs')%>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col">
+                            <h1 class="title">일자별 운항계획</h1>
+                        </div>
+                        <div class="col">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item"><a href="#">운항계획/실시사항 </a></li>
+                                <li class="breadcrumb-item">일자별 운항계획</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.content-header -->
+
+            <!-- Main content -->
+            <div class="content" data-menu="daily">
+                <div class="container-fluid">
+                    <div class="inquery-area">
+                        <table class="table table-bordered">
+                            <colgroup>
+                                <col style="width: 150px">
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>기간</th>
+                                    <td>
+                                        <div class="row row-10  align-items-center">
+                                            <div class="col-auto">
+                                                <input type="text" readonly="" class="form-control form-datepicker" placeholder="0000-00-00">
+                                            </div>
+                                            <div class="col-auto">~</div>
+                                            <div class="col-auto">
+                                                <input type="text" readonly="" class="form-control form-datepicker" placeholder="0000-00-00">
+                                            </div>
+                                            <div class="col">
+                                                <div class="btn-group" role="group">
+                                                    <button type="button" class="btn btn-outline-secondary active">오늘</button>
+                                                    <button type="button" class="btn btn-outline-secondary">어제</button>
+                                                    <button type="button" class="btn btn-outline-secondary">3일</button>
+                                                    <button type="button" class="btn btn-outline-secondary">7일</button>
+                                                    <button type="button" class="btn btn-outline-secondary">15일</button>
+                                                    <button type="button" class="btn btn-outline-secondary">1개월</button>
+                                                    <button type="button" class="btn btn-outline-secondary">3개월</button>
+                                                    <button type="button" class="btn btn-outline-secondary">6개월</button>
+                                                    <button type="button" class="btn btn-outline-secondary">전체</button>
+                                                </div>
+                                                <script>
+                                                    $('.btn-group .btn').on('click', function(e) {
+                                                        $(this).siblings().removeClass('active');
+                                                        $(this).addClass('active');
+                                                    });
+                                                </script>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="btns">
+                            <button type="button" class="btn btn-dark min-width-90px">검색</button>
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-between align-items-end mb-3">
+                        <div class="col-auto">
+                            <b>Total : 000</b>,
+                            Page 1/3
+                        </div>
+                        <div class="col-auto">
+                            <button type="button" class="btn btn-outline-primary mr-1">엑셀다운로드</button>
+                            <select class="custom-select w-auto">
+                                <option>10</option>
+                                <option>30</option>
+                                <option>50</option>
+                                <option>100</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="main_search_result_list"> <!-- softpuzzle에서 쓰는 datatable 고정 클래스명 -->
+                        <table class="table table-bordered table-fixed" id="datatable1">
+                            <colgroup>
+                                <col style="width:80px">
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col style="width:350px">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th class="text-center">번호</th>
+                                    <th class="text-center">날짜</th>
+                                    <th class="text-center">시간</th>
+                                    <th class="text-center">비행</th>
+                                    <th class="text-center">담당교관</th>
+                                    <th class="text-center">학생</th>
+                                    <th class="text-center">금일비행시간</th>
+                                    <th class="text-center">결항사유</th>
+                                    <th class="text-center">특이사항</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-center" rowspan="2">1</td>
+                                    <td class="text-center" rowspan="2">2021-10-07</td>
+                                    <td class="text-center">18:30 ∼ 22:00</td>
+                                    <td class="text-center">HL1156</td>
+                                    <td class="text-center">김교관</td>
+                                    <td class="text-center">김학생</td>
+                                    <td class="text-center">2</td>
+                                    <td class="text-center">결항(정비)</td>
+                                    <td class="text-left">기체 불량 엔진 기체 불량 엔진 기체 불량 엔진 기체 불량 엔진 기체 불량 엔진 기체 불량 엔진 기체 불량 엔진 기체 불량 엔진 기체 불량 엔진 기체 불량 엔진 기체 불량 엔진 기체 불량 엔진 기체 불량 엔진 기체 불량 엔진 기체 불량 엔진 기체 불량 엔진 기체 불량 엔진 기체 불량 엔진 기체 불량 엔진 기체 불량 엔진 기체 불량 엔진 </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">18:30 ∼ 22:00</td>
+                                    <td class="text-center">HL1156</td>
+                                    <td class="text-center">김교관</td>
+                                    <td class="text-center">김학생</td>
+                                    <td class="text-center">2</td>
+                                    <td class="text-center">결항(정비)</td>
+                                    <td class="text-left">기체 불량 엔진 기체 불량 엔진 기체 불량 엔진 기체 불량 엔진 기체 불량 엔진 기체 불량 엔진 기체 불량 엔진 기체 불량 엔진 기체 불량 엔진 기체 불량 엔진 기체 불량 엔진 기체 불량 엔진 기체 불량 엔진 기체 불량 엔진 기체 불량 엔진 기체 불량 엔진 기체 불량 엔진 기체 불량 엔진 기체 불량 엔진 기체 불량 엔진 기체 불량 엔진 </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <%- include('../layout/_pagination.ejs')%>
+                </div>
+            </div>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+
+    </div>
+    <!-- ./wrapper -->
+
+    <%- include('../layout/_footer.ejs')%>
+
+    <%- include('../layout/_modal.ejs')%>
+
+    <script>
+        $(document).ready(function () {
+            // $("#modal-training-designation-common").modal("show");
+        });
+    </script>
+</body>
+
+</html>

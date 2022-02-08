@@ -1,0 +1,75 @@
+
+@page {
+    size: 210mm 297mm;
+    /*A4*/
+    margin: 0mm
+}
+
+@media print {
+
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        page-break-after: avoid;
+        page-break-before: avoid
+    }
+
+    .page-divide {
+        page-break-after: always;
+    }
+
+    .no-print-page {
+        display: none;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    page-break-after: avoid;
+}
+
+table,
+figure,
+.sector {
+    page-break-inside: avoid;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+}
+
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+    text-align: center;
+}
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+.table td,
+.table th {
+    padding: .75rem;
+    vertical-align: middle;
+    border-top: 1px solid #eceeef;
+    border-left: 1px solid #eceeef;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}

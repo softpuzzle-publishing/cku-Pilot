@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <%- include('../layout/_head.ejs')%>
+</head>
+
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+
+        <%- include('../layout/_header.ejs')%>
+
+        <%- include('../layout/_sidebar.ejs')%>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col">
+                            <h1 class="title">학생관리</h1>
+                        </div>
+                        <div class="col">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item"><a href="#">학생관리</a></li>
+                                <li class="breadcrumb-item">재학생관리</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.content-header -->
+
+            <!-- Main content -->
+            <div class="content" data-menu="student">
+                <div class="container-fluid">
+                    <div class="row justify-content-between align-items-end">
+                        <div class="col-auto">
+                            <h3 class="table-title">학생기본정보</h3>
+                        </div>
+                        <div class="col-auto pb-2">
+                            <button type="button" class="btn btn-primary" data-target="#modal-reset-password" data-toggle="modal">비밀번호 초기화</button>
+                        </div>
+                    </div>
+                    <table class="table table-bordered table-fixed">
+                        <colgroup>
+                            <col style="width:150px">
+                            <col style="width: 34%;">
+                            <col style="width:150px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>이름 <strong class="text-danger">*</strong></th>
+                                <td>
+                                    <input type="text" class="form-control">
+                                </td>
+                                <th>학생상태</th>
+                                <td>
+                                    <div class="row row-10 align-items-center">
+                                        <div class="col-auto">
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input class="custom-control-input" type="radio" id="normal" name="userStatus" checked>
+                                                <label for="normal" class="custom-control-label">정상</label>
+                                            </div>
+                                            <div class="custom-control custom-radio custom-control-inline mr-0">
+                                                <input class="custom-control-input" type="radio" id="stop" name="userStatus" data-pair="#stop-reason">
+                                                <label for="stop" class="custom-control-label">정지</label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="input-next-radio" id="stop-reason">
+                                                <label for="reason">- 정지사유</label>
+                                                <input type="text" class="form-control" id="reason">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <script>
+                                        $('[data-pair]').each(function () {
+                                            if ($('[data-pair]').is(':checked')) {
+                                                $($(this).attr('data-pair')).addClass('show');
+                                            }
+                                        })
+                                        $('[name=userStatus]').on('change', function (e) {
+                                            if ($('[data-pair]').prop('checked')) {
+                                                $($('[data-pair]').attr('data-pair')).addClass('show');
+                                            } else {
+                                                $($('[data-pair]').attr('data-pair')).removeClass('show');
+                                            }
+                                        });
+                                    </script>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>학번 <strong class="text-danger">*</strong></th>
+                                <td>
+                                    <input type="text" class="form-control">
+                                </td>
+                                <th>입학일</th>
+                                <td>
+                                    2021.03.08 / 차단사유 : 관리자 차단(2021.03.01 10:20)
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>휴대폰번호 <strong class="text-danger">*</strong></th>
+                                <td>
+                                    <input type="text" class="form-control">
+                                </td>
+                                <th>최근 접속일</th>
+                                <td>
+                                    2021.03.08 17:08
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>생년월일 <strong class="text-danger">*</strong></th>
+                                <td>
+                                    <input type="text" class="form-control">
+                                </td>
+                                <th>부모연락처</th>
+                                <td>
+                                    <div class="row row-10 align-items-center">
+                                        <div class="col-auto">부</div>
+                                        <div class="col">
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="col-auto pl-3">모</div>
+                                        <div class="col">
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>학년소속 <strong class="text-danger">*</strong></th>
+                                <td>
+                                    <select name="" id="" class="custom-select">
+                                        <option value="">4학년</option>
+                                    </select>
+                                </td>
+                                <th>반 <strong class="text-danger">*</strong></th>
+                                <td>
+                                    2반
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>학생연락처 <strong class="text-danger">*</strong></th>
+                                <td>
+                                    <input type="text" class="form-control">
+                                </td>
+                                <th>학생주소 <strong class="text-danger">*</strong></th>
+                                <td>
+                                    <div class="row row-10 align-items-center">
+                                        <div class="col-auto">
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="col-auto">
+                                            <button type="button" class="btn btn-dark">주소검색</button>
+                                        </div>
+                                        <div class="col">
+                                            <input type="text" class="form-control" placeholder="상세 주소">
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>최근 신체검사일</th>
+                                <td colspan="3">
+                                    <div class="row align-items-center">
+                                        <div class="col-auto">
+                                            2021년 3월 26일 (남은 검사일 105일)
+                                        </div>
+                                        <div class="col-auto">
+                                            <input type="text" readonly="" class="form-control form-datepicker  min-width-200px" placeholder="0000-00-00">
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h3 class="table-title">휴학관리</h3>
+                    <table class="table table-bordered table-fixed">
+                        <colgroup>
+                            <col style="width:150px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>휴학일</th>
+                                <td>
+                                    <div class="row row-10 align-items-center">
+                                        <div class="col-auto">
+                                            <input type="text" class="form-control form-datepicker min-width-200px" id="leave-date">
+                                        </div>
+                                        <div class="col-auto">
+                                            <button type="button" class="btn btn-dark min-width-70px" id="leave-date-confirm">적용</button>
+                                        </div>
+                                        <div class="col-auto">
+                                            <button type="button" class="btn btn-dark" disabled id="btn-leave-cancel">휴학취소</button>
+                                        </div>
+                                    </div>
+                                    <script>
+                                        //적용 버튼 클릭
+                                        $('#leave-date-confirm').on('click', function () {
+                                            if ($('#leave-date').val() !== '') {
+                                                $('#leave-date').addClass('text-danger font-weight-bold');
+                                                $('#btn-leave-cancel').prop('disabled', false);
+                                            }
+                                        });
+                                        //휴학취소 버튼 클릭
+                                        $('#btn-leave-cancel').on('click', function () {
+                                            $('#leave-date').removeClass('text-danger font-weight-bold');
+                                            $('#btn-leave-cancel').prop('disabled', true);
+                                        });
+                                    </script>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>휴학사유</th>
+                                <td>
+                                    <div class="row row-10 align-items-center">
+                                        <div class="col-auto">
+                                            <select name="" id="leave-reason" class="custom-select min-width-200px">
+                                                <option value="">휴학사유 선택</option>
+                                                <option value="">병역휴학</option>
+                                                <option value="">일반휴학</option>
+                                                <option value="">질병휴학</option>
+                                                <option value="">임신/출산/육아휴학</option>
+                                                <option value="">기타사유</option>
+                                            </select>
+                                        </div>
+                                        <div class="col">
+                                            <input type="text" class="form-control" placeholder="기타사유 입력" id="leave-reason-etc" style="display: none;">
+                                        </div>
+                                    </div>
+                                    <script>
+                                        $('#leave-reason').change(function () {
+                                            if ($('#leave-reason option:selected').text() == '기타사유') {
+                                                $('#leave-reason-etc').show().focus();
+                                            }
+                                        });
+                                    </script>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="row row-10 justify-content-center mt-3">
+                        <div class="col-auto">
+                            <button type="button" class="btn btn-secondary min-width-90px" onclick="history.back();">취소</button>
+                        </div>
+                        <div class="col-auto">
+                            <button type="button" class="btn btn-primary min-width-90px" data-toggle="modal" data-target="#modal-reset-studentInfo">저장</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+
+    </div>
+    <!-- ./wrapper -->
+
+    <%- include('../layout/_footer.ejs')%>
+
+    <%- include('../layout/_modal.ejs')%>
+
+    <script>
+        $(document).ready(function () {});
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <%- include('../layout/_head.ejs')%>
+</head>
+
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+
+        <%- include('../layout/_header.ejs')%>
+
+        <%- include('../layout/_sidebar.ejs')%>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col">
+                            <h1 class="title">학생관리</h1>
+                        </div>
+                        <div class="col">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item"><a href="#">학생관리</a></li>
+                                <li class="breadcrumb-item">재학생관리</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.content-header -->
+
+            <!-- Main content -->
+            <div class="content" data-menu="student">
+                <div class="container-fluid">
+                    <div class="row justify-content-between align-items-end">
+                        <div class="col-auto">
+                            <h3 class="table-title">학생기본정보</h3>
+                        </div>
+                        <div class="col-auto pb-2">
+
+                        </div>
+                    </div>
+                    <table class="table table-bordered table-fixed">
+                        <colgroup>
+                            <col style="width:150px">
+                            <col style="width: 34%;">
+                            <col style="width:150px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>이름 <strong class="text-danger">*</strong></th>
+                                <td>김학생</td>
+                                <th>학생상태</th>
+                                <td>정상</td>
+                            </tr>
+                            <tr>
+                                <th>학번 <strong class="text-danger">*</strong></th>
+                                <td>202103001</td>
+                                <th>입학일</th>
+                                <td>2021.03.08 / 차단사유 : 관리자 차단(2021.03.01 10:20)</td>
+                            </tr>
+                            <tr>
+                                <th>휴대폰번호 <strong class="text-danger">*</strong></th>
+                                <td>010-0000-0000</td>
+                                <th>최근 접속일</th>
+                                <td>2021.03.08 17:08</td>
+                            </tr>
+                            <tr>
+                                <th>생년월일 <strong class="text-danger">*</strong></th>
+                                <td>1998.02.02</td>
+                                <th>부모연락처</th>
+                                <td>
+                                    <span>부 : 010-0000-0000</span> <span class="ml-3">모: 010-0000-0000</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>학년소속 <strong class="text-danger">*</strong></th>
+                                <td>4학년</td>
+                                <th>반 <strong class="text-danger">*</strong></th>
+                                <td>2반</td>
+                            </tr>
+                            <tr>
+                                <th>학생연락처 <strong class="text-danger">*</strong></th>
+                                <td>010-0000-0000</td>
+                                <th>학생주소 <strong class="text-danger">*</strong></th>
+                                <td>강원도 강릉시 범일로 579번길 24</td>
+                            </tr>
+                            <tr>
+                                <th>최근 신체검사일</th>
+                                <td colspan="3">
+                                    <div class="row align-items-center">
+                                        <div class="col-auto">
+                                            2021년 3월 26일 (남은 검사일 105일)
+                                        </div>
+                                        <div class="col-auto">
+                                            
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h3 class="table-title">휴학관리</h3>
+                    <table class="table table-bordered table-fixed">
+                        <colgroup>
+                            <col style="width:150px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>휴학일</th>
+                                <td>2021.09.09</td>
+                            </tr>
+                            <tr>
+                                <th>휴학사유</th>
+                                <td>병역휴학</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="row row-10 justify-content-between mt-3">
+                        <div class="col-auto">
+                            <a href="javascript:history.back()" class="btn btn-primary min-width-90px">목록</a>
+                        </div>
+                        <div class="col-auto">
+                            <button type="button" class="btn btn-primary min-width-90px" onclick="window.location.href='student_form.html'">수정</button>
+                            <button type="button" class="btn btn-primary min-width-90px" data-toggle="modal" data-target="#modal-delete">삭제</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+
+    </div>
+    <!-- ./wrapper -->
+
+    <%- include('../layout/_footer.ejs')%>
+
+    <%- include('../layout/_modal.ejs')%>
+
+    <script>
+        $(document).ready(function () {
+        });
+    </script>
+</body>
+
+</html>

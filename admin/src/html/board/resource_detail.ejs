@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <%- include('../layout/_head.ejs')%>
+</head>
+
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+
+        <%- include('../layout/_header.ejs')%>
+
+        <%- include('../layout/_sidebar.ejs')%>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col">
+                            <h1 class="title">자료실</h1>
+                        </div>
+                        <div class="col">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item"><a href="#">게시판관리</a></li>
+                                <li class="breadcrumb-item">자료실</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.content-header -->
+
+            <!-- Main content -->
+            <div class="content" data-menu="resource">
+                <div class="container-fluid">
+                    <table class="table table-bordered table-fixed">
+                        <colgroup>
+                            <col style="width:150px">
+                            <col>
+                            <col style="width:150px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>등록일</th>
+                                <td>2021.09.27 10:00</td>
+                                <th>작성자</th>
+                                <td>관리자</td>
+                            </tr>
+                            <tr>
+                                <th>학년 선택</th>
+                                <td colspan="3">4학년</td>
+                            </tr>
+                            <tr>
+                                <th>제목</th>
+                                <td colspan="3">자료실 알려드려요</td>
+                            </tr>
+                            <tr>
+                                <th>내용</th>
+                                <td colspan="3">
+                                    <div style="min-height: 200px" class="py-2">
+                                        자료실 내용이에여
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>첨부파일</th>
+                                <td colspan="3">
+                                    <a href="javascript:void(0);">xxxxxxxxxxx.pdf</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="row row-10 justify-content-between mt-3">
+                        <div class="col-auto">
+                            <a href="javascript:history.back()" class="btn btn-primary min-width-90px">목록</a>
+                        </div>
+                        <div class="col-auto">
+                            <button href="" class="btn btn-primary min-width-90px">수정</button>
+                            <button type="button" class="btn btn-primary min-width-90px" data-toggle="modal" data-target="#modal-delete">삭제</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+
+    </div>
+    <!-- ./wrapper -->
+
+    <%- include('../layout/_footer.ejs')%>
+
+    <%- include('../layout/_modal.ejs')%>
+
+    <script>
+        $(document).ready(function () {});
+    </script>
+</body>
+
+</html>

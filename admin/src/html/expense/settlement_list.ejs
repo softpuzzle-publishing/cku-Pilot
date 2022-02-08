@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <%- include('../layout/_head.ejs')%>
+</head>
+
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+
+        <%- include('../layout/_header.ejs')%>
+
+        <%- include('../layout/_sidebar.ejs')%>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col">
+                            <h1 class="title">정산내역</h1>
+                        </div>
+                        <div class="col">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item"><a href="#">교육비관리</a></li>
+                                <li class="breadcrumb-item">정산내역</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.content-header -->
+
+            <!-- Main content -->
+            <div class="content" data-menu="settlement">
+                <div class="container-fluid">
+                    <div class="inquery-area">
+                        <table class="table table-bordered">
+                            <tbody>
+                                <colgroup>
+                                    <col style="width: 150px">
+                                    <col>
+                                </colgroup>
+                                <tr>
+                                    <th>훈련 등록 대상자</th>
+                                    <td>
+                                        <div class="row row-10 align-items-center">
+                                            <div class="col-auto">
+                                                <select name="" id="" class="custom-select width-200px">
+                                                    <option value="">연도 선택</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-auto">년</div>
+                                            <div class="col-auto">
+                                                <select name="" id="" class="custom-select width-100px">
+                                                    <option value="">학기 선택</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-auto">
+                                                학기
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="btns">
+                            <button type="button" class="btn btn-dark min-width-90px">검색</button>
+                        </div>
+                    </div>
+
+                    <div class="p-b-20 border-bottom m-t-40">
+                        <div class="main_search_result_list">
+                            <!-- softpuzzle에서 쓰는 datatable 고정 클래스명 -->
+                            <table class="table table-bordered table-fixed" id="datatable1">
+                                <colgroup>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th class="text-center">정산 실제비행시간(h)</th>
+                                        <td class="text-center">655시간</td>
+                                        <th class="text-center">정산 합계</th>
+                                        <td class="text-center">173,100,000원</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-between align-items-end mb-3 mt-5">
+                        <div class="col-auto">
+                            <b>Total : 000</b>,
+                            Page 1/3
+                        </div>
+                        <div class="col-auto">
+                            <button type="button" class="btn btn-outline-primary mr-1">엑셀다운로드</button>
+                            <select class="custom-select w-auto">
+                                <option>10</option>
+                                <option>30</option>
+                                <option>50</option>
+                                <option>100</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="main_search_result_list">
+                        <!-- softpuzzle에서 쓰는 datatable 고정 클래스명 -->
+                        <table class="table table-bordered" id="datatable1">
+                            <colgroup>
+                                <col style="width:80px">
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th class="text-center">연번</th>
+                                    <th class="text-center">연도</th>
+                                    <th class="text-center">학기</th>
+                                    <th class="text-center">과정 구분s</th>
+                                    <th class="text-center">실제비행시간(h)</th>
+                                    <th class="text-center">시간당 훈련비</th>
+                                    <th class="text-center">합계</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% for(var i = 10; i > 0 ; i--){ %>
+                                <tr>
+                                    <td class="text-center"><%= i %></td>
+                                    <td class="text-center">2021년</td>
+                                    <td class="text-center">1학기</td>
+                                    <td class="text-center">과정1</td>
+                                    <td class="text-center">190</td>
+                                    <td class="text-center">220,000</td>
+                                    <td class="text-center">41,800,000</td>
+                                </tr>
+                                <% } %>
+                                <tr class="bg-light-gray font-weight-bold">
+                                    <td class="text-center" colspan="4">합계</td>
+                                    <td class="text-center">695</td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center">173,100,000원</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <%- include('../layout/_pagination.ejs')%>
+                </div>
+            </div>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+
+    </div>
+    <!-- ./wrapper -->
+
+    <%- include('../layout/_footer.ejs')%>
+
+    <%- include('../layout/_modal.ejs')%>
+
+    <script>
+        $(document).ready(function () {
+            // $("#modal-unit-price").modal("show");
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="../assets/css/print.css" media="screen" />
+<link rel="stylesheet" href="../assets/css/print.css" media="print" />
+<style>
+</style>
+
+<body>
+    <div class="no-print">
+        <button onclick="inputMy();">인적 사항 추가하기</button>
+
+        <button onclick="inputCareer();">경력 추가하기</button>
+    </div>
+
+    <img src="/sample/images/kwandong-uni-mark.jpg">
+
+
+    <div class="sector">
+        <h1 style="display:flex; justify-content: center;">경 력 증 명 서 </h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <td>성 명</td>
+                    <td width="25%" id="name"></td>
+                    <td>생 년 월 일</td>
+                    <td width="25%" id="birth"></td>
+                </tr>
+            </thead>
+        </table>
+        <br><br>
+        <h3 class="text-center">경 력 사 항 </h3>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <td colspan="4">근 무 처</td>
+                    <td rowspan="2">직 위 </td>
+                    <td rowspan="2">담당과목</td>
+                    <td rowspan="2">주당 시간</td>
+                </tr>
+                <tr>
+                    <td>학 년</td>
+                    <td>학 기</td>
+                    <td>대 학</td>
+                    <td>학 과 (전공)</td>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+
+            </tbody>
+        </table>
+    </div>
+    <img class="footer" src="/sample/images/kwandong-uni-injang.jpg">
+    <div class="no-print-page footer">
+        <button onclick="getPrt();" class="table">프린트 하기</button>
+    </div>
+</body>
+
+</html>
+<script>
+    /**
+     *  경력 증명서 이미지를 프린트 할 수 있는 프린트 샘플이다 
+     */
+
+    /** 
+     * 인적 사항을 적을 수 있는 함수 
+     */
+    function inputMy() {
+        /** 숫자 정규식 */
+        var regexNum = /[0-9]{4}.[0-9]{2}.[0-9]{2}/g;
+
+        /** 이름 입력 알람 */
+        var name = prompt('이름을 입력해주세요');
+        /** 취소 누를 시 */
+        if (name == '' || name == null) {
+            /** 알람 */
+            alert('이름을 입력해주세요');
+            /** 리턴 */
+            return
+        }
+        /** 이름 입력 시 */
+        else {
+            /** 이름이 적힘 */
+            document.getElementById('name').innerText = name;
+        }
+
+        /** 생년월일 알람 */
+        var birth = prompt('YYYY.MM.DD 생년월일을 입력해주세요');
+        /** 생년월일 미입력 시 */
+        if (birth == '' || birth == null) {
+            /** 알람 */
+            alert('생년월일을 입력해주세요');
+            /** 리턴 */
+            return
+        }
+        /** 생년월일 형식 미입력 시*/
+        else if (regexNum.test(birth) == false) {
+            /** 알람 */
+            alert('생년월일 형식에 맞춰 입력 해주세요');
+            /** 리턴 */
+            return
+        }
+        /** 생년월일 입력 시 */
+        else {
+            /** 생년월일이 적힘 */
+            document.getElementById('birth').innerText = birth;
+        }
+    }
+
+    /** 
+     * 경력 추가 하기 버튼 누를 시 실행 되는 함수
+     */
+    function inputCareer() {
+        /** 숫자 정규식 */
+        var regexNum = /[0-9]/g;
+        /** 학기 정규식 */
+        var hakgiRegex = /[0-9]/g;
+        /** 주당 시간 정규식 */
+        var timeRegex = /[0-9]/g;
+
+        /** 연도 입력 알람 */
+        var haknyeon = prompt('연도를 입력해주세요');
+        /** 연도 미입력 시 */
+        if (haknyeon == '' || haknyeon == null) {
+            /** 알람 */
+            alert('연도를 입력해주세요');
+            /** 리턴 */
+            return
+        }
+        /** 숫자 미입력 시*/
+        else if (regexNum.test(haknyeon) == false) {
+            /** 알람 */
+            alert('숫자만 입력해주세요')
+            /** 리턴 */
+            return
+        }
+
+        /** 학기 입력 알람 */
+        var hakgi = prompt('학기를 입력해주세요');
+
+        /** 학기 미입력 시 */
+        if (hakgi == '' || hakgi == null) {
+            /** 알람 */
+            alert('학기를 입력해주세요');
+            /** 리턴 */
+            return
+        }
+        /** 숫자 미입력 시*/
+        else if (hakgiRegex.test(hakgi) == false) {
+            /** 알람 */
+            alert('숫자만 입력해주세요')
+            /** 리턴 */
+            return
+        }
+
+        /** 대학 입력 알람 */
+        var daehak = prompt('대학을 입력해주세요');
+        /** 대학 미입력 시 */
+        if (daehak == '' || daehak == null) {
+            /** 알람 */
+            alert('대학을 입력해주세요');
+            /** 리턴 */
+            return
+        }
+
+        /** 학과 입력 알람 */
+        var hakgwa = prompt('학과(전공)을 입력해주세요');
+        /** 학과 미입력 시 */
+        if (hakgwa == '' || hakgwa == null) {
+            /** 알람 */
+            alert('학과(전공)을 입력해주세요');
+            /** 리턴 */
+            return
+        }
+
+        /** 직위 입력 알람 */
+        var jickwe = prompt('직위를 입력해주세요');
+        /** 직위 미입력 시 */
+        if (jickwe == '' || jickwe == null) {
+            /** 알람 */
+            alert('직위를 입력해주세요');
+            /** 리턴 */
+            return
+        }
+
+        /** 과목 입력 알람 */
+        var gwamok = prompt('담당과목을 입력해주세요');
+        /** 담당과목 미입력 시 */
+        if (gwamok == '' || gwamok == null) {
+            /** 알람 */
+            alert('담당과목을 입력해주세요');
+            /** 리턴 */
+            return
+        }
+
+        /** 주당시간 입력 알람 */
+        var time = prompt('주당 시간을 입력해주세요');
+        /** 주당 시간 미입력 시 */
+        if (time == '' || time == null) {
+            /** 알람 */
+            alert('주당 시간을 입력해주세요');
+            /** 리턴 */
+            return
+        }
+        /** 숫자 미입력 시*/
+        else if (timeRegex.test(time) == false) {
+            /** 알람 */
+            alert('숫자만 입력해주세요');
+            /** 리턴 */
+            return
+        }
+
+        /** tbody 선언 */
+        let tbody = document.getElementById('tbody');
+        /** tr 생성 */
+        let tr = document.createElement('tr');
+        /** tr class 명 주기 */
+        tr.setAttribute('class', 'pTag');
+        /** tr 안에 td 넣기 */
+        tr.innerHTML = '<td class="haknyeon">' + haknyeon + '</td> <td class="hakgi">' + hakgi + '</td> <td class="daehak">' + daehak + '</td> <td class="hakgwa">' + hakgwa + '</td> <td class="jickwe">' + jickwe + '</td> <td class="gwamok">' + gwamok + '</td> <td class="time">' + time + '</td>'
+        /** tbody 안에 tr 넣기 */
+        tbody.appendChild(tr);
+    }
+
+    /*
+     * 프린트 미리보기 실행 
+     */
+    function getPrt() {
+        /** id name 값 빼오기 */
+        var name = document.getElementById('name').innerText;
+        /** id birth 값 빼오기 */
+        var birth = document.getElementById('birth').innerText;
+        /** 인정사항 미입력 시 */
+        if ((name == null || name == '') || (birth == null || birth == '')) {
+            /** 알람 */
+            alert('인적 사항을 추가 해주세요');
+            /** 리턴 */
+            return
+        }
+        /** 인적사항 입력 시 */
+        else {
+            /** 프린트 */
+            window.print();
+        }
+    }
+</script>

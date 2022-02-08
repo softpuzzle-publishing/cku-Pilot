@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <%- include('../layout/_head.ejs')%>
+</head>
+
+<body class="body-login"> <!-- 로그인 페이지에 body-login 클래스 필요 -->
+
+    <div id="login-wrap">
+        <div class="login">
+            <form action="">
+                <div class="login-head">
+                    <div class="login-logo">
+                        <img src="../assets/images/logo-login.svg" alt="가톨릭관동대학교">
+                    </div>
+                    <h1>항공운항학과</h1>
+                </div>
+                <div class="login-body">
+                    <div class="form-group">
+                        <input id="fId" name="text" type="email" class="form-control form-control-lg" placeholder="EMAIL">
+                    </div>
+                    <div class="form-group">
+                        <input id="fPassword" name="password" type="password" class="form-control form-control-lg" placeholder="PASSWORD">
+                        <a href="javascript:;" class="password-visiblity"><i class="fas fa-eye-slash"></i></a>
+                    </div>
+                    <div>
+                        <p class="form-text text-danger">ⓘ 이메일을 입력해주세요.</p>
+                        <!-- 이메일을 입력해주세요
+                        비밀번호를 입력해주세요
+
+                        내용이 일치 하지 않는 경우
+                        등록되지 않은 이메일 이거나 이메일 또는 비밀번호가 일치 하지 않습니다. -->
+                    </div>
+                    <button type="button" class="btn btn-primary btn-block btn-lg mt-4" id="btn-login" onclick="document.location.href='../dashboard/dashboard.html'" disabled>로그인</button>
+                    <div class="custom-control custom-checkbox mt-3">
+                        <input class="custom-control-input" type="checkbox" id="save">
+                        <label for="save" class="custom-control-label">이메일 저장</label>
+                    </div>
+                </div>
+                <div class="login-foot">
+                    <strong>NOTICE</strong>
+                    <p>
+                        이메일, 비밀번호로 로그인 하시면 사용 가능한 메뉴를 보실 수 있습니다. <br>
+                        이용에 관한 문의사항은 담당자에게 연락 주시기 바랍니다.
+                    </p>
+                    <dl>
+                        <dt>담당자 : </dt><dd>ㅇㅇㅇ</dd>
+                        <dt>문의처 : </dt><dd>1588-0000</dd>
+                    </dl>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $('#fId, #fPassword').keyup(function(){
+                if($('#fId').val() !== '' && $('#fPassword').val() !== ''){
+                    $('#btn-login').prop('disabled',false);
+                }
+            });
+            $('.password-visiblity').on('click',function(){
+                if(!$(this).hasClass('active')){
+                    $(this).addClass('active');
+                    $('#fPassword').attr('type','text');
+                }else{
+                    $(this).removeClass('active');
+                    $('#fPassword').attr('type','password');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

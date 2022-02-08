@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible"="IE=edge">
+    <title>(pagelist)항공운항학과 관리자 시스템 - 가톨릭관동대학교</title>
+    <link rel="icon" href="resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="resources/images/favicon-128.png" sizes="128x128">
+    <style type="text/css">
+        body {
+            padding: 20px;
+            position: relative;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-size: 12px;
+            color: #222;
+            line-height: 1.5em;
+            font-family: 'NanumGothic';
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0 auto;
+        }
+
+        table th,
+        table td {
+            border: 1px solid #c1ced1;
+            padding: 4px 10px;
+            word-break: keep-all
+        }
+
+        table th {
+            background: #0c6276;
+            color: #fff;
+            padding: 10px;
+            font-size: 14px;
+        }
+
+        table td a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        table td a:hover {
+            text-decoration: underline;
+        }
+
+        table tbody tr:hover {
+            background-color: #f2fbfd;
+        }
+
+        .noteTable {
+            display: table;
+            width: 100%;
+        }
+
+        .noteTable .date {
+            display: table-cell;
+            color: #333;
+            width: 40px;
+        }
+
+        .noteTable .note {
+            display: table-cell;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .bg {
+            background: #fff5f5;
+        }
+
+        ul.float {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+        }
+
+        ul.float li {
+            list-style: none;
+            border: 1px solid #ccc;
+            padding: 2px 5px;
+            display: inline-block;
+        }
+
+        .end {
+            background: #333;
+        }
+
+        .ing {
+            background: #333;
+        }
+
+        .list {
+            text-align: center;
+            padding: 0 0 20px;
+        }
+
+        .list a {
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .list a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>항공운항학과 관리자 시스템 pagelist</h1>
+    <table>
+        <colgroup>
+            <col style="width:6%">
+            <col style="width:10%">
+            <col style="width:16%">
+            <col style="width:10%">
+            <col>
+            <col style="width:10%">
+            <col style="width:15%">
+            <col style="width:6%">
+            <col style="width:6%">
+            <col>
+            <col>
+        </colgroup>
+        <thead>
+            <tr>
+                <th></th>
+                <th>Depth 1</th>
+                <th>Depth 2</th>
+                <th>Depth 3</th>
+                <th>Depth 4</th>
+                <th>File</th>
+                <th>pageLink</th>
+                <th>최초작업일</th>
+                <th>수정일</th>
+                <th></th>
+                <th>Note</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td>Guide</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>/_guide/</td>
+                <td><a target="_blank" href="_guide/guide.html">guide.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>로그인</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>/login/</td>
+                <td><a target="_blank" href="login/login.html">login.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>학생관리</td>
+                <td>재학생관리</td>
+                <td>list</td>
+                <td></td>
+                <td>/student/</td>
+                <td><a target="_blank" href="student/student_list.html">student_list.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>detail</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="student/student_detail.html">student_detail.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>form</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="student/student_form.html">student_form.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>훈련학생관리</td>
+                <td>list</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="student/practice_student_list.html">practice_student_list.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>비행훈련관리</td>
+                <td>비행종합정보</td>
+                <td>list</td>
+                <td></td>
+                <td>/flight/</td>
+                <td><a target="_blank" href="flight/flight_list.html">flight_list.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>detail</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="flight/flight_detail.html">flight_detail.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>비행스케쥴관리</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="flight/flight_schdule_list.html">flight_schdule_list.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>교관별 비행스케쥴</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="flight/flight_instructor_list.html">flight_instructor_list.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>학생 교육정보</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="flight/flight_student_list.html">flight_student_list.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>운항계획/실시사항</td>
+                <td>일자별 운항계획</td>
+                <td></td>
+                <td></td>
+                <td>/plan/</td>
+                <td><a target="_blank" href="plan/daily_list.html">daily_list.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>교관 월별 기준</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="plan/instructor_monthly_list.html">instructor_monthly_list.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>학생 월별 기준</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="plan/student_monthly_list.html">student_monthly_list.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>전문교육학과관리</td>
+                <td>전문교육학과시간관리</td>
+                <td></td>
+                <td></td>
+                <td>/faculty/</td>
+                <td><a target="_blank" href="faculty/faculty_list.html">faculty_list.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>업무관리</td>
+                <td>안전보고 현황</td>
+                <td>list</td>
+                <td></td>
+                <td>/task/</td>
+                <td><a target="_blank" href="task/safety_list.html">safety_list.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>detail</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="task/safety_detail.html">safety_detail.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>위탁기관관리</td>
+                <td>list</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="task/consignment_list.html">consignment_list.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>detail</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="task/consignment_detail.html">consignment_detail.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>교관관리</td>
+                <td>교관</td>
+                <td>list</td>
+                <td></td>
+                <td><a target="_blank" href="task/instructor_list.html">instructor_list.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>detail</td>
+                <td></td>
+                <td><a target="_blank" href="task/instructor_detail.html">instructor_detail.htmll</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>근무현황</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="task/insturctor_working.html">insturctor_working.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>교육비관리</td>
+                <td>교육내역</td>
+                <td></td>
+                <td></td>
+                <td>/expense/</td>
+                <td><a target="_blank" href="expense/traning_history_list.html">traning_history_list.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>정산내역</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="expense/settlement_list.html">settlement_list.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>납입관리</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="expense/payment_list.html">payment_list.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>게시판관리</td>
+                <td>공지사항</td>
+                <td>list</td>
+                <td></td>
+                <td>/board/</td>
+                <td><a target="_blank" href="board/notice_list.html">notice_list.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    -공통
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>detail</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="board/notice_detail.html">notice_detail.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    -공통
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>form</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="board/notice_form.html">notice_form.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    -공통
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>자료실</td>
+                <td>list</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="board/resource_list.html">resource_list.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    -공통
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>detail</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="board/resource_detail.html">resource_detail.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    -공통
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>form</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="board/resource_form.html">resource_form.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    -공통
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>1:1문의</td>
+                <td>list</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="board/qna_list.html">qna_list.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    -공통
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>detail</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="board/qna_detail.html">qna_detail.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    -공통
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>팝업관리</td>
+                <td>list</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="board/popup_list.html">popup_list.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    -공통
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>form</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="board/popup_form.html">popup_form.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    -공통
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>시스템관리</td>
+                <td>내부사용자관리</td>
+                <td>list</td>
+                <td></td>
+                <td>/system/</td>
+                <td><a target="_blank" href="system/insider_list.html">insider_list.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    -공통
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>form</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="system/insider_form.html">insider_form.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    -공통
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>비밀번호변경</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="system/password_change.html">password_change.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    -공통
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>학사정보 가져오기</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="system/academic_import.html">academic_import.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    -공통
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>팝업</td>
+                <td>고지서</td>
+                <td></td>
+                <td></td>
+                <td>/util/</td>
+                <td><a target="_blank" href="util/bill.html">bill.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    -공통
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>경력증명서</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="util/career_certificate.html">career_certificate.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    -공통
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>이수증</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="util/certificate.html">certificate.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    -공통
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>에러페이지</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="util/error.html">error.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    -공통
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

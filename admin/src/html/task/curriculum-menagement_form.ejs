@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <%- include('../layout/_head.ejs')%>
+</head>
+
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+
+        <%- include('../layout/_header.ejs')%>
+
+        <%- include('../layout/_sidebar.ejs')%>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col">
+                            <h1 class="title">일반인교육과정 관리</h1>
+                        </div>
+                        <div class="col">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item"><a href="#">업무관리</a></li>
+                                <li class="breadcrumb-item">일반인교육과정 관리</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.content-header -->
+
+            <!-- Main content -->
+            <div class="content" data-menu="curriculum-management">
+                <div class="container-fluid">
+                    <table class="table table-bordered table-fixed">
+                        <colgroup>
+                            <col style="width:150px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>
+                                    구분<strong class="text-danger">*</strong>
+                                </th>
+                                <td>
+                                    <div class="row row-10 align-items-center">
+                                        <div class="col-auto">
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input class="custom-control-input" type="radio" id="normal" name="userStatus" checked="">
+                                                <label for="normal" class="custom-control-label">교육</label>
+                                            </div>
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input class="custom-control-input" type="radio" id="normal" name="userStatus" checked="">
+                                                <label for="normal" class="custom-control-label">실습</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    과정명<strong class="text-danger">*</strong>
+                                </th>
+                                <td>
+                                    <input type="text" class="form-control" placeholder="과정명을 입력해주세요">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    과정기간<strong class="text-danger">*</strong>
+                                </th>
+                                <td>
+                                    <div class="row row-10 align-items-center">
+                                        <div class="col-auto">
+                                            <input type="text" class="form-control form-datepicker width-200px">
+                                        </div>
+                                        <div class="col-auto">~</div>
+                                        <div class="col-auto">
+                                            <input type="text" class="form-control form-datepicker width-200px">
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    교육비<strong class="text-danger">*</strong>
+                                </th>
+                                <td>
+                                    <div class="row row-10 align-items-center">
+                                        <div class="col-auto">
+                                            <input type="text" class="form-control width-200px" placeholder="교육비를 입력해주세요.">
+                                        </div>
+                                        <div class="col-auto">원</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    성명<strong class="text-danger">*</strong>
+                                </th>
+                                <td>
+                                    <div class="row row-10 align-items-center">
+                                        <div class="col-auto">
+                                            <input type="text" class="form-control width-200px" placeholder="성명을 입력해주세요.">
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    생년월일
+                                </th>
+                                <td>
+                                    <div class="row row-10 align-items-center">
+                                        <div class="col-auto">
+                                            <input type="text" class="form-control width-200px" placeholder="생년월일을 입력해주세요.">
+                                        </div>
+                                        <div class="col-auto">
+                                            (ex: 1987.10.07)
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    성별<strong class="text-danger">*</strong>
+                                </th>
+                                <td>
+                                    <div class="row row-10 align-items-center">
+                                        <div class="col-auto">
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input class="custom-control-input" type="radio" id="normal" name="userStatus" checked="">
+                                                <label for="normal" class="custom-control-label">남</label>
+                                            </div>
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input class="custom-control-input" type="radio" id="normal" name="userStatus" checked="">
+                                                <label for="normal" class="custom-control-label">여</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    연락처<strong class="text-danger">*</strong>
+                                </th>
+                                <td>
+                                    <div class="row row-10 align-items-center">
+                                        <div class="col-auto">
+                                            <input type="text" class="form-control width-200px" placeholder="연락처를 입력해주세요.">
+                                        </div>
+                                        <div class="col-auto">
+                                            ex) 020-1234-5678
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    이메일
+                                </th>
+                                <td>
+                                    <div class="row row-10 align-items-center">
+                                        <div class="col-auto">
+                                            <input type="text" class="form-control width-200px" placeholder="이메일을 입력해주세요.">
+                                        </div>
+                                        <div class="col-auto">
+                                            ex) abc@naver.com
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    메모
+                                </th>
+                                <td>
+                                    <textarea name="" id="" cols="30" rows="10" class="form-control"></textarea>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="d-flex justify-content-center mt-3">
+                        <button class="btn btn-primary min-width-90px">저장</button>
+                        <button class="btn btn-secondary min-width-90px m-l-10">취소</button>
+                    </div>
+                </div>
+            </div>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+
+    </div>
+    <!-- ./wrapper -->
+
+    <%- include('../layout/_footer.ejs')%>
+
+    <%- include('../layout/_modal.ejs')%>
+
+    <script>
+        $(document).ready(function () {});
+    </script>
+</body>
+
+</html>

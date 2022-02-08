@@ -1,0 +1,11 @@
+<svg id="icom_login" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <defs>
+        <style>
+            .cls-1{fill:#83a8b0}
+        </style>
+    </defs>
+    <g id="그룹_2" data-name="그룹 2" transform="translate(6 6.072)">
+        <path id="패스_2" data-name="패스 2" class="cls-1" d="M621.864 573.492a2.836 2.836 0 1 0 2.836 2.836 2.839 2.839 0 0 0-2.836-2.836z" transform="translate(-616.138 -573.564)"/>
+        <path id="패스_3" data-name="패스 3" class="cls-1" d="M615.315 621.416a6.028 6.028 0 0 0-3.42 1.046 5.143 5.143 0 0 0-2.306 4.225v.763a.784.784 0 0 0 .813.749h9.826a.784.784 0 0 0 .813-.749v-.763a5.519 5.519 0 0 0-5.726-5.271z" transform="translate(-609.588 -615.377)"/>
+    </g>
+</svg>
